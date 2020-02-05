@@ -11,14 +11,13 @@
   <genPackages prefix="Ocl" basePackage="org.vgu.se" disposableProviderFactory="true"
       ecorePackage="ocl.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//EOperator">
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/="/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/equal"/>
       <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/allInstances"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3E"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3C"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3C%3E"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/=.1"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3E="/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3C="/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/greater"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/less"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/notEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/greaterOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/lessOrEqual"/>
       <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/AND"/>
       <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/OR"/>
       <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/XOR"/>
