@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ocl:EOperationCallExp
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ocl="http://www.example.org/ocl"
+    xsi:schemaLocation="http://www.example.org/ocl ocl.ecore"
+    referredOperation="size">
+  <source xsi:type="ocl:EIteratorExp"
+      kind="select">
+    <source
+        xsi:type="ocl:EOperationCallExp"
+        referredOperation="allInstances">
+      <source
+          xsi:type="ocl:ETypeExp"
+          referredType="Car"/>
+    </source>
+    <body xsi:type="ocl:EIteratorExp"
+        kind="exists">
+      <source
+          xsi:type="ocl:EAssociationClassCallExp"
+          referredAssociationEnds="owners">
+        <source
+            xsi:type="ocl:EVariableExp"
+            referredVariable="//@source/@iterator.0"/>
+      </source>
+      <body
+          xsi:type="ocl:EOperationCallExp"
+          referredOperation="=">
+        <source
+            xsi:type="ocl:EPropertyCallExp"
+            referredProperty="name">
+          <source
+              xsi:type="ocl:EVariableExp"
+              referredVariable="//@source/@body/@iterator.0"/>
+        </source>
+        <argument
+            xsi:type="ocl:EStringLiteralExp"
+            stringValue="no-name"/>
+      </body>
+      <iterator
+          name="p"/>
+    </body>
+    <iterator
+        name="c"/>
+  </source>
+</ocl:EOperationCallExp>
