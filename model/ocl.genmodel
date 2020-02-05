@@ -10,6 +10,32 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Ocl" basePackage="org.vgu.se" disposableProviderFactory="true"
       ecorePackage="ocl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//EOperator">
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/="/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/allInstances"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3E"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3C"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3C%3E"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/=.1"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3E="/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/%3C="/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/OR"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/XOR"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/IMPLIES"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/size"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/isEmpty"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/oclIsUndefined"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/flatten"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/notEmpty"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EOperator/isUnique"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//EIteratorKind">
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EIteratorKind/forAll"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EIteratorKind/exists"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EIteratorKind/collect"/>
+      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//EIteratorKind/select"/>
+    </genEnums>
     <genClasses image="false" ecoreClass="ocl.ecore#//EOclExpression">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ocl.ecore#//EOclExpression/loopBodyOwner"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ocl.ecore#//EOclExpression/appliedElement"/>

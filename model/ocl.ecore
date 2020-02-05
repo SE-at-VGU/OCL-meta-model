@@ -48,7 +48,7 @@
         eType="#//EVariable" containment="true" eOpposite="#//EVariable/loopExp"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EIteratorExp" eSuperTypes="#//ELoopExp">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//EIteratorKind"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EIterateExp" eSuperTypes="#//ELoopExp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//EVariable"
@@ -83,7 +83,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="EOperationCallExp" eSuperTypes="#//EFeatureCallExp">
     <eStructuralFeatures xsi:type="ecore:EReference" name="argument" upperBound="-1"
         eType="#//EOclExpression" containment="true" eOpposite="#//EOclExpression/parentCall"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referredOperation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="referredOperation" eType="#//EOperator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EPropertyCallExp" eSuperTypes="#//ENavigationCallExp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="referredProperty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -91,5 +91,30 @@
   <eClassifiers xsi:type="ecore:EClass" name="EAssociationClassCallExp" eSuperTypes="#//ENavigationCallExp">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="referredAssociationEnds"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EOperator" instanceClassName="java.lang.Object">
+    <eLiterals name="equal" value="1" literal="="/>
+    <eLiterals name="allInstances"/>
+    <eLiterals name="greater" value="2" literal=">"/>
+    <eLiterals name="less" value="3" literal="&lt;"/>
+    <eLiterals name="notEqual" value="4" literal="&lt;>"/>
+    <eLiterals name="greaterOrEqual" value="6" literal=">="/>
+    <eLiterals name="lessOrEqual" value="7" literal="&lt;="/>
+    <eLiterals name="AND" value="8"/>
+    <eLiterals name="OR" value="9"/>
+    <eLiterals name="XOR" value="10"/>
+    <eLiterals name="IMPLIES" value="11"/>
+    <eLiterals name="size" value="12"/>
+    <eLiterals name="isEmpty" value="13"/>
+    <eLiterals name="oclIsUndefined" value="14"/>
+    <eLiterals name="flatten" value="15"/>
+    <eLiterals name="notEmpty" value="16"/>
+    <eLiterals name="isUnique" value="17"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EIteratorKind" instanceClassName="java.lang.Object">
+    <eLiterals name="forAll"/>
+    <eLiterals name="exists" value="1"/>
+    <eLiterals name="collect" value="2"/>
+    <eLiterals name="select" value="3"/>
   </eClassifiers>
 </ecore:EPackage>
