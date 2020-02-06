@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ocl -->
+      <package
+            uri="http://www.example.org/ocl/dm"
+            class="org.vgu.se.ocl.dm.dmPackage"
+            genModel="model/ocl.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ocl -->
+      <package
+            uri="http://www.example.org/ocl/exp"
+            class="org.vgu.se.ocl.exp.expPackage"
+            genModel="model/ocl.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ocl -->
+      <package
+            uri="http://www.example.org/ocl/type"
+            class="org.vgu.se.ocl.type.typePackage"
+            genModel="model/ocl.genmodel"/>
+   </extension>
+</plugin>

@@ -10,33 +10,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Ocl" basePackage="org.vgu.se" disposableProviderFactory="true"
       ecorePackage="ocl.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//exp/EOperator">
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/equal"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/allInstances"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/greater"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/less"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/notEqual"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/greaterOrEqual"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/lessOrEqual"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/AND"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/OR"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/XOR"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/IMPLIES"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/size"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/isEmpty"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/oclIsUndefined"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/flatten"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/notEmpty"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/isUnique"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//exp/EIteratorKind">
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/forAll"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/exists"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/collect"/>
-      <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/select"/>
-    </genEnums>
-    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="ocl.ecore#//dm">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//dm/EMultiplicity">
+    <nestedGenPackages prefix="dm" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
+        ecorePackage="ocl.ecore#//dm">
+      <genEnums ecoreEnum="ocl.ecore#//dm/EMultiplicity">
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//dm/EMultiplicity/one"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//dm/EMultiplicity/many"/>
       </genEnums>
@@ -60,14 +36,15 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ocl.ecore#//dm/EAttribute/type"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="NewPackage2" disposableProviderFactory="true" ecorePackage="ocl.ecore#//exp">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//exp/EIteratorKind">
+    <nestedGenPackages prefix="exp" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
+        ecorePackage="ocl.ecore#//exp">
+      <genEnums ecoreEnum="ocl.ecore#//exp/EIteratorKind">
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/forAll"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/exists"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/collect"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/select"/>
       </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//exp/EOperator">
+      <genEnums ecoreEnum="ocl.ecore#//exp/EOperator">
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/equal"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/allInstances"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/greater"/>
@@ -159,7 +136,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ocl.ecore#//exp/EBooleanLiteralExp/booleanValue"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Type" disposableProviderFactory="true" ecorePackage="ocl.ecore#//type">
+    <nestedGenPackages prefix="type" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
+        ecorePackage="ocl.ecore#//type">
       <genClasses image="false" ecoreClass="ocl.ecore#//type/EClassifier"/>
       <genClasses ecoreClass="ocl.ecore#//type/EDataType"/>
       <genClasses ecoreClass="ocl.ecore#//type/EInvalidType"/>

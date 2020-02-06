@@ -24,7 +24,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="EMultiplicity" instanceTypeName="mult">
+    <eClassifiers xsi:type="ecore:EEnum" name="EMultiplicity" instanceClassName="java.lang.Object">
       <eLiterals name="one" value="1" literal="1"/>
       <eLiterals name="many" value="-1" literal="*"/>
     </eClassifiers>

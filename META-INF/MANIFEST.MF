@@ -1,7 +1,24 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.vgu.se.ocl
-Bundle-SymbolicName: org.vgu.se.ocl; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.vgu.se.ocl;singleton:=true
+Automatic-Module-Name: org.vgu.se.ocl
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: 
+ org.vgu.se.ocl.dm,
+ org.vgu.se.ocl.dm.impl,
+ org.vgu.se.ocl.dm.util,
+ org.vgu.se.ocl.exp,
+ org.vgu.se.ocl.exp.impl,
+ org.vgu.se.ocl.exp.util,
+ org.vgu.se.ocl.type,
+ org.vgu.se.ocl.type.impl,
+ org.vgu.se.ocl.type.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.emf.ecore.xmi.impl

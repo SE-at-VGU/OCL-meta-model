@@ -23,6 +23,13 @@
     <semanticResources>Phase5Challenge2.xmi</semanticResources>
     <semanticResources>Phase6Challenge1.xmi</semanticResources>
     <semanticResources>Phase6Challenge2.xmi</semanticResources>
+    <semanticResources>pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml</semanticResources>
+    <semanticResources>pathmap://UML_PROFILES/Standard.profile.uml</semanticResources>
+    <semanticResources>pathmap://UML_METAMODELS/UML.metamodel.uml</semanticResources>
+    <semanticResources>pathmap://UML_METAMODELS/Ecore.metamodel.uml</semanticResources>
+    <semanticResources>pathmap://UML_PROFILES/Ecore.profile.uml</semanticResources>
+    <semanticResources>pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml</semanticResources>
+    <semanticResources>pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_kv6oYEdQEeqQKq5f8YQMSw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ePinBEfREeqPwY9aIio_0g" name="DM" repPath="#_ePgx0EfREeqPwY9aIio_0g" changeId="eb66d3ca-b6da-4981-ba26-45d8ba6302b6">
