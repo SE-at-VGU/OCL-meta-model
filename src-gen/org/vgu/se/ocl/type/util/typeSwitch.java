@@ -19,17 +19,17 @@ import org.vgu.se.ocl.type.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.type.typePackage
+ * @see org.vgu.se.ocl.type.TYPEPackage
  * @generated
  */
-public class typeSwitch<T> extends Switch<T> {
+public class TYPESwitch<T> extends Switch<T> {
     /**
      * The cached model package
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static typePackage modelPackage;
+    protected static TYPEPackage modelPackage;
 
     /**
      * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class typeSwitch<T> extends Switch<T> {
      * <!-- end-user-doc -->
      * @generated
      */
-    public typeSwitch() {
+    public TYPESwitch() {
         if (modelPackage == null) {
-            modelPackage = typePackage.eINSTANCE;
+            modelPackage = TYPEPackage.eINSTANCE;
         }
     }
 
@@ -66,14 +66,14 @@ public class typeSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case typePackage.ECLASSIFIER: {
+        case TYPEPackage.ECLASSIFIER: {
             EClassifier eClassifier = (EClassifier) theEObject;
             T result = caseEClassifier(eClassifier);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EDATA_TYPE: {
+        case TYPEPackage.EDATA_TYPE: {
             EDataType eDataType = (EDataType) theEObject;
             T result = caseEDataType(eDataType);
             if (result == null)
@@ -82,7 +82,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EINVALID_TYPE: {
+        case TYPEPackage.EINVALID_TYPE: {
             EInvalidType eInvalidType = (EInvalidType) theEObject;
             T result = caseEInvalidType(eInvalidType);
             if (result == null)
@@ -91,7 +91,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EVOID_TYPE: {
+        case TYPEPackage.EVOID_TYPE: {
             EVoidType eVoidType = (EVoidType) theEObject;
             T result = caseEVoidType(eVoidType);
             if (result == null)
@@ -100,7 +100,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EANY_TYPE: {
+        case TYPEPackage.EANY_TYPE: {
             EAnyType eAnyType = (EAnyType) theEObject;
             T result = caseEAnyType(eAnyType);
             if (result == null)
@@ -109,7 +109,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EMESSAGE_TYPE: {
+        case TYPEPackage.EMESSAGE_TYPE: {
             EMessageType eMessageType = (EMessageType) theEObject;
             T result = caseEMessageType(eMessageType);
             if (result == null)
@@ -118,7 +118,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.ECOLLECTION_TYPE: {
+        case TYPEPackage.ECOLLECTION_TYPE: {
             ECollectionType eCollectionType = (ECollectionType) theEObject;
             T result = caseECollectionType(eCollectionType);
             if (result == null)
@@ -129,7 +129,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EPRIMITIVE_TYPE: {
+        case TYPEPackage.EPRIMITIVE_TYPE: {
             EPrimitiveType ePrimitiveType = (EPrimitiveType) theEObject;
             T result = caseEPrimitiveType(ePrimitiveType);
             if (result == null)
@@ -140,7 +140,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.ETUPLE_TYPE: {
+        case TYPEPackage.ETUPLE_TYPE: {
             ETupleType eTupleType = (ETupleType) theEObject;
             T result = caseETupleType(eTupleType);
             if (result == null)
@@ -151,7 +151,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EORDERED_SET_TYPE: {
+        case TYPEPackage.EORDERED_SET_TYPE: {
             EOrderedSetType eOrderedSetType = (EOrderedSetType) theEObject;
             T result = caseEOrderedSetType(eOrderedSetType);
             if (result == null)
@@ -164,7 +164,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.ESEQUENCE_TYPE: {
+        case TYPEPackage.ESEQUENCE_TYPE: {
             ESequenceType eSequenceType = (ESequenceType) theEObject;
             T result = caseESequenceType(eSequenceType);
             if (result == null)
@@ -177,7 +177,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.EBAG_TYPE: {
+        case TYPEPackage.EBAG_TYPE: {
             EBagType eBagType = (EBagType) theEObject;
             T result = caseEBagType(eBagType);
             if (result == null)
@@ -190,7 +190,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.ESET_TYPE: {
+        case TYPEPackage.ESET_TYPE: {
             ESetType eSetType = (ESetType) theEObject;
             T result = caseESetType(eSetType);
             if (result == null)
@@ -203,7 +203,7 @@ public class typeSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case typePackage.ESIGNAL: {
+        case TYPEPackage.ESIGNAL: {
             ESignal eSignal = (ESignal) theEObject;
             T result = caseESignal(eSignal);
             if (result == null)
@@ -441,4 +441,4 @@ public class typeSwitch<T> extends Switch<T> {
         return null;
     }
 
-} //typeSwitch
+} //TYPESwitch

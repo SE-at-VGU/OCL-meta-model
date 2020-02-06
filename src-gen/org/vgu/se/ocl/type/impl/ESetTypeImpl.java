@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.ESetType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class ESetTypeImpl extends ECollectionTypeImpl implements ESetType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.ESET_TYPE;
+        return TYPEPackage.Literals.ESET_TYPE;
     }
 
 } //ESetTypeImpl

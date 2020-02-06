@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.vgu.se.ocl.exp.EOclExpression#getParentNav <em>Parent Nav</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression()
  * @model abstract="true"
  * @generated
  */
@@ -35,7 +35,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Body Owner</em>' container reference.
      * @see #setLoopBodyOwner(ELoopExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_LoopBodyOwner()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_LoopBodyOwner()
      * @see org.vgu.se.ocl.exp.ELoopExp#getBody
      * @model opposite="body" transient="false"
      * @generated
@@ -59,7 +59,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Applied Element</em>' container reference.
      * @see #setAppliedElement(ECallExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_AppliedElement()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_AppliedElement()
      * @see org.vgu.se.ocl.exp.ECallExp#getSource
      * @model opposite="source" transient="false"
      * @generated
@@ -83,7 +83,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Initialized Element</em>' container reference.
      * @see #setInitializedElement(EVariable)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_InitializedElement()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_InitializedElement()
      * @see org.vgu.se.ocl.exp.EVariable#getInitExpression
      * @model opposite="initExpression" transient="false"
      * @generated
@@ -107,7 +107,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Then Owner</em>' container reference.
      * @see #setThenOwner(EIfExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_ThenOwner()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_ThenOwner()
      * @see org.vgu.se.ocl.exp.EIfExp#getThenExpression
      * @model opposite="thenExpression" transient="false"
      * @generated
@@ -131,7 +131,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>If Owner</em>' container reference.
      * @see #setIfOwner(EIfExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_IfOwner()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_IfOwner()
      * @see org.vgu.se.ocl.exp.EIfExp#getCondition
      * @model opposite="condition" transient="false"
      * @generated
@@ -155,7 +155,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Else Owner</em>' container reference.
      * @see #setElseOwner(EIfExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_ElseOwner()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_ElseOwner()
      * @see org.vgu.se.ocl.exp.EIfExp#getElseExpression
      * @model opposite="elseExpression" transient="false"
      * @generated
@@ -179,7 +179,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Parent Call</em>' container reference.
      * @see #setParentCall(EOperationCallExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_ParentCall()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_ParentCall()
      * @see org.vgu.se.ocl.exp.EOperationCallExp#getArgument
      * @model opposite="argument" transient="false"
      * @generated
@@ -203,7 +203,7 @@ public interface EOclExpression extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Parent Nav</em>' container reference.
      * @see #setParentNav(ENavigationCallExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOclExpression_ParentNav()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOclExpression_ParentNav()
      * @see org.vgu.se.ocl.exp.ENavigationCallExp#getQualifier
      * @model opposite="qualifier" transient="false"
      * @generated

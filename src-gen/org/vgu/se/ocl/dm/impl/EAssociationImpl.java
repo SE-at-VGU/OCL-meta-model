@@ -10,10 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.vgu.se.ocl.dm.DMPackage;
 import org.vgu.se.ocl.dm.EAssociation;
 import org.vgu.se.ocl.dm.EEntity;
 import org.vgu.se.ocl.dm.EMultiplicity;
-import org.vgu.se.ocl.dm.dmPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
      * @generated
      * @ordered
      */
-    protected static final EMultiplicity MULT_EDEFAULT = EMultiplicity.ONE_LITERAL;
+    protected static final EMultiplicity MULT_EDEFAULT = EMultiplicity.ONE;
 
     /**
      * The cached value of the '{@link #getMult() <em>Mult</em>}' attribute.
@@ -119,7 +119,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return dmPackage.Literals.EASSOCIATION;
+        return DMPackage.Literals.EASSOCIATION;
     }
 
     /**
@@ -143,7 +143,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EASSOCIATION__NAME, oldName, name));
+                DMPackage.EASSOCIATION__NAME, oldName, name));
     }
 
     /**
@@ -167,7 +167,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         opp = newOpp;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EASSOCIATION__OPP, oldOpp, opp));
+                DMPackage.EASSOCIATION__OPP, oldOpp, opp));
     }
 
     /**
@@ -191,7 +191,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         mult = newMult == null ? MULT_EDEFAULT : newMult;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EASSOCIATION__MULT, oldMult, mult));
+                DMPackage.EASSOCIATION__MULT, oldMult, mult));
     }
 
     /**
@@ -207,7 +207,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
             if (target != oldTarget) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        dmPackage.EASSOCIATION__TARGET, oldTarget, target));
+                        DMPackage.EASSOCIATION__TARGET, oldTarget, target));
             }
         }
         return target;
@@ -233,7 +233,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         target = newTarget;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EASSOCIATION__TARGET, oldTarget, target));
+                DMPackage.EASSOCIATION__TARGET, oldTarget, target));
     }
 
     /**
@@ -244,13 +244,13 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case dmPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION__NAME:
             return getName();
-        case dmPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION__OPP:
             return getOpp();
-        case dmPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION__MULT:
             return getMult();
-        case dmPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION__TARGET:
             if (resolve)
                 return getTarget();
             return basicGetTarget();
@@ -266,16 +266,16 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case dmPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION__NAME:
             setName((String) newValue);
             return;
-        case dmPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION__OPP:
             setOpp((String) newValue);
             return;
-        case dmPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION__MULT:
             setMult((EMultiplicity) newValue);
             return;
-        case dmPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION__TARGET:
             setTarget((EEntity) newValue);
             return;
         }
@@ -290,16 +290,16 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case dmPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case dmPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION__OPP:
             setOpp(OPP_EDEFAULT);
             return;
-        case dmPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION__MULT:
             setMult(MULT_EDEFAULT);
             return;
-        case dmPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION__TARGET:
             setTarget((EEntity) null);
             return;
         }
@@ -314,15 +314,15 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case dmPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION__NAME:
             return NAME_EDEFAULT == null ? name != null
                 : !NAME_EDEFAULT.equals(name);
-        case dmPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION__OPP:
             return OPP_EDEFAULT == null ? opp != null
                 : !OPP_EDEFAULT.equals(opp);
-        case dmPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION__MULT:
             return mult != MULT_EDEFAULT;
-        case dmPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION__TARGET:
             return target != null;
         }
         return super.eIsSet(featureID);

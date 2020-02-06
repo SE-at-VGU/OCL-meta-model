@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.vgu.se.ocl.dm.EDataModel#getClasses <em>Classes</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.dm.dmPackage#getEDataModel()
+ * @see org.vgu.se.ocl.dm.DMPackage#getEDataModel()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface EDataModel extends EObject {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Classes</em>' containment reference list.
-     * @see org.vgu.se.ocl.dm.dmPackage#getEDataModel_Classes()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEDataModel_Classes()
      * @model containment="true"
      * @generated
      */

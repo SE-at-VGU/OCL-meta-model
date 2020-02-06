@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ocl" nsURI="http://www.example.org/ocl" nsPrefix="ocl">
-  <eSubpackages name="dm" nsURI="http://www.example.org/ocl/dm" nsPrefix="dm">
+  <eSubpackages name="dm" nsURI="http://www.example.org/ocl/dm" nsPrefix="DM">
     <eClassifiers xsi:type="ecore:EClass" name="EEntity" eSuperTypes="#//type/EClassifier">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="ends" upperBound="-1"
@@ -29,7 +29,7 @@
       <eLiterals name="many" value="-1" literal="*"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="exp" nsURI="http://www.example.org/ocl/exp" nsPrefix="exp">
+  <eSubpackages name="exp" nsURI="http://www.example.org/ocl/exp" nsPrefix="EXP">
     <eClassifiers xsi:type="ecore:EEnum" name="EIteratorKind" instanceClassName="java.lang.Object">
       <eLiterals name="forAll"/>
       <eLiterals name="exists" value="1"/>
@@ -149,7 +149,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="booleanValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="type" nsURI="http://www.example.org/ocl/type" nsPrefix="type">
+  <eSubpackages name="type" nsURI="http://www.example.org/ocl/type" nsPrefix="TYPE">
     <eClassifiers xsi:type="ecore:EClass" name="EClassifier" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="EDataType" abstract="true" eSuperTypes="#//type/EClassifier"/>
     <eClassifiers xsi:type="ecore:EClass" name="EInvalidType" eSuperTypes="#//type/EClassifier"/>

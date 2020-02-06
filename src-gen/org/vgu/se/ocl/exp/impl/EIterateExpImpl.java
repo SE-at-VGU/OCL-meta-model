@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EIterateExp;
 import org.vgu.se.ocl.exp.EVariable;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EITERATE_EXP;
+        return EXPPackage.Literals.EITERATE_EXP;
     }
 
     /**
@@ -78,7 +78,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
         result = newResult;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.EITERATE_EXP__RESULT, oldResult,
+                Notification.SET, EXPPackage.EITERATE_EXP__RESULT, oldResult,
                 newResult);
             if (msgs == null)
                 msgs = notification;
@@ -99,16 +99,16 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
             NotificationChain msgs = null;
             if (result != null)
                 msgs = ((InternalEObject) result).eInverseRemove(this,
-                    expPackage.EVARIABLE__BASE_EXP, EVariable.class, msgs);
+                    EXPPackage.EVARIABLE__BASE_EXP, EVariable.class, msgs);
             if (newResult != null)
                 msgs = ((InternalEObject) newResult).eInverseAdd(this,
-                    expPackage.EVARIABLE__BASE_EXP, EVariable.class, msgs);
+                    EXPPackage.EVARIABLE__BASE_EXP, EVariable.class, msgs);
             msgs = basicSetResult(newResult, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EITERATE_EXP__RESULT, newResult, newResult));
+                EXPPackage.EITERATE_EXP__RESULT, newResult, newResult));
     }
 
     /**
@@ -120,10 +120,10 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EITERATE_EXP__RESULT:
+        case EXPPackage.EITERATE_EXP__RESULT:
             if (result != null)
                 msgs = ((InternalEObject) result).eInverseRemove(this,
-                    EOPPOSITE_FEATURE_BASE - expPackage.EITERATE_EXP__RESULT,
+                    EOPPOSITE_FEATURE_BASE - EXPPackage.EITERATE_EXP__RESULT,
                     null, msgs);
             return basicSetResult((EVariable) otherEnd, msgs);
         }
@@ -139,7 +139,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EITERATE_EXP__RESULT:
+        case EXPPackage.EITERATE_EXP__RESULT:
             return basicSetResult(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -153,7 +153,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EITERATE_EXP__RESULT:
+        case EXPPackage.EITERATE_EXP__RESULT:
             return getResult();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -167,7 +167,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EITERATE_EXP__RESULT:
+        case EXPPackage.EITERATE_EXP__RESULT:
             setResult((EVariable) newValue);
             return;
         }
@@ -182,7 +182,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EITERATE_EXP__RESULT:
+        case EXPPackage.EITERATE_EXP__RESULT:
             setResult((EVariable) null);
             return;
         }
@@ -197,7 +197,7 @@ public class EIterateExpImpl extends ELoopExpImpl implements EIterateExp {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EITERATE_EXP__RESULT:
+        case EXPPackage.EITERATE_EXP__RESULT:
             return result != null;
         }
         return super.eIsSet(featureID);

@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.ECallExp#getSource <em>Source</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getECallExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getECallExp()
  * @model abstract="true"
  * @generated
  */
@@ -26,7 +26,7 @@ public interface ECallExp extends EOclExpression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Source</em>' containment reference.
      * @see #setSource(EOclExpression)
-     * @see org.vgu.se.ocl.exp.expPackage#getECallExp_Source()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getECallExp_Source()
      * @see org.vgu.se.ocl.exp.EOclExpression#getAppliedElement
      * @model opposite="appliedElement" containment="true"
      * @generated

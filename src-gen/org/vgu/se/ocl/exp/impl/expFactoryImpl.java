@@ -19,24 +19,24 @@ import org.vgu.se.ocl.exp.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class expFactoryImpl extends EFactoryImpl implements expFactory {
+public class EXPFactoryImpl extends EFactoryImpl implements EXPFactory {
     /**
      * Creates the default factory implementation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static expFactory init() {
+    public static EXPFactory init() {
         try {
-            expFactory theexpFactory = (expFactory) EPackage.Registry.INSTANCE
-                .getEFactory(expPackage.eNS_URI);
-            if (theexpFactory != null) {
-                return theexpFactory;
+            EXPFactory theEXPFactory = (EXPFactory) EPackage.Registry.INSTANCE
+                .getEFactory(EXPPackage.eNS_URI);
+            if (theEXPFactory != null) {
+                return theEXPFactory;
             }
         } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
-        return new expFactoryImpl();
+        return new EXPFactoryImpl();
     }
 
     /**
@@ -45,7 +45,7 @@ public class expFactoryImpl extends EFactoryImpl implements expFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public expFactoryImpl() {
+    public EXPFactoryImpl() {
         super();
     }
 
@@ -57,33 +57,33 @@ public class expFactoryImpl extends EFactoryImpl implements expFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case expPackage.EVARIABLE_EXP:
+        case EXPPackage.EVARIABLE_EXP:
             return createEVariableExp();
-        case expPackage.ETYPE_EXP:
+        case EXPPackage.ETYPE_EXP:
             return createETypeExp();
-        case expPackage.ESTATE_EXP:
+        case EXPPackage.ESTATE_EXP:
             return createEStateExp();
-        case expPackage.EASSOCIATION_CLASS_CALL_EXP:
+        case EXPPackage.EASSOCIATION_CLASS_CALL_EXP:
             return createEAssociationClassCallExp();
-        case expPackage.EMESSAGE_EXP:
+        case EXPPackage.EMESSAGE_EXP:
             return createEMessageExp();
-        case expPackage.EVARIABLE:
+        case EXPPackage.EVARIABLE:
             return createEVariable();
-        case expPackage.EPROPERTY_CALL_EXP:
+        case EXPPackage.EPROPERTY_CALL_EXP:
             return createEPropertyCallExp();
-        case expPackage.EITERATOR_EXP:
+        case EXPPackage.EITERATOR_EXP:
             return createEIteratorExp();
-        case expPackage.EITERATE_EXP:
+        case EXPPackage.EITERATE_EXP:
             return createEIterateExp();
-        case expPackage.EINTEGER_LITERAL_EXP:
+        case EXPPackage.EINTEGER_LITERAL_EXP:
             return createEIntegerLiteralExp();
-        case expPackage.EOPERATION_CALL_EXP:
+        case EXPPackage.EOPERATION_CALL_EXP:
             return createEOperationCallExp();
-        case expPackage.ESTRING_LITERAL_EXP:
+        case EXPPackage.ESTRING_LITERAL_EXP:
             return createEStringLiteralExp();
-        case expPackage.EIF_EXP:
+        case EXPPackage.EIF_EXP:
             return createEIfExp();
-        case expPackage.EBOOLEAN_LITERAL_EXP:
+        case EXPPackage.EBOOLEAN_LITERAL_EXP:
             return createEBooleanLiteralExp();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
@@ -99,9 +99,9 @@ public class expFactoryImpl extends EFactoryImpl implements expFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-        case expPackage.EITERATOR_KIND:
+        case EXPPackage.EITERATOR_KIND:
             return createEIteratorKindFromString(eDataType, initialValue);
-        case expPackage.EOPERATOR:
+        case EXPPackage.EOPERATOR:
             return createEOperatorFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '"
@@ -117,9 +117,9 @@ public class expFactoryImpl extends EFactoryImpl implements expFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-        case expPackage.EITERATOR_KIND:
+        case EXPPackage.EITERATOR_KIND:
             return convertEIteratorKindToString(eDataType, instanceValue);
-        case expPackage.EOPERATOR:
+        case EXPPackage.EOPERATOR:
             return convertEOperatorToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '"
@@ -337,8 +337,8 @@ public class expFactoryImpl extends EFactoryImpl implements expFactory {
      * @generated
      */
     @Override
-    public expPackage getexpPackage() {
-        return (expPackage) getEPackage();
+    public EXPPackage getEXPPackage() {
+        return (EXPPackage) getEPackage();
     }
 
     /**
@@ -348,8 +348,8 @@ public class expFactoryImpl extends EFactoryImpl implements expFactory {
      * @generated
      */
     @Deprecated
-    public static expPackage getPackage() {
-        return expPackage.eINSTANCE;
+    public static EXPPackage getPackage() {
+        return EXPPackage.eINSTANCE;
     }
 
-} //expFactoryImpl
+} //EXPFactoryImpl

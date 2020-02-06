@@ -12,20 +12,20 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
+import org.vgu.se.ocl.dm.DMFactory;
+import org.vgu.se.ocl.dm.DMPackage;
 import org.vgu.se.ocl.dm.EAssociation;
 import org.vgu.se.ocl.dm.EDataModel;
 import org.vgu.se.ocl.dm.EEntity;
 import org.vgu.se.ocl.dm.EMultiplicity;
-import org.vgu.se.ocl.dm.dmFactory;
-import org.vgu.se.ocl.dm.dmPackage;
 
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
-import org.vgu.se.ocl.exp.impl.expPackageImpl;
+import org.vgu.se.ocl.exp.impl.EXPPackageImpl;
 
-import org.vgu.se.ocl.type.impl.typePackageImpl;
+import org.vgu.se.ocl.type.TYPEPackage;
 
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.impl.TYPEPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ import org.vgu.se.ocl.type.typePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class dmPackageImpl extends EPackageImpl implements dmPackage {
+public class DMPackageImpl extends EPackageImpl implements DMPackage {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -80,12 +80,12 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see org.vgu.se.ocl.dm.dmPackage#eNS_URI
+     * @see org.vgu.se.ocl.dm.DMPackage#eNS_URI
      * @see #init()
      * @generated
      */
-    private dmPackageImpl() {
-        super(eNS_URI, dmFactory.eINSTANCE);
+    private DMPackageImpl() {
+        super(eNS_URI, DMFactory.eINSTANCE);
     }
 
     /**
@@ -98,7 +98,7 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      *
-     * <p>This method is used to initialize {@link dmPackage#eINSTANCE} when that field is accessed.
+     * <p>This method is used to initialize {@link DMPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -107,16 +107,16 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
      * @see #initializePackageContents()
      * @generated
      */
-    public static dmPackage init() {
+    public static DMPackage init() {
         if (isInited)
-            return (dmPackage) EPackage.Registry.INSTANCE
-                .getEPackage(dmPackage.eNS_URI);
+            return (DMPackage) EPackage.Registry.INSTANCE
+                .getEPackage(DMPackage.eNS_URI);
 
         // Obtain or create and register package
-        Object registereddmPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-        dmPackageImpl thedmPackage = registereddmPackage instanceof dmPackageImpl
-            ? (dmPackageImpl) registereddmPackage
-            : new dmPackageImpl();
+        Object registeredDMPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        DMPackageImpl theDMPackage = registeredDMPackage instanceof DMPackageImpl
+            ? (DMPackageImpl) registeredDMPackage
+            : new DMPackageImpl();
 
         isInited = true;
 
@@ -125,32 +125,32 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
 
         // Obtain or create and register interdependencies
         Object registeredPackage = EPackage.Registry.INSTANCE
-            .getEPackage(expPackage.eNS_URI);
-        expPackageImpl theexpPackage = (expPackageImpl) (registeredPackage instanceof expPackageImpl
+            .getEPackage(EXPPackage.eNS_URI);
+        EXPPackageImpl theEXPPackage = (EXPPackageImpl) (registeredPackage instanceof EXPPackageImpl
             ? registeredPackage
-            : expPackage.eINSTANCE);
+            : EXPPackage.eINSTANCE);
         registeredPackage = EPackage.Registry.INSTANCE
-            .getEPackage(typePackage.eNS_URI);
-        typePackageImpl thetypePackage = (typePackageImpl) (registeredPackage instanceof typePackageImpl
+            .getEPackage(TYPEPackage.eNS_URI);
+        TYPEPackageImpl theTYPEPackage = (TYPEPackageImpl) (registeredPackage instanceof TYPEPackageImpl
             ? registeredPackage
-            : typePackage.eINSTANCE);
+            : TYPEPackage.eINSTANCE);
 
         // Create package meta-data objects
-        thedmPackage.createPackageContents();
-        theexpPackage.createPackageContents();
-        thetypePackage.createPackageContents();
+        theDMPackage.createPackageContents();
+        theEXPPackage.createPackageContents();
+        theTYPEPackage.createPackageContents();
 
         // Initialize created meta-data
-        thedmPackage.initializePackageContents();
-        theexpPackage.initializePackageContents();
-        thetypePackage.initializePackageContents();
+        theDMPackage.initializePackageContents();
+        theEXPPackage.initializePackageContents();
+        theTYPEPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
-        thedmPackage.freeze();
+        theDMPackage.freeze();
 
         // Update the registry and return the package
-        EPackage.Registry.INSTANCE.put(dmPackage.eNS_URI, thedmPackage);
-        return thedmPackage;
+        EPackage.Registry.INSTANCE.put(DMPackage.eNS_URI, theDMPackage);
+        return theDMPackage;
     }
 
     /**
@@ -309,8 +309,8 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
      * @generated
      */
     @Override
-    public dmFactory getdmFactory() {
-        return (dmFactory) getEFactoryInstance();
+    public DMFactory getDMFactory() {
+        return (DMFactory) getEFactoryInstance();
     }
 
     /**
@@ -380,8 +380,8 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
         setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        typePackage thetypePackage = (typePackage) EPackage.Registry.INSTANCE
-            .getEPackage(typePackage.eNS_URI);
+        TYPEPackage theTYPEPackage = (TYPEPackage) EPackage.Registry.INSTANCE
+            .getEPackage(TYPEPackage.eNS_URI);
         XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
             .getEPackage(XMLTypePackage.eNS_URI);
 
@@ -390,7 +390,7 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
         // Set bounds for type parameters
 
         // Add supertypes to classes
-        eEntityEClass.getESuperTypes().add(thetypePackage.getEClassifier());
+        eEntityEClass.getESuperTypes().add(theTYPEPackage.getEClassifier());
 
         // Initialize classes, features, and operations; add parameters
         initEClass(eEntityEClass, EEntity.class, "EEntity", !IS_ABSTRACT,
@@ -448,11 +448,11 @@ public class dmPackageImpl extends EPackageImpl implements dmPackage {
 
         // Initialize enums and add enum literals
         initEEnum(eMultiplicityEEnum, EMultiplicity.class, "EMultiplicity");
-        addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.ONE_LITERAL);
-        addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.MANY_LITERAL);
+        addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.ONE);
+        addEEnumLiteral(eMultiplicityEEnum, EMultiplicity.MANY);
 
         // Create resource
         createResource(eNS_URI);
     }
 
-} //dmPackageImpl
+} //DMPackageImpl

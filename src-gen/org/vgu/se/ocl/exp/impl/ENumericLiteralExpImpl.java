@@ -5,7 +5,7 @@ package org.vgu.se.ocl.exp.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.exp.ENumericLiteralExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public abstract class ENumericLiteralExpImpl extends EPrimitiveTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ENUMERIC_LITERAL_EXP;
+        return EXPPackage.Literals.ENUMERIC_LITERAL_EXP;
     }
 
 } //ENumericLiteralExpImpl

@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.type.EClassifier;
 import org.vgu.se.ocl.type.ECollectionType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.ECOLLECTION_TYPE;
+        return TYPEPackage.Literals.ECOLLECTION_TYPE;
     }
 
     /**
@@ -70,7 +70,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
             if (elementType != oldElementType) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        typePackage.ECOLLECTION_TYPE__ELEMENT_TYPE,
+                        TYPEPackage.ECOLLECTION_TYPE__ELEMENT_TYPE,
                         oldElementType, elementType));
             }
         }
@@ -97,7 +97,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
         elementType = newElementType;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                typePackage.ECOLLECTION_TYPE__ELEMENT_TYPE, oldElementType,
+                TYPEPackage.ECOLLECTION_TYPE__ELEMENT_TYPE, oldElementType,
                 elementType));
     }
 
@@ -109,7 +109,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case typePackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
+        case TYPEPackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
             if (resolve)
                 return getElementType();
             return basicGetElementType();
@@ -125,7 +125,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case typePackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
+        case TYPEPackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
             setElementType((EClassifier) newValue);
             return;
         }
@@ -140,7 +140,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case typePackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
+        case TYPEPackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
             setElementType((EClassifier) null);
             return;
         }
@@ -155,7 +155,7 @@ public class ECollectionTypeImpl extends EDataTypeImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case typePackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
+        case TYPEPackage.ECOLLECTION_TYPE__ELEMENT_TYPE:
             return elementType != null;
         }
         return super.eIsSet(featureID);

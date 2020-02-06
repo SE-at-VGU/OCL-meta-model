@@ -9,8 +9,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.vgu.se.ocl.dm.DMPackage;
 import org.vgu.se.ocl.dm.EAttribute;
-import org.vgu.se.ocl.dm.dmPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -84,7 +84,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return dmPackage.Literals.EATTRIBUTE;
+        return DMPackage.Literals.EATTRIBUTE;
     }
 
     /**
@@ -108,7 +108,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EATTRIBUTE__NAME, oldName, name));
+                DMPackage.EATTRIBUTE__NAME, oldName, name));
     }
 
     /**
@@ -132,7 +132,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
         type = newType;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EATTRIBUTE__TYPE, oldType, type));
+                DMPackage.EATTRIBUTE__TYPE, oldType, type));
     }
 
     /**
@@ -143,9 +143,9 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case dmPackage.EATTRIBUTE__NAME:
+        case DMPackage.EATTRIBUTE__NAME:
             return getName();
-        case dmPackage.EATTRIBUTE__TYPE:
+        case DMPackage.EATTRIBUTE__TYPE:
             return getType();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -159,10 +159,10 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case dmPackage.EATTRIBUTE__NAME:
+        case DMPackage.EATTRIBUTE__NAME:
             setName((String) newValue);
             return;
-        case dmPackage.EATTRIBUTE__TYPE:
+        case DMPackage.EATTRIBUTE__TYPE:
             setType((String) newValue);
             return;
         }
@@ -177,10 +177,10 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case dmPackage.EATTRIBUTE__NAME:
+        case DMPackage.EATTRIBUTE__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case dmPackage.EATTRIBUTE__TYPE:
+        case DMPackage.EATTRIBUTE__TYPE:
             setType(TYPE_EDEFAULT);
             return;
         }
@@ -195,10 +195,10 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case dmPackage.EATTRIBUTE__NAME:
+        case DMPackage.EATTRIBUTE__NAME:
             return NAME_EDEFAULT == null ? name != null
                 : !NAME_EDEFAULT.equals(name);
-        case dmPackage.EATTRIBUTE__TYPE:
+        case DMPackage.EATTRIBUTE__TYPE:
             return TYPE_EDEFAULT == null ? type != null
                 : !TYPE_EDEFAULT.equals(type);
         }

@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.exp.expPackage
+ * @see org.vgu.se.ocl.exp.EXPPackage
  * @generated
  */
-public interface expFactory extends EFactory {
+public interface EXPFactory extends EFactory {
     /**
      * The singleton instance of the factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    expFactory eINSTANCE = org.vgu.se.ocl.exp.impl.expFactoryImpl.init();
+    EXPFactory eINSTANCE = org.vgu.se.ocl.exp.impl.EXPFactoryImpl.init();
 
     /**
      * Returns a new object of class '<em>EVariable Exp</em>'.
@@ -154,6 +154,6 @@ public interface expFactory extends EFactory {
      * @return the package supported by this factory.
      * @generated
      */
-    expPackage getexpPackage();
+    EXPPackage getEXPPackage();
 
-} //expFactory
+} //EXPFactory

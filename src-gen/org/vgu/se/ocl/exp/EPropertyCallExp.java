@@ -16,7 +16,7 @@ import org.vgu.se.ocl.dm.EAttribute;
  *   <li>{@link org.vgu.se.ocl.exp.EPropertyCallExp#getReferredProperty <em>Referred Property</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEPropertyCallExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEPropertyCallExp()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface EPropertyCallExp extends ENavigationCallExp {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Referred Property</em>' reference.
      * @see #setReferredProperty(EAttribute)
-     * @see org.vgu.se.ocl.exp.expPackage#getEPropertyCallExp_ReferredProperty()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEPropertyCallExp_ReferredProperty()
      * @model required="true"
      * @generated
      */

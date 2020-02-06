@@ -8,7 +8,7 @@ package org.vgu.se.ocl.type;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.type.typePackage#getESequenceType()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getESequenceType()
  * @model
  * @generated
  */

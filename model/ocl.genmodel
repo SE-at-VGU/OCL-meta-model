@@ -10,9 +10,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Ocl" basePackage="org.vgu.se" disposableProviderFactory="true"
       ecorePackage="ocl.ecore#/">
-    <nestedGenPackages prefix="dm" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
+    <nestedGenPackages prefix="DM" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
         ecorePackage="ocl.ecore#//dm">
-      <genEnums ecoreEnum="ocl.ecore#//dm/EMultiplicity">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="ocl.ecore#//dm/EMultiplicity">
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//dm/EMultiplicity/one"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//dm/EMultiplicity/many"/>
       </genEnums>
@@ -36,7 +36,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ocl.ecore#//dm/EAttribute/type"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="exp" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
+    <nestedGenPackages prefix="EXP" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
         ecorePackage="ocl.ecore#//exp">
       <genEnums ecoreEnum="ocl.ecore#//exp/EIteratorKind">
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EIteratorKind/forAll"/>
@@ -136,7 +136,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ocl.ecore#//exp/EBooleanLiteralExp/booleanValue"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="type" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
+    <nestedGenPackages prefix="TYPE" basePackage="org.vgu.se.ocl" disposableProviderFactory="true"
         ecorePackage="ocl.ecore#//type">
       <genClasses image="false" ecoreClass="ocl.ecore#//type/EClassifier"/>
       <genClasses ecoreClass="ocl.ecore#//type/EDataType"/>

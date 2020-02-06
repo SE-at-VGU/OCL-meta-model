@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EIteratorExp;
 import org.vgu.se.ocl.exp.EIteratorKind;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class EIteratorExpImpl extends ELoopExpImpl implements EIteratorExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EITERATOR_EXP;
+        return EXPPackage.Literals.EITERATOR_EXP;
     }
 
     /**
@@ -86,7 +86,7 @@ public class EIteratorExpImpl extends ELoopExpImpl implements EIteratorExp {
         kind = newKind == null ? KIND_EDEFAULT : newKind;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EITERATOR_EXP__KIND, oldKind, kind));
+                EXPPackage.EITERATOR_EXP__KIND, oldKind, kind));
     }
 
     /**
@@ -97,7 +97,7 @@ public class EIteratorExpImpl extends ELoopExpImpl implements EIteratorExp {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EITERATOR_EXP__KIND:
+        case EXPPackage.EITERATOR_EXP__KIND:
             return getKind();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -111,7 +111,7 @@ public class EIteratorExpImpl extends ELoopExpImpl implements EIteratorExp {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EITERATOR_EXP__KIND:
+        case EXPPackage.EITERATOR_EXP__KIND:
             setKind((EIteratorKind) newValue);
             return;
         }
@@ -126,7 +126,7 @@ public class EIteratorExpImpl extends ELoopExpImpl implements EIteratorExp {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EITERATOR_EXP__KIND:
+        case EXPPackage.EITERATOR_EXP__KIND:
             setKind(KIND_EDEFAULT);
             return;
         }
@@ -141,7 +141,7 @@ public class EIteratorExpImpl extends ELoopExpImpl implements EIteratorExp {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EITERATOR_EXP__KIND:
+        case EXPPackage.EITERATOR_EXP__KIND:
             return kind != KIND_EDEFAULT;
         }
         return super.eIsSet(featureID);

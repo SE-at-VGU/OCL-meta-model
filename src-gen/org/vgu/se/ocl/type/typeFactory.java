@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.type.typePackage
+ * @see org.vgu.se.ocl.type.TYPEPackage
  * @generated
  */
-public interface typeFactory extends EFactory {
+public interface TYPEFactory extends EFactory {
     /**
      * The singleton instance of the factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    typeFactory eINSTANCE = org.vgu.se.ocl.type.impl.typeFactoryImpl.init();
+    TYPEFactory eINSTANCE = org.vgu.se.ocl.type.impl.TYPEFactoryImpl.init();
 
     /**
      * Returns a new object of class '<em>EInvalid Type</em>'.
@@ -136,6 +136,6 @@ public interface typeFactory extends EFactory {
      * @return the package supported by this factory.
      * @generated
      */
-    typePackage gettypePackage();
+    TYPEPackage getTYPEPackage();
 
-} //typeFactory
+} //TYPEFactory

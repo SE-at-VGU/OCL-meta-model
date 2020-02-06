@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EVariable;
 import org.vgu.se.ocl.exp.EVariableExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EVARIABLE_EXP;
+        return EXPPackage.Literals.EVARIABLE_EXP;
     }
 
     /**
@@ -70,7 +70,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
             if (referredVariable != oldReferredVariable) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        expPackage.EVARIABLE_EXP__REFERRED_VARIABLE,
+                        EXPPackage.EVARIABLE_EXP__REFERRED_VARIABLE,
                         oldReferredVariable, referredVariable));
             }
         }
@@ -97,7 +97,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
         referredVariable = newReferredVariable;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EVARIABLE_EXP__REFERRED_VARIABLE,
+                EXPPackage.EVARIABLE_EXP__REFERRED_VARIABLE,
                 oldReferredVariable, referredVariable));
     }
 
@@ -109,7 +109,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
+        case EXPPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
             if (resolve)
                 return getReferredVariable();
             return basicGetReferredVariable();
@@ -125,7 +125,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
+        case EXPPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
             setReferredVariable((EVariable) newValue);
             return;
         }
@@ -140,7 +140,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
+        case EXPPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
             setReferredVariable((EVariable) null);
             return;
         }
@@ -155,7 +155,7 @@ public class EVariableExpImpl extends EOclExpressionImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
+        case EXPPackage.EVARIABLE_EXP__REFERRED_VARIABLE:
             return referredVariable != null;
         }
         return super.eIsSet(featureID);

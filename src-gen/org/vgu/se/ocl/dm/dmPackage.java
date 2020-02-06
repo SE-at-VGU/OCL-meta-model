@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,11 +22,11 @@ import org.vgu.se.ocl.type.typePackage;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.dm.dmFactory
+ * @see org.vgu.se.ocl.dm.DMFactory
  * @model kind="package"
  * @generated
  */
-public interface dmPackage extends EPackage {
+public interface DMPackage extends EPackage {
     /**
      * The package name.
      * <!-- begin-user-doc -->
@@ -49,7 +49,7 @@ public interface dmPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    String eNS_PREFIX = "dm";
+    String eNS_PREFIX = "DM";
 
     /**
      * The singleton instance of the package.
@@ -57,14 +57,14 @@ public interface dmPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    dmPackage eINSTANCE = org.vgu.se.ocl.dm.impl.dmPackageImpl.init();
+    DMPackage eINSTANCE = org.vgu.se.ocl.dm.impl.DMPackageImpl.init();
 
     /**
      * The meta object id for the '{@link org.vgu.se.ocl.dm.impl.EEntityImpl <em>EEntity</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.dm.impl.EEntityImpl
-     * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEEntity()
+     * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEEntity()
      * @generated
      */
     int EENTITY = 0;
@@ -76,7 +76,7 @@ public interface dmPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EENTITY__NAME = typePackage.ECLASSIFIER_FEATURE_COUNT + 0;
+    int EENTITY__NAME = TYPEPackage.ECLASSIFIER_FEATURE_COUNT + 0;
 
     /**
      * The feature id for the '<em><b>Ends</b></em>' containment reference list.
@@ -85,7 +85,7 @@ public interface dmPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EENTITY__ENDS = typePackage.ECLASSIFIER_FEATURE_COUNT + 1;
+    int EENTITY__ENDS = TYPEPackage.ECLASSIFIER_FEATURE_COUNT + 1;
 
     /**
      * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -94,7 +94,7 @@ public interface dmPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EENTITY__ATTRIBUTES = typePackage.ECLASSIFIER_FEATURE_COUNT + 2;
+    int EENTITY__ATTRIBUTES = TYPEPackage.ECLASSIFIER_FEATURE_COUNT + 2;
 
     /**
      * The number of structural features of the '<em>EEntity</em>' class.
@@ -103,7 +103,7 @@ public interface dmPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EENTITY_FEATURE_COUNT = typePackage.ECLASSIFIER_FEATURE_COUNT + 3;
+    int EENTITY_FEATURE_COUNT = TYPEPackage.ECLASSIFIER_FEATURE_COUNT + 3;
 
     /**
      * The number of operations of the '<em>EEntity</em>' class.
@@ -112,14 +112,14 @@ public interface dmPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EENTITY_OPERATION_COUNT = typePackage.ECLASSIFIER_OPERATION_COUNT + 0;
+    int EENTITY_OPERATION_COUNT = TYPEPackage.ECLASSIFIER_OPERATION_COUNT + 0;
 
     /**
      * The meta object id for the '{@link org.vgu.se.ocl.dm.impl.EAssociationImpl <em>EAssociation</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.dm.impl.EAssociationImpl
-     * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEAssociation()
+     * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEAssociation()
      * @generated
      */
     int EASSOCIATION = 1;
@@ -183,7 +183,7 @@ public interface dmPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.dm.impl.EDataModelImpl
-     * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEDataModel()
+     * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEDataModel()
      * @generated
      */
     int EDATA_MODEL = 2;
@@ -220,7 +220,7 @@ public interface dmPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.dm.impl.EAttributeImpl
-     * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEAttribute()
+     * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEAttribute()
      * @generated
      */
     int EATTRIBUTE = 3;
@@ -266,7 +266,7 @@ public interface dmPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.dm.EMultiplicity
-     * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEMultiplicity()
+     * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEMultiplicity()
      * @generated
      */
     int EMULTIPLICITY = 4;
@@ -438,7 +438,7 @@ public interface dmPackage extends EPackage {
      * @return the factory that creates the instances of the model.
      * @generated
      */
-    dmFactory getdmFactory();
+    DMFactory getDMFactory();
 
     /**
      * <!-- begin-user-doc -->
@@ -459,7 +459,7 @@ public interface dmPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.dm.impl.EEntityImpl
-         * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEEntity()
+         * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEEntity()
          * @generated
          */
         EClass EENTITY = eINSTANCE.getEEntity();
@@ -493,7 +493,7 @@ public interface dmPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.dm.impl.EAssociationImpl
-         * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEAssociation()
+         * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEAssociation()
          * @generated
          */
         EClass EASSOCIATION = eINSTANCE.getEAssociation();
@@ -535,7 +535,7 @@ public interface dmPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.dm.impl.EDataModelImpl
-         * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEDataModel()
+         * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEDataModel()
          * @generated
          */
         EClass EDATA_MODEL = eINSTANCE.getEDataModel();
@@ -553,7 +553,7 @@ public interface dmPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.dm.impl.EAttributeImpl
-         * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEAttribute()
+         * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEAttribute()
          * @generated
          */
         EClass EATTRIBUTE = eINSTANCE.getEAttribute();
@@ -579,11 +579,11 @@ public interface dmPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.dm.EMultiplicity
-         * @see org.vgu.se.ocl.dm.impl.dmPackageImpl#getEMultiplicity()
+         * @see org.vgu.se.ocl.dm.impl.DMPackageImpl#getEMultiplicity()
          * @generated
          */
         EEnum EMULTIPLICITY = eINSTANCE.getEMultiplicity();
 
     }
 
-} //dmPackage
+} //DMPackage

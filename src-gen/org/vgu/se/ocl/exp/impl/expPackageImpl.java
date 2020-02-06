@@ -10,9 +10,9 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.vgu.se.ocl.dm.dmPackage;
+import org.vgu.se.ocl.dm.DMPackage;
 
-import org.vgu.se.ocl.dm.impl.dmPackageImpl;
+import org.vgu.se.ocl.dm.impl.DMPackageImpl;
 
 import org.vgu.se.ocl.exp.EAssociationClassCallExp;
 import org.vgu.se.ocl.exp.EBooleanLiteralExp;
@@ -38,12 +38,12 @@ import org.vgu.se.ocl.exp.EStringLiteralExp;
 import org.vgu.se.ocl.exp.ETypeExp;
 import org.vgu.se.ocl.exp.EVariable;
 import org.vgu.se.ocl.exp.EVariableExp;
-import org.vgu.se.ocl.exp.expFactory;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPFactory;
+import org.vgu.se.ocl.exp.EXPPackage;
 
-import org.vgu.se.ocl.type.impl.typePackageImpl;
+import org.vgu.se.ocl.type.TYPEPackage;
 
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.impl.TYPEPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ import org.vgu.se.ocl.type.typePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class expPackageImpl extends EPackageImpl implements expPackage {
+public class EXPPackageImpl extends EPackageImpl implements EXPPackage {
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -231,12 +231,12 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.eclipse.emf.ecore.EPackage.Registry
-     * @see org.vgu.se.ocl.exp.expPackage#eNS_URI
+     * @see org.vgu.se.ocl.exp.EXPPackage#eNS_URI
      * @see #init()
      * @generated
      */
-    private expPackageImpl() {
-        super(eNS_URI, expFactory.eINSTANCE);
+    private EXPPackageImpl() {
+        super(eNS_URI, EXPFactory.eINSTANCE);
     }
 
     /**
@@ -249,7 +249,7 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
      *
-     * <p>This method is used to initialize {@link expPackage#eINSTANCE} when that field is accessed.
+     * <p>This method is used to initialize {@link EXPPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -258,47 +258,47 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
      * @see #initializePackageContents()
      * @generated
      */
-    public static expPackage init() {
+    public static EXPPackage init() {
         if (isInited)
-            return (expPackage) EPackage.Registry.INSTANCE
-                .getEPackage(expPackage.eNS_URI);
+            return (EXPPackage) EPackage.Registry.INSTANCE
+                .getEPackage(EXPPackage.eNS_URI);
 
         // Obtain or create and register package
-        Object registeredexpPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-        expPackageImpl theexpPackage = registeredexpPackage instanceof expPackageImpl
-            ? (expPackageImpl) registeredexpPackage
-            : new expPackageImpl();
+        Object registeredEXPPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        EXPPackageImpl theEXPPackage = registeredEXPPackage instanceof EXPPackageImpl
+            ? (EXPPackageImpl) registeredEXPPackage
+            : new EXPPackageImpl();
 
         isInited = true;
 
         // Obtain or create and register interdependencies
         Object registeredPackage = EPackage.Registry.INSTANCE
-            .getEPackage(dmPackage.eNS_URI);
-        dmPackageImpl thedmPackage = (dmPackageImpl) (registeredPackage instanceof dmPackageImpl
+            .getEPackage(DMPackage.eNS_URI);
+        DMPackageImpl theDMPackage = (DMPackageImpl) (registeredPackage instanceof DMPackageImpl
             ? registeredPackage
-            : dmPackage.eINSTANCE);
+            : DMPackage.eINSTANCE);
         registeredPackage = EPackage.Registry.INSTANCE
-            .getEPackage(typePackage.eNS_URI);
-        typePackageImpl thetypePackage = (typePackageImpl) (registeredPackage instanceof typePackageImpl
+            .getEPackage(TYPEPackage.eNS_URI);
+        TYPEPackageImpl theTYPEPackage = (TYPEPackageImpl) (registeredPackage instanceof TYPEPackageImpl
             ? registeredPackage
-            : typePackage.eINSTANCE);
+            : TYPEPackage.eINSTANCE);
 
         // Create package meta-data objects
-        theexpPackage.createPackageContents();
-        thedmPackage.createPackageContents();
-        thetypePackage.createPackageContents();
+        theEXPPackage.createPackageContents();
+        theDMPackage.createPackageContents();
+        theTYPEPackage.createPackageContents();
 
         // Initialize created meta-data
-        theexpPackage.initializePackageContents();
-        thedmPackage.initializePackageContents();
-        thetypePackage.initializePackageContents();
+        theEXPPackage.initializePackageContents();
+        theDMPackage.initializePackageContents();
+        theTYPEPackage.initializePackageContents();
 
         // Mark meta-data to indicate it can't be changed
-        theexpPackage.freeze();
+        theEXPPackage.freeze();
 
         // Update the registry and return the package
-        EPackage.Registry.INSTANCE.put(expPackage.eNS_URI, theexpPackage);
-        return theexpPackage;
+        EPackage.Registry.INSTANCE.put(EXPPackage.eNS_URI, theEXPPackage);
+        return theEXPPackage;
     }
 
     /**
@@ -863,8 +863,8 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
      * @generated
      */
     @Override
-    public expFactory getexpFactory() {
-        return (expFactory) getEFactoryInstance();
+    public EXPFactory getEXPFactory() {
+        return (EXPFactory) getEFactoryInstance();
     }
 
     /**
@@ -1003,10 +1003,10 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
         setNsURI(eNS_URI);
 
         // Obtain other dependent packages
-        typePackage thetypePackage = (typePackage) EPackage.Registry.INSTANCE
-            .getEPackage(typePackage.eNS_URI);
-        dmPackage thedmPackage = (dmPackage) EPackage.Registry.INSTANCE
-            .getEPackage(dmPackage.eNS_URI);
+        TYPEPackage theTYPEPackage = (TYPEPackage) EPackage.Registry.INSTANCE
+            .getEPackage(TYPEPackage.eNS_URI);
+        DMPackage theDMPackage = (DMPackage) EPackage.Registry.INSTANCE
+            .getEPackage(DMPackage.eNS_URI);
 
         // Create type parameters
 
@@ -1050,7 +1050,7 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
         initEClass(eTypeExpEClass, ETypeExp.class, "ETypeExp", !IS_ABSTRACT,
             !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getETypeExp_ReferredType(),
-            thetypePackage.getEClassifier(), null, "referredType", null, 1, 1,
+            theTYPEPackage.getEClassifier(), null, "referredType", null, 1, 1,
             ETypeExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
             !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
             !IS_DERIVED, IS_ORDERED);
@@ -1079,7 +1079,7 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
             EAssociationClassCallExp.class, "EAssociationClassCallExp",
             !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getEAssociationClassCallExp_ReferredAssociationEnds(),
-            thedmPackage.getEAssociation(), null, "referredAssociationEnds",
+            theDMPackage.getEAssociation(), null, "referredAssociationEnds",
             null, 1, 1, EAssociationClassCallExp.class, !IS_TRANSIENT,
             !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
             !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1120,7 +1120,7 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
             "EPropertyCallExp", !IS_ABSTRACT, !IS_INTERFACE,
             IS_GENERATED_INSTANCE_CLASS);
         initEReference(getEPropertyCallExp_ReferredProperty(),
-            thedmPackage.getEAttribute(), null, "referredProperty", null, 1, 1,
+            theDMPackage.getEAttribute(), null, "referredProperty", null, 1, 1,
             EPropertyCallExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
             !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
             !IS_DERIVED, IS_ORDERED);
@@ -1292,4 +1292,4 @@ public class expPackageImpl extends EPackageImpl implements expPackage {
         createResource(eNS_URI);
     }
 
-} //expPackageImpl
+} //EXPPackageImpl

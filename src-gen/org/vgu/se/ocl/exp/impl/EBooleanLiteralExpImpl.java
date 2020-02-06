@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EBooleanLiteralExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class EBooleanLiteralExpImpl extends EPrimitiveTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EBOOLEAN_LITERAL_EXP;
+        return EXPPackage.Literals.EBOOLEAN_LITERAL_EXP;
     }
 
     /**
@@ -86,7 +86,7 @@ public class EBooleanLiteralExpImpl extends EPrimitiveTypeImpl
         booleanValue = newBooleanValue;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE, oldBooleanValue,
+                EXPPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE, oldBooleanValue,
                 booleanValue));
     }
 
@@ -98,7 +98,7 @@ public class EBooleanLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
+        case EXPPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
             return getBooleanValue();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public class EBooleanLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
+        case EXPPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
             setBooleanValue((Boolean) newValue);
             return;
         }
@@ -127,7 +127,7 @@ public class EBooleanLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
+        case EXPPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
             setBooleanValue(BOOLEAN_VALUE_EDEFAULT);
             return;
         }
@@ -142,7 +142,7 @@ public class EBooleanLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
+        case EXPPackage.EBOOLEAN_LITERAL_EXP__BOOLEAN_VALUE:
             return BOOLEAN_VALUE_EDEFAULT == null ? booleanValue != null
                 : !BOOLEAN_VALUE_EDEFAULT.equals(booleanValue);
         }

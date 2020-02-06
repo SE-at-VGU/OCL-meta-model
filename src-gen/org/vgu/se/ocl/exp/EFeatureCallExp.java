@@ -8,7 +8,7 @@ package org.vgu.se.ocl.exp;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEFeatureCallExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEFeatureCallExp()
  * @model abstract="true"
  * @generated
  */

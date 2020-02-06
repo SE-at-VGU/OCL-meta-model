@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.ECallExp;
 import org.vgu.se.ocl.exp.EOclExpression;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ECALL_EXP;
+        return EXPPackage.Literals.ECALL_EXP;
     }
 
     /**
@@ -79,7 +79,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
         source = newSource;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.ECALL_EXP__SOURCE, oldSource,
+                Notification.SET, EXPPackage.ECALL_EXP__SOURCE, oldSource,
                 newSource);
             if (msgs == null)
                 msgs = notification;
@@ -100,18 +100,18 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
             NotificationChain msgs = null;
             if (source != null)
                 msgs = ((InternalEObject) source).eInverseRemove(this,
-                    expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT,
+                    EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT,
                     EOclExpression.class, msgs);
             if (newSource != null)
                 msgs = ((InternalEObject) newSource).eInverseAdd(this,
-                    expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT,
+                    EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT,
                     EOclExpression.class, msgs);
             msgs = basicSetSource(newSource, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.ECALL_EXP__SOURCE, newSource, newSource));
+                EXPPackage.ECALL_EXP__SOURCE, newSource, newSource));
     }
 
     /**
@@ -123,10 +123,10 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.ECALL_EXP__SOURCE:
+        case EXPPackage.ECALL_EXP__SOURCE:
             if (source != null)
                 msgs = ((InternalEObject) source).eInverseRemove(this,
-                    EOPPOSITE_FEATURE_BASE - expPackage.ECALL_EXP__SOURCE, null,
+                    EOPPOSITE_FEATURE_BASE - EXPPackage.ECALL_EXP__SOURCE, null,
                     msgs);
             return basicSetSource((EOclExpression) otherEnd, msgs);
         }
@@ -142,7 +142,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.ECALL_EXP__SOURCE:
+        case EXPPackage.ECALL_EXP__SOURCE:
             return basicSetSource(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -156,7 +156,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.ECALL_EXP__SOURCE:
+        case EXPPackage.ECALL_EXP__SOURCE:
             return getSource();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -170,7 +170,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.ECALL_EXP__SOURCE:
+        case EXPPackage.ECALL_EXP__SOURCE:
             setSource((EOclExpression) newValue);
             return;
         }
@@ -185,7 +185,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.ECALL_EXP__SOURCE:
+        case EXPPackage.ECALL_EXP__SOURCE:
             setSource((EOclExpression) null);
             return;
         }
@@ -200,7 +200,7 @@ public abstract class ECallExpImpl extends EOclExpressionImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.ECALL_EXP__SOURCE:
+        case EXPPackage.ECALL_EXP__SOURCE:
             return source != null;
         }
         return super.eIsSet(featureID);

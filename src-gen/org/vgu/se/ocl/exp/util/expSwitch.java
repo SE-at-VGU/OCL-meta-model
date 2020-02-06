@@ -19,17 +19,17 @@ import org.vgu.se.ocl.exp.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.exp.expPackage
+ * @see org.vgu.se.ocl.exp.EXPPackage
  * @generated
  */
-public class expSwitch<T> extends Switch<T> {
+public class EXPSwitch<T> extends Switch<T> {
     /**
      * The cached model package
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static expPackage modelPackage;
+    protected static EXPPackage modelPackage;
 
     /**
      * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class expSwitch<T> extends Switch<T> {
      * <!-- end-user-doc -->
      * @generated
      */
-    public expSwitch() {
+    public EXPSwitch() {
         if (modelPackage == null) {
-            modelPackage = expPackage.eINSTANCE;
+            modelPackage = EXPPackage.eINSTANCE;
         }
     }
 
@@ -66,7 +66,7 @@ public class expSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case expPackage.EVARIABLE_EXP: {
+        case EXPPackage.EVARIABLE_EXP: {
             EVariableExp eVariableExp = (EVariableExp) theEObject;
             T result = caseEVariableExp(eVariableExp);
             if (result == null)
@@ -75,7 +75,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ETYPE_EXP: {
+        case EXPPackage.ETYPE_EXP: {
             ETypeExp eTypeExp = (ETypeExp) theEObject;
             T result = caseETypeExp(eTypeExp);
             if (result == null)
@@ -84,7 +84,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ELOOP_EXP: {
+        case EXPPackage.ELOOP_EXP: {
             ELoopExp eLoopExp = (ELoopExp) theEObject;
             T result = caseELoopExp(eLoopExp);
             if (result == null)
@@ -95,7 +95,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ESTATE_EXP: {
+        case EXPPackage.ESTATE_EXP: {
             EStateExp eStateExp = (EStateExp) theEObject;
             T result = caseEStateExp(eStateExp);
             if (result == null)
@@ -104,7 +104,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EFEATURE_CALL_EXP: {
+        case EXPPackage.EFEATURE_CALL_EXP: {
             EFeatureCallExp eFeatureCallExp = (EFeatureCallExp) theEObject;
             T result = caseEFeatureCallExp(eFeatureCallExp);
             if (result == null)
@@ -115,7 +115,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EASSOCIATION_CLASS_CALL_EXP: {
+        case EXPPackage.EASSOCIATION_CLASS_CALL_EXP: {
             EAssociationClassCallExp eAssociationClassCallExp = (EAssociationClassCallExp) theEObject;
             T result = caseEAssociationClassCallExp(eAssociationClassCallExp);
             if (result == null)
@@ -130,7 +130,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ENUMERIC_LITERAL_EXP: {
+        case EXPPackage.ENUMERIC_LITERAL_EXP: {
             ENumericLiteralExp eNumericLiteralExp = (ENumericLiteralExp) theEObject;
             T result = caseENumericLiteralExp(eNumericLiteralExp);
             if (result == null)
@@ -143,7 +143,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ELITERAL_EXP: {
+        case EXPPackage.ELITERAL_EXP: {
             ELiteralExp eLiteralExp = (ELiteralExp) theEObject;
             T result = caseELiteralExp(eLiteralExp);
             if (result == null)
@@ -152,7 +152,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EMESSAGE_EXP: {
+        case EXPPackage.EMESSAGE_EXP: {
             EMessageExp eMessageExp = (EMessageExp) theEObject;
             T result = caseEMessageExp(eMessageExp);
             if (result == null)
@@ -161,14 +161,14 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EVARIABLE: {
+        case EXPPackage.EVARIABLE: {
             EVariable eVariable = (EVariable) theEObject;
             T result = caseEVariable(eVariable);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EPROPERTY_CALL_EXP: {
+        case EXPPackage.EPROPERTY_CALL_EXP: {
             EPropertyCallExp ePropertyCallExp = (EPropertyCallExp) theEObject;
             T result = caseEPropertyCallExp(ePropertyCallExp);
             if (result == null)
@@ -183,7 +183,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EITERATOR_EXP: {
+        case EXPPackage.EITERATOR_EXP: {
             EIteratorExp eIteratorExp = (EIteratorExp) theEObject;
             T result = caseEIteratorExp(eIteratorExp);
             if (result == null)
@@ -196,14 +196,14 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EOCL_EXPRESSION: {
+        case EXPPackage.EOCL_EXPRESSION: {
             EOclExpression eOclExpression = (EOclExpression) theEObject;
             T result = caseEOclExpression(eOclExpression);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EITERATE_EXP: {
+        case EXPPackage.EITERATE_EXP: {
             EIterateExp eIterateExp = (EIterateExp) theEObject;
             T result = caseEIterateExp(eIterateExp);
             if (result == null)
@@ -216,7 +216,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ECALL_EXP: {
+        case EXPPackage.ECALL_EXP: {
             ECallExp eCallExp = (ECallExp) theEObject;
             T result = caseECallExp(eCallExp);
             if (result == null)
@@ -225,7 +225,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EINTEGER_LITERAL_EXP: {
+        case EXPPackage.EINTEGER_LITERAL_EXP: {
             EIntegerLiteralExp eIntegerLiteralExp = (EIntegerLiteralExp) theEObject;
             T result = caseEIntegerLiteralExp(eIntegerLiteralExp);
             if (result == null)
@@ -240,7 +240,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EPRIMITIVE_TYPE: {
+        case EXPPackage.EPRIMITIVE_TYPE: {
             EPrimitiveType ePrimitiveType = (EPrimitiveType) theEObject;
             T result = caseEPrimitiveType(ePrimitiveType);
             if (result == null)
@@ -251,7 +251,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ENAVIGATION_CALL_EXP: {
+        case EXPPackage.ENAVIGATION_CALL_EXP: {
             ENavigationCallExp eNavigationCallExp = (ENavigationCallExp) theEObject;
             T result = caseENavigationCallExp(eNavigationCallExp);
             if (result == null)
@@ -264,7 +264,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EOPERATION_CALL_EXP: {
+        case EXPPackage.EOPERATION_CALL_EXP: {
             EOperationCallExp eOperationCallExp = (EOperationCallExp) theEObject;
             T result = caseEOperationCallExp(eOperationCallExp);
             if (result == null)
@@ -277,7 +277,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.ESTRING_LITERAL_EXP: {
+        case EXPPackage.ESTRING_LITERAL_EXP: {
             EStringLiteralExp eStringLiteralExp = (EStringLiteralExp) theEObject;
             T result = caseEStringLiteralExp(eStringLiteralExp);
             if (result == null)
@@ -290,7 +290,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EIF_EXP: {
+        case EXPPackage.EIF_EXP: {
             EIfExp eIfExp = (EIfExp) theEObject;
             T result = caseEIfExp(eIfExp);
             if (result == null)
@@ -299,7 +299,7 @@ public class expSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case expPackage.EBOOLEAN_LITERAL_EXP: {
+        case EXPPackage.EBOOLEAN_LITERAL_EXP: {
             EBooleanLiteralExp eBooleanLiteralExp = (EBooleanLiteralExp) theEObject;
             T result = caseEBooleanLiteralExp(eBooleanLiteralExp);
             if (result == null)
@@ -663,4 +663,4 @@ public class expSwitch<T> extends Switch<T> {
         return null;
     }
 
-} //expSwitch
+} //EXPSwitch

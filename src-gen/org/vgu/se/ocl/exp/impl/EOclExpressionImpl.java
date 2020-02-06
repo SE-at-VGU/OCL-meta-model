@@ -20,7 +20,7 @@ import org.vgu.se.ocl.exp.ENavigationCallExp;
 import org.vgu.se.ocl.exp.EOclExpression;
 import org.vgu.se.ocl.exp.EOperationCallExp;
 import org.vgu.se.ocl.exp.EVariable;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EOCL_EXPRESSION;
+        return EXPPackage.Literals.EOCL_EXPRESSION;
     }
 
     /**
@@ -70,7 +70,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public ELoopExp getLoopBodyOwner() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER)
             return null;
         return (ELoopExp) eInternalContainer();
     }
@@ -83,7 +83,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetLoopBodyOwner(ELoopExp newLoopBodyOwner,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newLoopBodyOwner,
-            expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER, msgs);
+            EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER, msgs);
         return msgs;
     }
 
@@ -95,7 +95,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setLoopBodyOwner(ELoopExp newLoopBodyOwner) {
         if (newLoopBodyOwner != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER
                 && newLoopBodyOwner != null)) {
             if (EcoreUtil.isAncestor(this, newLoopBodyOwner))
                 throw new IllegalArgumentException(
@@ -105,13 +105,13 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newLoopBodyOwner != null)
                 msgs = ((InternalEObject) newLoopBodyOwner).eInverseAdd(this,
-                    expPackage.ELOOP_EXP__BODY, ELoopExp.class, msgs);
+                    EXPPackage.ELOOP_EXP__BODY, ELoopExp.class, msgs);
             msgs = basicSetLoopBodyOwner(newLoopBodyOwner, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER, newLoopBodyOwner,
+                EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER, newLoopBodyOwner,
                 newLoopBodyOwner));
     }
 
@@ -122,7 +122,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public ECallExp getAppliedElement() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT)
             return null;
         return (ECallExp) eInternalContainer();
     }
@@ -135,7 +135,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetAppliedElement(ECallExp newAppliedElement,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newAppliedElement,
-            expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT, msgs);
+            EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT, msgs);
         return msgs;
     }
 
@@ -147,7 +147,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setAppliedElement(ECallExp newAppliedElement) {
         if (newAppliedElement != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT
                 && newAppliedElement != null)) {
             if (EcoreUtil.isAncestor(this, newAppliedElement))
                 throw new IllegalArgumentException(
@@ -157,13 +157,13 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newAppliedElement != null)
                 msgs = ((InternalEObject) newAppliedElement).eInverseAdd(this,
-                    expPackage.ECALL_EXP__SOURCE, ECallExp.class, msgs);
+                    EXPPackage.ECALL_EXP__SOURCE, ECallExp.class, msgs);
             msgs = basicSetAppliedElement(newAppliedElement, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT, newAppliedElement,
+                EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT, newAppliedElement,
                 newAppliedElement));
     }
 
@@ -174,7 +174,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public EVariable getInitializedElement() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT)
             return null;
         return (EVariable) eInternalContainer();
     }
@@ -187,7 +187,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetInitializedElement(
         EVariable newInitializedElement, NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newInitializedElement,
-            expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT, msgs);
+            EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT, msgs);
         return msgs;
     }
 
@@ -199,7 +199,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setInitializedElement(EVariable newInitializedElement) {
         if (newInitializedElement != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT
                 && newInitializedElement != null)) {
             if (EcoreUtil.isAncestor(this, newInitializedElement))
                 throw new IllegalArgumentException(
@@ -209,14 +209,14 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newInitializedElement != null)
                 msgs = ((InternalEObject) newInitializedElement).eInverseAdd(
-                    this, expPackage.EVARIABLE__INIT_EXPRESSION,
+                    this, EXPPackage.EVARIABLE__INIT_EXPRESSION,
                     EVariable.class, msgs);
             msgs = basicSetInitializedElement(newInitializedElement, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT,
+                EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT,
                 newInitializedElement, newInitializedElement));
     }
 
@@ -227,7 +227,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public EIfExp getThenOwner() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__THEN_OWNER)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__THEN_OWNER)
             return null;
         return (EIfExp) eInternalContainer();
     }
@@ -240,7 +240,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetThenOwner(EIfExp newThenOwner,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newThenOwner,
-            expPackage.EOCL_EXPRESSION__THEN_OWNER, msgs);
+            EXPPackage.EOCL_EXPRESSION__THEN_OWNER, msgs);
         return msgs;
     }
 
@@ -252,7 +252,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setThenOwner(EIfExp newThenOwner) {
         if (newThenOwner != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__THEN_OWNER
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__THEN_OWNER
                 && newThenOwner != null)) {
             if (EcoreUtil.isAncestor(this, newThenOwner))
                 throw new IllegalArgumentException(
@@ -262,13 +262,13 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newThenOwner != null)
                 msgs = ((InternalEObject) newThenOwner).eInverseAdd(this,
-                    expPackage.EIF_EXP__THEN_EXPRESSION, EIfExp.class, msgs);
+                    EXPPackage.EIF_EXP__THEN_EXPRESSION, EIfExp.class, msgs);
             msgs = basicSetThenOwner(newThenOwner, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__THEN_OWNER, newThenOwner,
+                EXPPackage.EOCL_EXPRESSION__THEN_OWNER, newThenOwner,
                 newThenOwner));
     }
 
@@ -279,7 +279,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public EIfExp getIfOwner() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__IF_OWNER)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__IF_OWNER)
             return null;
         return (EIfExp) eInternalContainer();
     }
@@ -292,7 +292,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetIfOwner(EIfExp newIfOwner,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newIfOwner,
-            expPackage.EOCL_EXPRESSION__IF_OWNER, msgs);
+            EXPPackage.EOCL_EXPRESSION__IF_OWNER, msgs);
         return msgs;
     }
 
@@ -304,7 +304,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setIfOwner(EIfExp newIfOwner) {
         if (newIfOwner != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__IF_OWNER
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__IF_OWNER
                 && newIfOwner != null)) {
             if (EcoreUtil.isAncestor(this, newIfOwner))
                 throw new IllegalArgumentException(
@@ -314,13 +314,13 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newIfOwner != null)
                 msgs = ((InternalEObject) newIfOwner).eInverseAdd(this,
-                    expPackage.EIF_EXP__CONDITION, EIfExp.class, msgs);
+                    EXPPackage.EIF_EXP__CONDITION, EIfExp.class, msgs);
             msgs = basicSetIfOwner(newIfOwner, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__IF_OWNER, newIfOwner, newIfOwner));
+                EXPPackage.EOCL_EXPRESSION__IF_OWNER, newIfOwner, newIfOwner));
     }
 
     /**
@@ -330,7 +330,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public EIfExp getElseOwner() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__ELSE_OWNER)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__ELSE_OWNER)
             return null;
         return (EIfExp) eInternalContainer();
     }
@@ -343,7 +343,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetElseOwner(EIfExp newElseOwner,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newElseOwner,
-            expPackage.EOCL_EXPRESSION__ELSE_OWNER, msgs);
+            EXPPackage.EOCL_EXPRESSION__ELSE_OWNER, msgs);
         return msgs;
     }
 
@@ -355,7 +355,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setElseOwner(EIfExp newElseOwner) {
         if (newElseOwner != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__ELSE_OWNER
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__ELSE_OWNER
                 && newElseOwner != null)) {
             if (EcoreUtil.isAncestor(this, newElseOwner))
                 throw new IllegalArgumentException(
@@ -365,13 +365,13 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newElseOwner != null)
                 msgs = ((InternalEObject) newElseOwner).eInverseAdd(this,
-                    expPackage.EIF_EXP__ELSE_EXPRESSION, EIfExp.class, msgs);
+                    EXPPackage.EIF_EXP__ELSE_EXPRESSION, EIfExp.class, msgs);
             msgs = basicSetElseOwner(newElseOwner, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__ELSE_OWNER, newElseOwner,
+                EXPPackage.EOCL_EXPRESSION__ELSE_OWNER, newElseOwner,
                 newElseOwner));
     }
 
@@ -382,7 +382,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public EOperationCallExp getParentCall() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__PARENT_CALL)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__PARENT_CALL)
             return null;
         return (EOperationCallExp) eInternalContainer();
     }
@@ -395,7 +395,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetParentCall(EOperationCallExp newParentCall,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newParentCall,
-            expPackage.EOCL_EXPRESSION__PARENT_CALL, msgs);
+            EXPPackage.EOCL_EXPRESSION__PARENT_CALL, msgs);
         return msgs;
     }
 
@@ -407,7 +407,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setParentCall(EOperationCallExp newParentCall) {
         if (newParentCall != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__PARENT_CALL
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__PARENT_CALL
                 && newParentCall != null)) {
             if (EcoreUtil.isAncestor(this, newParentCall))
                 throw new IllegalArgumentException(
@@ -417,14 +417,14 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newParentCall != null)
                 msgs = ((InternalEObject) newParentCall).eInverseAdd(this,
-                    expPackage.EOPERATION_CALL_EXP__ARGUMENT,
+                    EXPPackage.EOPERATION_CALL_EXP__ARGUMENT,
                     EOperationCallExp.class, msgs);
             msgs = basicSetParentCall(newParentCall, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__PARENT_CALL, newParentCall,
+                EXPPackage.EOCL_EXPRESSION__PARENT_CALL, newParentCall,
                 newParentCall));
     }
 
@@ -435,7 +435,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public ENavigationCallExp getParentNav() {
-        if (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__PARENT_NAV)
+        if (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__PARENT_NAV)
             return null;
         return (ENavigationCallExp) eInternalContainer();
     }
@@ -448,7 +448,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetParentNav(ENavigationCallExp newParentNav,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newParentNav,
-            expPackage.EOCL_EXPRESSION__PARENT_NAV, msgs);
+            EXPPackage.EOCL_EXPRESSION__PARENT_NAV, msgs);
         return msgs;
     }
 
@@ -460,7 +460,7 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void setParentNav(ENavigationCallExp newParentNav) {
         if (newParentNav != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EOCL_EXPRESSION__PARENT_NAV
+            || (eContainerFeatureID() != EXPPackage.EOCL_EXPRESSION__PARENT_NAV
                 && newParentNav != null)) {
             if (EcoreUtil.isAncestor(this, newParentNav))
                 throw new IllegalArgumentException(
@@ -470,14 +470,14 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newParentNav != null)
                 msgs = ((InternalEObject) newParentNav).eInverseAdd(this,
-                    expPackage.ENAVIGATION_CALL_EXP__QUALIFIER,
+                    EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER,
                     ENavigationCallExp.class, msgs);
             msgs = basicSetParentNav(newParentNav, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOCL_EXPRESSION__PARENT_NAV, newParentNav,
+                EXPPackage.EOCL_EXPRESSION__PARENT_NAV, newParentNav,
                 newParentNav));
     }
 
@@ -490,35 +490,35 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetLoopBodyOwner((ELoopExp) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetAppliedElement((ECallExp) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetInitializedElement((EVariable) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetThenOwner((EIfExp) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetIfOwner((EIfExp) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetElseOwner((EIfExp) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetParentCall((EOperationCallExp) otherEnd, msgs);
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetParentNav((ENavigationCallExp) otherEnd, msgs);
@@ -535,21 +535,21 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             return basicSetLoopBodyOwner(null, msgs);
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             return basicSetAppliedElement(null, msgs);
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             return basicSetInitializedElement(null, msgs);
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             return basicSetThenOwner(null, msgs);
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             return basicSetIfOwner(null, msgs);
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             return basicSetElseOwner(null, msgs);
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             return basicSetParentCall(null, msgs);
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             return basicSetParentNav(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -564,31 +564,31 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     public NotificationChain eBasicRemoveFromContainerFeature(
         NotificationChain msgs) {
         switch (eContainerFeatureID()) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.ELOOP_EXP__BODY, ELoopExp.class, msgs);
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+                EXPPackage.ELOOP_EXP__BODY, ELoopExp.class, msgs);
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.ECALL_EXP__SOURCE, ECallExp.class, msgs);
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+                EXPPackage.ECALL_EXP__SOURCE, ECallExp.class, msgs);
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.EVARIABLE__INIT_EXPRESSION, EVariable.class, msgs);
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+                EXPPackage.EVARIABLE__INIT_EXPRESSION, EVariable.class, msgs);
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.EIF_EXP__THEN_EXPRESSION, EIfExp.class, msgs);
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+                EXPPackage.EIF_EXP__THEN_EXPRESSION, EIfExp.class, msgs);
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.EIF_EXP__CONDITION, EIfExp.class, msgs);
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+                EXPPackage.EIF_EXP__CONDITION, EIfExp.class, msgs);
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.EIF_EXP__ELSE_EXPRESSION, EIfExp.class, msgs);
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+                EXPPackage.EIF_EXP__ELSE_EXPRESSION, EIfExp.class, msgs);
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.EOPERATION_CALL_EXP__ARGUMENT,
+                EXPPackage.EOPERATION_CALL_EXP__ARGUMENT,
                 EOperationCallExp.class, msgs);
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.ENAVIGATION_CALL_EXP__QUALIFIER,
+                EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER,
                 ENavigationCallExp.class, msgs);
         }
         return super.eBasicRemoveFromContainerFeature(msgs);
@@ -602,21 +602,21 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             return getLoopBodyOwner();
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             return getAppliedElement();
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             return getInitializedElement();
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             return getThenOwner();
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             return getIfOwner();
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             return getElseOwner();
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             return getParentCall();
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             return getParentNav();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -630,28 +630,28 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             setLoopBodyOwner((ELoopExp) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             setAppliedElement((ECallExp) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             setInitializedElement((EVariable) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             setThenOwner((EIfExp) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             setIfOwner((EIfExp) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             setElseOwner((EIfExp) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             setParentCall((EOperationCallExp) newValue);
             return;
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             setParentNav((ENavigationCallExp) newValue);
             return;
         }
@@ -666,28 +666,28 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             setLoopBodyOwner((ELoopExp) null);
             return;
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             setAppliedElement((ECallExp) null);
             return;
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             setInitializedElement((EVariable) null);
             return;
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             setThenOwner((EIfExp) null);
             return;
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             setIfOwner((EIfExp) null);
             return;
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             setElseOwner((EIfExp) null);
             return;
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             setParentCall((EOperationCallExp) null);
             return;
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             setParentNav((ENavigationCallExp) null);
             return;
         }
@@ -702,21 +702,21 @@ public abstract class EOclExpressionImpl extends MinimalEObjectImpl.Container
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER:
             return getLoopBodyOwner() != null;
-        case expPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__APPLIED_ELEMENT:
             return getAppliedElement() != null;
-        case expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
+        case EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT:
             return getInitializedElement() != null;
-        case expPackage.EOCL_EXPRESSION__THEN_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__THEN_OWNER:
             return getThenOwner() != null;
-        case expPackage.EOCL_EXPRESSION__IF_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__IF_OWNER:
             return getIfOwner() != null;
-        case expPackage.EOCL_EXPRESSION__ELSE_OWNER:
+        case EXPPackage.EOCL_EXPRESSION__ELSE_OWNER:
             return getElseOwner() != null;
-        case expPackage.EOCL_EXPRESSION__PARENT_CALL:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_CALL:
             return getParentCall() != null;
-        case expPackage.EOCL_EXPRESSION__PARENT_NAV:
+        case EXPPackage.EOCL_EXPRESSION__PARENT_NAV:
             return getParentNav() != null;
         }
         return super.eIsSet(featureID);

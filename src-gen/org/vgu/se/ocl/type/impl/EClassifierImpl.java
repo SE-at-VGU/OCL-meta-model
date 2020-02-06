@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.vgu.se.ocl.type.EClassifier;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public abstract class EClassifierImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.ECLASSIFIER;
+        return TYPEPackage.Literals.ECLASSIFIER;
     }
 
 } //EClassifierImpl

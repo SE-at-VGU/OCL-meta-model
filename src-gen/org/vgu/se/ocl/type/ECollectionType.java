@@ -14,7 +14,7 @@ package org.vgu.se.ocl.type;
  *   <li>{@link org.vgu.se.ocl.type.ECollectionType#getElementType <em>Element Type</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.type.typePackage#getECollectionType()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getECollectionType()
  * @model
  * @generated
  */
@@ -25,7 +25,7 @@ public interface ECollectionType extends EDataType {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Element Type</em>' reference.
      * @see #setElementType(EClassifier)
-     * @see org.vgu.se.ocl.type.typePackage#getECollectionType_ElementType()
+     * @see org.vgu.se.ocl.type.TYPEPackage#getECollectionType_ElementType()
      * @model required="true"
      * @generated
      */

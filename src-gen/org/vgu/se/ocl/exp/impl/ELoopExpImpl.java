@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.vgu.se.ocl.exp.ELoopExp;
 import org.vgu.se.ocl.exp.EOclExpression;
 import org.vgu.se.ocl.exp.EVariable;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ELOOP_EXP;
+        return EXPPackage.Literals.ELOOP_EXP;
     }
 
     /**
@@ -97,7 +97,7 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
         body = newBody;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.ELOOP_EXP__BODY, oldBody, newBody);
+                Notification.SET, EXPPackage.ELOOP_EXP__BODY, oldBody, newBody);
             if (msgs == null)
                 msgs = notification;
             else
@@ -117,18 +117,18 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
             NotificationChain msgs = null;
             if (body != null)
                 msgs = ((InternalEObject) body).eInverseRemove(this,
-                    expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER,
+                    EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER,
                     EOclExpression.class, msgs);
             if (newBody != null)
                 msgs = ((InternalEObject) newBody).eInverseAdd(this,
-                    expPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER,
+                    EXPPackage.EOCL_EXPRESSION__LOOP_BODY_OWNER,
                     EOclExpression.class, msgs);
             msgs = basicSetBody(newBody, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.ELOOP_EXP__BODY, newBody, newBody));
+                EXPPackage.ELOOP_EXP__BODY, newBody, newBody));
     }
 
     /**
@@ -140,8 +140,8 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     public EList<EVariable> getIterator() {
         if (iterator == null) {
             iterator = new EObjectContainmentWithInverseEList<EVariable>(
-                EVariable.class, this, expPackage.ELOOP_EXP__ITERATOR,
-                expPackage.EVARIABLE__LOOP_EXP);
+                EVariable.class, this, EXPPackage.ELOOP_EXP__ITERATOR,
+                EXPPackage.EVARIABLE__LOOP_EXP);
         }
         return iterator;
     }
@@ -156,13 +156,13 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.ELOOP_EXP__BODY:
+        case EXPPackage.ELOOP_EXP__BODY:
             if (body != null)
                 msgs = ((InternalEObject) body).eInverseRemove(this,
-                    EOPPOSITE_FEATURE_BASE - expPackage.ELOOP_EXP__BODY, null,
+                    EOPPOSITE_FEATURE_BASE - EXPPackage.ELOOP_EXP__BODY, null,
                     msgs);
             return basicSetBody((EOclExpression) otherEnd, msgs);
-        case expPackage.ELOOP_EXP__ITERATOR:
+        case EXPPackage.ELOOP_EXP__ITERATOR:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getIterator())
                 .basicAdd(otherEnd, msgs);
         }
@@ -178,9 +178,9 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.ELOOP_EXP__BODY:
+        case EXPPackage.ELOOP_EXP__BODY:
             return basicSetBody(null, msgs);
-        case expPackage.ELOOP_EXP__ITERATOR:
+        case EXPPackage.ELOOP_EXP__ITERATOR:
             return ((InternalEList<?>) getIterator()).basicRemove(otherEnd,
                 msgs);
         }
@@ -195,9 +195,9 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.ELOOP_EXP__BODY:
+        case EXPPackage.ELOOP_EXP__BODY:
             return getBody();
-        case expPackage.ELOOP_EXP__ITERATOR:
+        case EXPPackage.ELOOP_EXP__ITERATOR:
             return getIterator();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -212,10 +212,10 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.ELOOP_EXP__BODY:
+        case EXPPackage.ELOOP_EXP__BODY:
             setBody((EOclExpression) newValue);
             return;
-        case expPackage.ELOOP_EXP__ITERATOR:
+        case EXPPackage.ELOOP_EXP__ITERATOR:
             getIterator().clear();
             getIterator().addAll((Collection<? extends EVariable>) newValue);
             return;
@@ -231,10 +231,10 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.ELOOP_EXP__BODY:
+        case EXPPackage.ELOOP_EXP__BODY:
             setBody((EOclExpression) null);
             return;
-        case expPackage.ELOOP_EXP__ITERATOR:
+        case EXPPackage.ELOOP_EXP__ITERATOR:
             getIterator().clear();
             return;
         }
@@ -249,9 +249,9 @@ public abstract class ELoopExpImpl extends ECallExpImpl implements ELoopExp {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.ELOOP_EXP__BODY:
+        case EXPPackage.ELOOP_EXP__BODY:
             return body != null;
-        case expPackage.ELOOP_EXP__ITERATOR:
+        case EXPPackage.ELOOP_EXP__ITERATOR:
             return iterator != null && !iterator.isEmpty();
         }
         return super.eIsSet(featureID);

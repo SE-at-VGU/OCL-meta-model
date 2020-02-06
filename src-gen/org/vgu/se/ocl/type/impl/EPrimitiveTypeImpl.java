@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EPrimitiveType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class EPrimitiveTypeImpl extends EDataTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EPRIMITIVE_TYPE;
+        return TYPEPackage.Literals.EPRIMITIVE_TYPE;
     }
 
 } //EPrimitiveTypeImpl

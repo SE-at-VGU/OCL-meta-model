@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EIfExp;
 import org.vgu.se.ocl.exp.EOclExpression;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EIF_EXP;
+        return EXPPackage.Literals.EIF_EXP;
     }
 
     /**
@@ -100,7 +100,7 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
         thenExpression = newThenExpression;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.EIF_EXP__THEN_EXPRESSION,
+                Notification.SET, EXPPackage.EIF_EXP__THEN_EXPRESSION,
                 oldThenExpression, newThenExpression);
             if (msgs == null)
                 msgs = notification;
@@ -121,18 +121,18 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
             NotificationChain msgs = null;
             if (thenExpression != null)
                 msgs = ((InternalEObject) thenExpression).eInverseRemove(this,
-                    expPackage.EOCL_EXPRESSION__THEN_OWNER,
+                    EXPPackage.EOCL_EXPRESSION__THEN_OWNER,
                     EOclExpression.class, msgs);
             if (newThenExpression != null)
                 msgs = ((InternalEObject) newThenExpression).eInverseAdd(this,
-                    expPackage.EOCL_EXPRESSION__THEN_OWNER,
+                    EXPPackage.EOCL_EXPRESSION__THEN_OWNER,
                     EOclExpression.class, msgs);
             msgs = basicSetThenExpression(newThenExpression, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EIF_EXP__THEN_EXPRESSION, newThenExpression,
+                EXPPackage.EIF_EXP__THEN_EXPRESSION, newThenExpression,
                 newThenExpression));
     }
 
@@ -157,7 +157,7 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
         condition = newCondition;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.EIF_EXP__CONDITION, oldCondition,
+                Notification.SET, EXPPackage.EIF_EXP__CONDITION, oldCondition,
                 newCondition);
             if (msgs == null)
                 msgs = notification;
@@ -178,18 +178,18 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
             NotificationChain msgs = null;
             if (condition != null)
                 msgs = ((InternalEObject) condition).eInverseRemove(this,
-                    expPackage.EOCL_EXPRESSION__IF_OWNER, EOclExpression.class,
+                    EXPPackage.EOCL_EXPRESSION__IF_OWNER, EOclExpression.class,
                     msgs);
             if (newCondition != null)
                 msgs = ((InternalEObject) newCondition).eInverseAdd(this,
-                    expPackage.EOCL_EXPRESSION__IF_OWNER, EOclExpression.class,
+                    EXPPackage.EOCL_EXPRESSION__IF_OWNER, EOclExpression.class,
                     msgs);
             msgs = basicSetCondition(newCondition, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EIF_EXP__CONDITION, newCondition, newCondition));
+                EXPPackage.EIF_EXP__CONDITION, newCondition, newCondition));
     }
 
     /**
@@ -213,7 +213,7 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
         elseExpression = newElseExpression;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.EIF_EXP__ELSE_EXPRESSION,
+                Notification.SET, EXPPackage.EIF_EXP__ELSE_EXPRESSION,
                 oldElseExpression, newElseExpression);
             if (msgs == null)
                 msgs = notification;
@@ -234,18 +234,18 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
             NotificationChain msgs = null;
             if (elseExpression != null)
                 msgs = ((InternalEObject) elseExpression).eInverseRemove(this,
-                    expPackage.EOCL_EXPRESSION__ELSE_OWNER,
+                    EXPPackage.EOCL_EXPRESSION__ELSE_OWNER,
                     EOclExpression.class, msgs);
             if (newElseExpression != null)
                 msgs = ((InternalEObject) newElseExpression).eInverseAdd(this,
-                    expPackage.EOCL_EXPRESSION__ELSE_OWNER,
+                    EXPPackage.EOCL_EXPRESSION__ELSE_OWNER,
                     EOclExpression.class, msgs);
             msgs = basicSetElseExpression(newElseExpression, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EIF_EXP__ELSE_EXPRESSION, newElseExpression,
+                EXPPackage.EIF_EXP__ELSE_EXPRESSION, newElseExpression,
                 newElseExpression));
     }
 
@@ -258,24 +258,24 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EIF_EXP__THEN_EXPRESSION:
+        case EXPPackage.EIF_EXP__THEN_EXPRESSION:
             if (thenExpression != null)
                 msgs = ((InternalEObject) thenExpression).eInverseRemove(this,
                     EOPPOSITE_FEATURE_BASE
-                        - expPackage.EIF_EXP__THEN_EXPRESSION,
+                        - EXPPackage.EIF_EXP__THEN_EXPRESSION,
                     null, msgs);
             return basicSetThenExpression((EOclExpression) otherEnd, msgs);
-        case expPackage.EIF_EXP__CONDITION:
+        case EXPPackage.EIF_EXP__CONDITION:
             if (condition != null)
                 msgs = ((InternalEObject) condition).eInverseRemove(this,
-                    EOPPOSITE_FEATURE_BASE - expPackage.EIF_EXP__CONDITION,
+                    EOPPOSITE_FEATURE_BASE - EXPPackage.EIF_EXP__CONDITION,
                     null, msgs);
             return basicSetCondition((EOclExpression) otherEnd, msgs);
-        case expPackage.EIF_EXP__ELSE_EXPRESSION:
+        case EXPPackage.EIF_EXP__ELSE_EXPRESSION:
             if (elseExpression != null)
                 msgs = ((InternalEObject) elseExpression).eInverseRemove(this,
                     EOPPOSITE_FEATURE_BASE
-                        - expPackage.EIF_EXP__ELSE_EXPRESSION,
+                        - EXPPackage.EIF_EXP__ELSE_EXPRESSION,
                     null, msgs);
             return basicSetElseExpression((EOclExpression) otherEnd, msgs);
         }
@@ -291,11 +291,11 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EIF_EXP__THEN_EXPRESSION:
+        case EXPPackage.EIF_EXP__THEN_EXPRESSION:
             return basicSetThenExpression(null, msgs);
-        case expPackage.EIF_EXP__CONDITION:
+        case EXPPackage.EIF_EXP__CONDITION:
             return basicSetCondition(null, msgs);
-        case expPackage.EIF_EXP__ELSE_EXPRESSION:
+        case EXPPackage.EIF_EXP__ELSE_EXPRESSION:
             return basicSetElseExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -309,11 +309,11 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EIF_EXP__THEN_EXPRESSION:
+        case EXPPackage.EIF_EXP__THEN_EXPRESSION:
             return getThenExpression();
-        case expPackage.EIF_EXP__CONDITION:
+        case EXPPackage.EIF_EXP__CONDITION:
             return getCondition();
-        case expPackage.EIF_EXP__ELSE_EXPRESSION:
+        case EXPPackage.EIF_EXP__ELSE_EXPRESSION:
             return getElseExpression();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -327,13 +327,13 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EIF_EXP__THEN_EXPRESSION:
+        case EXPPackage.EIF_EXP__THEN_EXPRESSION:
             setThenExpression((EOclExpression) newValue);
             return;
-        case expPackage.EIF_EXP__CONDITION:
+        case EXPPackage.EIF_EXP__CONDITION:
             setCondition((EOclExpression) newValue);
             return;
-        case expPackage.EIF_EXP__ELSE_EXPRESSION:
+        case EXPPackage.EIF_EXP__ELSE_EXPRESSION:
             setElseExpression((EOclExpression) newValue);
             return;
         }
@@ -348,13 +348,13 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EIF_EXP__THEN_EXPRESSION:
+        case EXPPackage.EIF_EXP__THEN_EXPRESSION:
             setThenExpression((EOclExpression) null);
             return;
-        case expPackage.EIF_EXP__CONDITION:
+        case EXPPackage.EIF_EXP__CONDITION:
             setCondition((EOclExpression) null);
             return;
-        case expPackage.EIF_EXP__ELSE_EXPRESSION:
+        case EXPPackage.EIF_EXP__ELSE_EXPRESSION:
             setElseExpression((EOclExpression) null);
             return;
         }
@@ -369,11 +369,11 @@ public class EIfExpImpl extends EOclExpressionImpl implements EIfExp {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EIF_EXP__THEN_EXPRESSION:
+        case EXPPackage.EIF_EXP__THEN_EXPRESSION:
             return thenExpression != null;
-        case expPackage.EIF_EXP__CONDITION:
+        case EXPPackage.EIF_EXP__CONDITION:
             return condition != null;
-        case expPackage.EIF_EXP__ELSE_EXPRESSION:
+        case EXPPackage.EIF_EXP__ELSE_EXPRESSION:
             return elseExpression != null;
         }
         return super.eIsSet(featureID);

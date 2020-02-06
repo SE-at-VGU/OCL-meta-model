@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>EIterator Kind</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.exp.expPackage#getEIteratorKind()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEIteratorKind()
  * @model instanceClass="org.vgu.se.ocl.exp.EIteratorKind"
  * @generated
  */

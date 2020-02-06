@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.vgu.se.ocl.dm.DMPackage;
 import org.vgu.se.ocl.dm.EAssociation;
 import org.vgu.se.ocl.dm.EAttribute;
 import org.vgu.se.ocl.dm.EEntity;
-import org.vgu.se.ocl.dm.dmPackage;
 
 import org.vgu.se.ocl.type.impl.EClassifierImpl;
 
@@ -96,7 +96,7 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
      */
     @Override
     protected EClass eStaticClass() {
-        return dmPackage.Literals.EENTITY;
+        return DMPackage.Literals.EENTITY;
     }
 
     /**
@@ -120,7 +120,7 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                dmPackage.EENTITY__NAME, oldName, name));
+                DMPackage.EENTITY__NAME, oldName, name));
     }
 
     /**
@@ -132,7 +132,7 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     public EList<EAssociation> getEnds() {
         if (ends == null) {
             ends = new EObjectContainmentEList<EAssociation>(EAssociation.class,
-                this, dmPackage.EENTITY__ENDS);
+                this, DMPackage.EENTITY__ENDS);
         }
         return ends;
     }
@@ -146,7 +146,7 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     public EList<EAttribute> getAttributes() {
         if (attributes == null) {
             attributes = new EObjectContainmentEList<EAttribute>(
-                EAttribute.class, this, dmPackage.EENTITY__ATTRIBUTES);
+                EAttribute.class, this, DMPackage.EENTITY__ATTRIBUTES);
         }
         return attributes;
     }
@@ -160,9 +160,9 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case dmPackage.EENTITY__ENDS:
+        case DMPackage.EENTITY__ENDS:
             return ((InternalEList<?>) getEnds()).basicRemove(otherEnd, msgs);
-        case dmPackage.EENTITY__ATTRIBUTES:
+        case DMPackage.EENTITY__ATTRIBUTES:
             return ((InternalEList<?>) getAttributes()).basicRemove(otherEnd,
                 msgs);
         }
@@ -177,11 +177,11 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case dmPackage.EENTITY__NAME:
+        case DMPackage.EENTITY__NAME:
             return getName();
-        case dmPackage.EENTITY__ENDS:
+        case DMPackage.EENTITY__ENDS:
             return getEnds();
-        case dmPackage.EENTITY__ATTRIBUTES:
+        case DMPackage.EENTITY__ATTRIBUTES:
             return getAttributes();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -196,14 +196,14 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case dmPackage.EENTITY__NAME:
+        case DMPackage.EENTITY__NAME:
             setName((String) newValue);
             return;
-        case dmPackage.EENTITY__ENDS:
+        case DMPackage.EENTITY__ENDS:
             getEnds().clear();
             getEnds().addAll((Collection<? extends EAssociation>) newValue);
             return;
-        case dmPackage.EENTITY__ATTRIBUTES:
+        case DMPackage.EENTITY__ATTRIBUTES:
             getAttributes().clear();
             getAttributes().addAll((Collection<? extends EAttribute>) newValue);
             return;
@@ -219,13 +219,13 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case dmPackage.EENTITY__NAME:
+        case DMPackage.EENTITY__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case dmPackage.EENTITY__ENDS:
+        case DMPackage.EENTITY__ENDS:
             getEnds().clear();
             return;
-        case dmPackage.EENTITY__ATTRIBUTES:
+        case DMPackage.EENTITY__ATTRIBUTES:
             getAttributes().clear();
             return;
         }
@@ -240,12 +240,12 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case dmPackage.EENTITY__NAME:
+        case DMPackage.EENTITY__NAME:
             return NAME_EDEFAULT == null ? name != null
                 : !NAME_EDEFAULT.equals(name);
-        case dmPackage.EENTITY__ENDS:
+        case DMPackage.EENTITY__ENDS:
             return ends != null && !ends.isEmpty();
-        case dmPackage.EENTITY__ATTRIBUTES:
+        case DMPackage.EENTITY__ATTRIBUTES:
             return attributes != null && !attributes.isEmpty();
         }
         return super.eIsSet(featureID);

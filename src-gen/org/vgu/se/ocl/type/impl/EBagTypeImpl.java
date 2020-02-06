@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EBagType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EBagTypeImpl extends ECollectionTypeImpl implements EBagType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EBAG_TYPE;
+        return TYPEPackage.Literals.EBAG_TYPE;
     }
 
 } //EBagTypeImpl

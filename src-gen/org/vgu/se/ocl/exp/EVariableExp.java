@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EVariableExp#getReferredVariable <em>Referred Variable</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEVariableExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEVariableExp()
  * @model
  * @generated
  */
@@ -25,7 +25,7 @@ public interface EVariableExp extends EOclExpression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Referred Variable</em>' reference.
      * @see #setReferredVariable(EVariable)
-     * @see org.vgu.se.ocl.exp.expPackage#getEVariableExp_ReferredVariable()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEVariableExp_ReferredVariable()
      * @model
      * @generated
      */

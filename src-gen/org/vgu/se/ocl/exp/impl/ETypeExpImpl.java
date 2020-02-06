@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.ETypeExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 import org.vgu.se.ocl.type.EClassifier;
 
@@ -54,7 +54,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ETYPE_EXP;
+        return EXPPackage.Literals.ETYPE_EXP;
     }
 
     /**
@@ -70,7 +70,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
             if (referredType != oldReferredType) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        expPackage.ETYPE_EXP__REFERRED_TYPE, oldReferredType,
+                        EXPPackage.ETYPE_EXP__REFERRED_TYPE, oldReferredType,
                         referredType));
             }
         }
@@ -97,7 +97,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
         referredType = newReferredType;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.ETYPE_EXP__REFERRED_TYPE, oldReferredType,
+                EXPPackage.ETYPE_EXP__REFERRED_TYPE, oldReferredType,
                 referredType));
     }
 
@@ -109,7 +109,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.ETYPE_EXP__REFERRED_TYPE:
+        case EXPPackage.ETYPE_EXP__REFERRED_TYPE:
             if (resolve)
                 return getReferredType();
             return basicGetReferredType();
@@ -125,7 +125,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.ETYPE_EXP__REFERRED_TYPE:
+        case EXPPackage.ETYPE_EXP__REFERRED_TYPE:
             setReferredType((EClassifier) newValue);
             return;
         }
@@ -140,7 +140,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.ETYPE_EXP__REFERRED_TYPE:
+        case EXPPackage.ETYPE_EXP__REFERRED_TYPE:
             setReferredType((EClassifier) null);
             return;
         }
@@ -155,7 +155,7 @@ public class ETypeExpImpl extends EOclExpressionImpl implements ETypeExp {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.ETYPE_EXP__REFERRED_TYPE:
+        case EXPPackage.ETYPE_EXP__REFERRED_TYPE:
             return referredType != null;
         }
         return super.eIsSet(featureID);

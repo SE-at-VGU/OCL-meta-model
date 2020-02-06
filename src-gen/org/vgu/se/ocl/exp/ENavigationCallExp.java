@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.vgu.se.ocl.exp.ENavigationCallExp#getQualifier <em>Qualifier</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getENavigationCallExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getENavigationCallExp()
  * @model abstract="true"
  * @generated
  */
@@ -28,7 +28,7 @@ public interface ENavigationCallExp extends EFeatureCallExp {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Qualifier</em>' containment reference list.
-     * @see org.vgu.se.ocl.exp.expPackage#getENavigationCallExp_Qualifier()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getENavigationCallExp_Qualifier()
      * @see org.vgu.se.ocl.exp.EOclExpression#getParentNav
      * @model opposite="parentNav" containment="true"
      * @generated

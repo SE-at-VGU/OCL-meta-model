@@ -16,17 +16,17 @@ import org.vgu.se.ocl.exp.*;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.exp.expPackage
+ * @see org.vgu.se.ocl.exp.EXPPackage
  * @generated
  */
-public class expAdapterFactory extends AdapterFactoryImpl {
+public class EXPAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static expPackage modelPackage;
+    protected static EXPPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class expAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    public expAdapterFactory() {
+    public EXPAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = expPackage.eINSTANCE;
+            modelPackage = EXPPackage.eINSTANCE;
         }
     }
 
@@ -65,7 +65,7 @@ public class expAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected expSwitch<Adapter> modelSwitch = new expSwitch<Adapter>() {
+    protected EXPSwitch<Adapter> modelSwitch = new EXPSwitch<Adapter>() {
         @Override
         public Adapter caseEVariableExp(EVariableExp object) {
             return createEVariableExpAdapter();
@@ -516,4 +516,4 @@ public class expAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} //expAdapterFactory
+} //EXPAdapterFactory

@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EAnyType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EAnyTypeImpl extends EClassifierImpl implements EAnyType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EANY_TYPE;
+        return TYPEPackage.Literals.EANY_TYPE;
     }
 
 } //EAnyTypeImpl

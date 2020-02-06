@@ -13,7 +13,7 @@ import org.vgu.se.ocl.exp.EOperator;
 
 import org.vgu.se.ocl.type.EMessageType;
 import org.vgu.se.ocl.type.ESignal;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -76,7 +76,7 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EMESSAGE_TYPE;
+        return TYPEPackage.Literals.EMESSAGE_TYPE;
     }
 
     /**
@@ -92,7 +92,7 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
             if (referredSignal != oldReferredSignal) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        typePackage.EMESSAGE_TYPE__REFERRED_SIGNAL,
+                        TYPEPackage.EMESSAGE_TYPE__REFERRED_SIGNAL,
                         oldReferredSignal, referredSignal));
             }
         }
@@ -119,7 +119,7 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
         referredSignal = newReferredSignal;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                typePackage.EMESSAGE_TYPE__REFERRED_SIGNAL, oldReferredSignal,
+                TYPEPackage.EMESSAGE_TYPE__REFERRED_SIGNAL, oldReferredSignal,
                 referredSignal));
     }
 
@@ -146,7 +146,7 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
             : newReferredOperation;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                typePackage.EMESSAGE_TYPE__REFERRED_OPERATION,
+                TYPEPackage.EMESSAGE_TYPE__REFERRED_OPERATION,
                 oldReferredOperation, referredOperation));
     }
 
@@ -158,11 +158,11 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case typePackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
             if (resolve)
                 return getReferredSignal();
             return basicGetReferredSignal();
-        case typePackage.EMESSAGE_TYPE__REFERRED_OPERATION:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_OPERATION:
             return getReferredOperation();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -176,10 +176,10 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case typePackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
             setReferredSignal((ESignal) newValue);
             return;
-        case typePackage.EMESSAGE_TYPE__REFERRED_OPERATION:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_OPERATION:
             setReferredOperation((EOperator) newValue);
             return;
         }
@@ -194,10 +194,10 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case typePackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
             setReferredSignal((ESignal) null);
             return;
-        case typePackage.EMESSAGE_TYPE__REFERRED_OPERATION:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_OPERATION:
             setReferredOperation(REFERRED_OPERATION_EDEFAULT);
             return;
         }
@@ -212,9 +212,9 @@ public class EMessageTypeImpl extends EClassifierImpl implements EMessageType {
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case typePackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_SIGNAL:
             return referredSignal != null;
-        case typePackage.EMESSAGE_TYPE__REFERRED_OPERATION:
+        case TYPEPackage.EMESSAGE_TYPE__REFERRED_OPERATION:
             return referredOperation != REFERRED_OPERATION_EDEFAULT;
         }
         return super.eIsSet(featureID);

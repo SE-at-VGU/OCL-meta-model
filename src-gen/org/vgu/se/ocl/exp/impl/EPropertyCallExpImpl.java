@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.vgu.se.ocl.dm.EAttribute;
 
 import org.vgu.se.ocl.exp.EPropertyCallExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EPROPERTY_CALL_EXP;
+        return EXPPackage.Literals.EPROPERTY_CALL_EXP;
     }
 
     /**
@@ -71,7 +71,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
             if (referredProperty != oldReferredProperty) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        expPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY,
+                        EXPPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY,
                         oldReferredProperty, referredProperty));
             }
         }
@@ -98,7 +98,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
         referredProperty = newReferredProperty;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY,
+                EXPPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY,
                 oldReferredProperty, referredProperty));
     }
 
@@ -110,7 +110,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
+        case EXPPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
             if (resolve)
                 return getReferredProperty();
             return basicGetReferredProperty();
@@ -126,7 +126,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
+        case EXPPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
             setReferredProperty((EAttribute) newValue);
             return;
         }
@@ -141,7 +141,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
+        case EXPPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
             setReferredProperty((EAttribute) null);
             return;
         }
@@ -156,7 +156,7 @@ public class EPropertyCallExpImpl extends ENavigationCallExpImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
+        case EXPPackage.EPROPERTY_CALL_EXP__REFERRED_PROPERTY:
             return referredProperty != null;
         }
         return super.eIsSet(featureID);

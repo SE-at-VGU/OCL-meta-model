@@ -17,7 +17,7 @@ import org.vgu.se.ocl.exp.EOperator;
  *   <li>{@link org.vgu.se.ocl.type.EMessageType#getReferredOperation <em>Referred Operation</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.type.typePackage#getEMessageType()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getEMessageType()
  * @model
  * @generated
  */
@@ -28,7 +28,7 @@ public interface EMessageType extends EClassifier {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Referred Signal</em>' reference.
      * @see #setReferredSignal(ESignal)
-     * @see org.vgu.se.ocl.type.typePackage#getEMessageType_ReferredSignal()
+     * @see org.vgu.se.ocl.type.TYPEPackage#getEMessageType_ReferredSignal()
      * @model
      * @generated
      */
@@ -52,7 +52,7 @@ public interface EMessageType extends EClassifier {
      * @return the value of the '<em>Referred Operation</em>' attribute.
      * @see org.vgu.se.ocl.exp.EOperator
      * @see #setReferredOperation(EOperator)
-     * @see org.vgu.se.ocl.type.typePackage#getEMessageType_ReferredOperation()
+     * @see org.vgu.se.ocl.type.TYPEPackage#getEMessageType_ReferredOperation()
      * @model dataType="org.vgu.se.ocl.exp.EOperator"
      * @generated
      */

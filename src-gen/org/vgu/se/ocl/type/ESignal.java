@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.type.typePackage#getESignal()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getESignal()
  * @model
  * @generated
  */

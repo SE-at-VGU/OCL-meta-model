@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EVoidType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EVoidTypeImpl extends EClassifierImpl implements EVoidType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EVOID_TYPE;
+        return TYPEPackage.Literals.EVOID_TYPE;
     }
 
 } //EVoidTypeImpl

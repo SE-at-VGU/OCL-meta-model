@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EIntegerLiteralExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class EIntegerLiteralExpImpl extends ENumericLiteralExpImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EINTEGER_LITERAL_EXP;
+        return EXPPackage.Literals.EINTEGER_LITERAL_EXP;
     }
 
     /**
@@ -86,7 +86,7 @@ public class EIntegerLiteralExpImpl extends ENumericLiteralExpImpl
         integerValue = newIntegerValue;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE, oldIntegerValue,
+                EXPPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE, oldIntegerValue,
                 integerValue));
     }
 
@@ -98,7 +98,7 @@ public class EIntegerLiteralExpImpl extends ENumericLiteralExpImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
+        case EXPPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
             return getIntegerValue();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public class EIntegerLiteralExpImpl extends ENumericLiteralExpImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
+        case EXPPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
             setIntegerValue((Integer) newValue);
             return;
         }
@@ -127,7 +127,7 @@ public class EIntegerLiteralExpImpl extends ENumericLiteralExpImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
+        case EXPPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
             setIntegerValue(INTEGER_VALUE_EDEFAULT);
             return;
         }
@@ -142,7 +142,7 @@ public class EIntegerLiteralExpImpl extends ENumericLiteralExpImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
+        case EXPPackage.EINTEGER_LITERAL_EXP__INTEGER_VALUE:
             return INTEGER_VALUE_EDEFAULT == null ? integerValue != null
                 : !INTEGER_VALUE_EDEFAULT.equals(integerValue);
         }

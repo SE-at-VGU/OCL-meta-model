@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.vgu.se.ocl.dm.EAssociation#getTarget <em>Target</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.dm.dmPackage#getEAssociation()
+ * @see org.vgu.se.ocl.dm.DMPackage#getEAssociation()
  * @model
  * @generated
  */
@@ -30,7 +30,7 @@ public interface EAssociation extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEAssociation_Name()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAssociation_Name()
      * @model
      * @generated
      */
@@ -52,7 +52,7 @@ public interface EAssociation extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Opp</em>' attribute.
      * @see #setOpp(String)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEAssociation_Opp()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAssociation_Opp()
      * @model
      * @generated
      */
@@ -76,7 +76,7 @@ public interface EAssociation extends EObject {
      * @return the value of the '<em>Mult</em>' attribute.
      * @see org.vgu.se.ocl.dm.EMultiplicity
      * @see #setMult(EMultiplicity)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEAssociation_Mult()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAssociation_Mult()
      * @model dataType="org.vgu.se.ocl.dm.EMultiplicity"
      * @generated
      */
@@ -99,7 +99,7 @@ public interface EAssociation extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Target</em>' reference.
      * @see #setTarget(EEntity)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEAssociation_Target()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAssociation_Target()
      * @model required="true"
      * @generated
      */

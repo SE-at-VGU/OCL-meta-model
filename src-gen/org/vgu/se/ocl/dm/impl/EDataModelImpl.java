@@ -16,9 +16,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.vgu.se.ocl.dm.DMPackage;
 import org.vgu.se.ocl.dm.EDataModel;
 import org.vgu.se.ocl.dm.EEntity;
-import org.vgu.se.ocl.dm.dmPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -61,7 +61,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return dmPackage.Literals.EDATA_MODEL;
+        return DMPackage.Literals.EDATA_MODEL;
     }
 
     /**
@@ -73,7 +73,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
     public EList<EEntity> getClasses() {
         if (classes == null) {
             classes = new EObjectContainmentEList<EEntity>(EEntity.class, this,
-                dmPackage.EDATA_MODEL__CLASSES);
+                DMPackage.EDATA_MODEL__CLASSES);
         }
         return classes;
     }
@@ -87,7 +87,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case dmPackage.EDATA_MODEL__CLASSES:
+        case DMPackage.EDATA_MODEL__CLASSES:
             return ((InternalEList<?>) getClasses()).basicRemove(otherEnd,
                 msgs);
         }
@@ -102,7 +102,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case dmPackage.EDATA_MODEL__CLASSES:
+        case DMPackage.EDATA_MODEL__CLASSES:
             return getClasses();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -117,7 +117,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case dmPackage.EDATA_MODEL__CLASSES:
+        case DMPackage.EDATA_MODEL__CLASSES:
             getClasses().clear();
             getClasses().addAll((Collection<? extends EEntity>) newValue);
             return;
@@ -133,7 +133,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case dmPackage.EDATA_MODEL__CLASSES:
+        case DMPackage.EDATA_MODEL__CLASSES:
             getClasses().clear();
             return;
         }
@@ -148,7 +148,7 @@ public class EDataModelImpl extends MinimalEObjectImpl.Container
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case dmPackage.EDATA_MODEL__CLASSES:
+        case DMPackage.EDATA_MODEL__CLASSES:
             return classes != null && !classes.isEmpty();
         }
         return super.eIsSet(featureID);

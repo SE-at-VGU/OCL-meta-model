@@ -8,7 +8,7 @@ package org.vgu.se.ocl.exp;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEStateExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEStateExp()
  * @model
  * @generated
  */

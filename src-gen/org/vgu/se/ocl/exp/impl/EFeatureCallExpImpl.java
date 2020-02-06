@@ -5,7 +5,7 @@ package org.vgu.se.ocl.exp.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.exp.EFeatureCallExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public abstract class EFeatureCallExpImpl extends ECallExpImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EFEATURE_CALL_EXP;
+        return EXPPackage.Literals.EFEATURE_CALL_EXP;
     }
 
 } //EFeatureCallExpImpl

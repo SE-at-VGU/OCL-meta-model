@@ -5,7 +5,7 @@ package org.vgu.se.ocl.exp.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.exp.EStateExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EStateExpImpl extends EOclExpressionImpl implements EStateExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ESTATE_EXP;
+        return EXPPackage.Literals.ESTATE_EXP;
     }
 
 } //EStateExpImpl

@@ -8,7 +8,7 @@ package org.vgu.se.ocl.exp;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.exp.expPackage#getENumericLiteralExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getENumericLiteralExp()
  * @model abstract="true"
  * @generated
  */

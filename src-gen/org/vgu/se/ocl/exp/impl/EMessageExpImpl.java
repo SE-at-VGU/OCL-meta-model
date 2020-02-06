@@ -5,7 +5,7 @@ package org.vgu.se.ocl.exp.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.exp.EMessageExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EMessageExpImpl extends EOclExpressionImpl implements EMessageExp {
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EMESSAGE_EXP;
+        return EXPPackage.Literals.EMESSAGE_EXP;
     }
 
 } //EMessageExpImpl

@@ -5,7 +5,7 @@ package org.vgu.se.ocl.exp.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.exp.ELiteralExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public abstract class ELiteralExpImpl extends EOclExpressionImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ELITERAL_EXP;
+        return EXPPackage.Literals.ELITERAL_EXP;
     }
 
 } //ELiteralExpImpl

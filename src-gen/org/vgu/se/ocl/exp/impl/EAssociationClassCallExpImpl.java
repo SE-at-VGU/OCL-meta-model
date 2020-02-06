@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.vgu.se.ocl.dm.EAssociation;
 
 import org.vgu.se.ocl.exp.EAssociationClassCallExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,7 +55,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EASSOCIATION_CLASS_CALL_EXP;
+        return EXPPackage.Literals.EASSOCIATION_CLASS_CALL_EXP;
     }
 
     /**
@@ -73,7 +73,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
             if (referredAssociationEnds != oldReferredAssociationEnds) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        expPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS,
+                        EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS,
                         oldReferredAssociationEnds, referredAssociationEnds));
             }
         }
@@ -101,7 +101,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
         referredAssociationEnds = newReferredAssociationEnds;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS,
+                EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS,
                 oldReferredAssociationEnds, referredAssociationEnds));
     }
 
@@ -113,7 +113,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
+        case EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
             if (resolve)
                 return getReferredAssociationEnds();
             return basicGetReferredAssociationEnds();
@@ -129,7 +129,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
+        case EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
             setReferredAssociationEnds((EAssociation) newValue);
             return;
         }
@@ -144,7 +144,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
+        case EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
             setReferredAssociationEnds((EAssociation) null);
             return;
         }
@@ -159,7 +159,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
+        case EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
             return referredAssociationEnds != null;
         }
         return super.eIsSet(featureID);

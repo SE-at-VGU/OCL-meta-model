@@ -8,7 +8,7 @@ package org.vgu.se.ocl.type;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.type.typePackage#getEBagType()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getEBagType()
  * @model
  * @generated
  */

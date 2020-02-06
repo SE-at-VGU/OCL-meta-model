@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EStringLiteralExp#getStringValue <em>String Value</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEStringLiteralExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEStringLiteralExp()
  * @model
  * @generated
  */
@@ -25,7 +25,7 @@ public interface EStringLiteralExp extends EPrimitiveType {
      * <!-- end-user-doc -->
      * @return the value of the '<em>String Value</em>' attribute.
      * @see #setStringValue(String)
-     * @see org.vgu.se.ocl.exp.expPackage#getEStringLiteralExp_StringValue()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEStringLiteralExp_StringValue()
      * @model
      * @generated
      */

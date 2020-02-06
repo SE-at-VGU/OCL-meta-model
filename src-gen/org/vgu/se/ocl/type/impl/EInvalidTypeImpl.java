@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EInvalidType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class EInvalidTypeImpl extends EClassifierImpl implements EInvalidType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EINVALID_TYPE;
+        return TYPEPackage.Literals.EINVALID_TYPE;
     }
 
 } //EInvalidTypeImpl

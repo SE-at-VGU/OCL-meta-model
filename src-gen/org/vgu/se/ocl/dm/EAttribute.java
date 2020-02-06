@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.vgu.se.ocl.dm.EAttribute#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.dm.dmPackage#getEAttribute()
+ * @see org.vgu.se.ocl.dm.DMPackage#getEAttribute()
  * @model
  * @generated
  */
@@ -28,7 +28,7 @@ public interface EAttribute extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEAttribute_Name()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAttribute_Name()
      * @model
      * @generated
      */
@@ -50,7 +50,7 @@ public interface EAttribute extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Type</em>' attribute.
      * @see #setType(String)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEAttribute_Type()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAttribute_Type()
      * @model
      * @generated
      */

@@ -18,17 +18,17 @@ import org.vgu.se.ocl.type.EClassifier;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.dm.dmPackage
+ * @see org.vgu.se.ocl.dm.DMPackage
  * @generated
  */
-public class dmAdapterFactory extends AdapterFactoryImpl {
+public class DMAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static dmPackage modelPackage;
+    protected static DMPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory.
@@ -36,9 +36,9 @@ public class dmAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    public dmAdapterFactory() {
+    public DMAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = dmPackage.eINSTANCE;
+            modelPackage = DMPackage.eINSTANCE;
         }
     }
 
@@ -67,7 +67,7 @@ public class dmAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected dmSwitch<Adapter> modelSwitch = new dmSwitch<Adapter>() {
+    protected DMSwitch<Adapter> modelSwitch = new DMSwitch<Adapter>() {
         @Override
         public Adapter caseEEntity(EEntity object) {
             return createEEntityAdapter();
@@ -194,4 +194,4 @@ public class dmAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} //dmAdapterFactory
+} //DMAdapterFactory

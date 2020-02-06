@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EIterateExp#getResult <em>Result</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEIterateExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEIterateExp()
  * @model
  * @generated
  */
@@ -26,7 +26,7 @@ public interface EIterateExp extends ELoopExp {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Result</em>' containment reference.
      * @see #setResult(EVariable)
-     * @see org.vgu.se.ocl.exp.expPackage#getEIterateExp_Result()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEIterateExp_Result()
      * @see org.vgu.se.ocl.exp.EVariable#getBaseExp
      * @model opposite="baseExp" containment="true"
      * @generated

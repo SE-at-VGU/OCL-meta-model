@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.vgu.se.ocl.exp.ELoopExp#getIterator <em>Iterator</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getELoopExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getELoopExp()
  * @model abstract="true"
  * @generated
  */
@@ -29,7 +29,7 @@ public interface ELoopExp extends ECallExp {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Body</em>' containment reference.
      * @see #setBody(EOclExpression)
-     * @see org.vgu.se.ocl.exp.expPackage#getELoopExp_Body()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getELoopExp_Body()
      * @see org.vgu.se.ocl.exp.EOclExpression#getLoopBodyOwner
      * @model opposite="loopBodyOwner" containment="true" required="true"
      * @generated
@@ -53,7 +53,7 @@ public interface ELoopExp extends ECallExp {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Iterator</em>' containment reference list.
-     * @see org.vgu.se.ocl.exp.expPackage#getELoopExp_Iterator()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getELoopExp_Iterator()
      * @see org.vgu.se.ocl.exp.EVariable#getLoopExp
      * @model opposite="loopExp" containment="true"
      * @generated

@@ -10,7 +10,7 @@
       <!-- @generated ocl -->
       <package
             uri="http://www.example.org/ocl/dm"
-            class="org.vgu.se.ocl.dm.dmPackage"
+            class="org.vgu.se.ocl.dm.DMPackage"
             genModel="model/ocl.genmodel"/>
    </extension>
 
@@ -18,7 +18,7 @@
       <!-- @generated ocl -->
       <package
             uri="http://www.example.org/ocl/exp"
-            class="org.vgu.se.ocl.exp.expPackage"
+            class="org.vgu.se.ocl.exp.EXPPackage"
             genModel="model/ocl.genmodel"/>
    </extension>
 
@@ -26,7 +26,8 @@
       <!-- @generated ocl -->
       <package
             uri="http://www.example.org/ocl/type"
-            class="org.vgu.se.ocl.type.typePackage"
+            class="org.vgu.se.ocl.type.TYPEPackage"
             genModel="model/ocl.genmodel"/>
    </extension>
+
 </plugin>

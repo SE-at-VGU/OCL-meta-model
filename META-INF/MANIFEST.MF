@@ -8,8 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: 
- org.vgu.se.ocl.dm,
+Export-Package: org.vgu.se.ocl.dm,
  org.vgu.se.ocl.dm.impl,
  org.vgu.se.ocl.dm.util,
  org.vgu.se.ocl.exp,

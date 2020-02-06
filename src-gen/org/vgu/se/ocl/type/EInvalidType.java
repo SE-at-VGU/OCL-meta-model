@@ -8,7 +8,7 @@ package org.vgu.se.ocl.type;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.type.typePackage#getEInvalidType()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getEInvalidType()
  * @model
  * @generated
  */

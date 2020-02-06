@@ -16,7 +16,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EIfExp#getElseExpression <em>Else Expression</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEIfExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEIfExp()
  * @model
  * @generated
  */
@@ -28,7 +28,7 @@ public interface EIfExp extends EOclExpression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Then Expression</em>' containment reference.
      * @see #setThenExpression(EOclExpression)
-     * @see org.vgu.se.ocl.exp.expPackage#getEIfExp_ThenExpression()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEIfExp_ThenExpression()
      * @see org.vgu.se.ocl.exp.EOclExpression#getThenOwner
      * @model opposite="thenOwner" containment="true" required="true"
      * @generated
@@ -52,7 +52,7 @@ public interface EIfExp extends EOclExpression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Condition</em>' containment reference.
      * @see #setCondition(EOclExpression)
-     * @see org.vgu.se.ocl.exp.expPackage#getEIfExp_Condition()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEIfExp_Condition()
      * @see org.vgu.se.ocl.exp.EOclExpression#getIfOwner
      * @model opposite="ifOwner" containment="true" required="true"
      * @generated
@@ -76,7 +76,7 @@ public interface EIfExp extends EOclExpression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Else Expression</em>' containment reference.
      * @see #setElseExpression(EOclExpression)
-     * @see org.vgu.se.ocl.exp.expPackage#getEIfExp_ElseExpression()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEIfExp_ElseExpression()
      * @see org.vgu.se.ocl.exp.EOclExpression#getElseOwner
      * @model opposite="elseOwner" containment="true" required="true"
      * @generated

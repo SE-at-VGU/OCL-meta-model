@@ -8,7 +8,7 @@ package org.vgu.se.ocl.type;
  * <!-- end-user-doc -->
  *
  *
- * @see org.vgu.se.ocl.type.typePackage#getETupleType()
+ * @see org.vgu.se.ocl.type.TYPEPackage#getETupleType()
  * @model
  * @generated
  */

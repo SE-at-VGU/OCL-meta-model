@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EIteratorExp#getKind <em>Kind</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEIteratorExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEIteratorExp()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface EIteratorExp extends ELoopExp {
      * @return the value of the '<em>Kind</em>' attribute.
      * @see org.vgu.se.ocl.exp.EIteratorKind
      * @see #setKind(EIteratorKind)
-     * @see org.vgu.se.ocl.exp.expPackage#getEIteratorExp_Kind()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEIteratorExp_Kind()
      * @model dataType="org.vgu.se.ocl.exp.EIteratorKind"
      * @generated
      */

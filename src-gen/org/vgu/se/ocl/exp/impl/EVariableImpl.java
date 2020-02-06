@@ -17,7 +17,7 @@ import org.vgu.se.ocl.exp.EIterateExp;
 import org.vgu.se.ocl.exp.ELoopExp;
 import org.vgu.se.ocl.exp.EOclExpression;
 import org.vgu.se.ocl.exp.EVariable;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -83,7 +83,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EVARIABLE;
+        return EXPPackage.Literals.EVARIABLE;
     }
 
     /**
@@ -93,7 +93,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public ELoopExp getLoopExp() {
-        if (eContainerFeatureID() != expPackage.EVARIABLE__LOOP_EXP)
+        if (eContainerFeatureID() != EXPPackage.EVARIABLE__LOOP_EXP)
             return null;
         return (ELoopExp) eInternalContainer();
     }
@@ -106,7 +106,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetLoopExp(ELoopExp newLoopExp,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newLoopExp,
-            expPackage.EVARIABLE__LOOP_EXP, msgs);
+            EXPPackage.EVARIABLE__LOOP_EXP, msgs);
         return msgs;
     }
 
@@ -118,7 +118,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     @Override
     public void setLoopExp(ELoopExp newLoopExp) {
         if (newLoopExp != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EVARIABLE__LOOP_EXP
+            || (eContainerFeatureID() != EXPPackage.EVARIABLE__LOOP_EXP
                 && newLoopExp != null)) {
             if (EcoreUtil.isAncestor(this, newLoopExp))
                 throw new IllegalArgumentException(
@@ -128,13 +128,13 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newLoopExp != null)
                 msgs = ((InternalEObject) newLoopExp).eInverseAdd(this,
-                    expPackage.ELOOP_EXP__ITERATOR, ELoopExp.class, msgs);
+                    EXPPackage.ELOOP_EXP__ITERATOR, ELoopExp.class, msgs);
             msgs = basicSetLoopExp(newLoopExp, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EVARIABLE__LOOP_EXP, newLoopExp, newLoopExp));
+                EXPPackage.EVARIABLE__LOOP_EXP, newLoopExp, newLoopExp));
     }
 
     /**
@@ -144,7 +144,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
      */
     @Override
     public EIterateExp getBaseExp() {
-        if (eContainerFeatureID() != expPackage.EVARIABLE__BASE_EXP)
+        if (eContainerFeatureID() != EXPPackage.EVARIABLE__BASE_EXP)
             return null;
         return (EIterateExp) eInternalContainer();
     }
@@ -157,7 +157,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     public NotificationChain basicSetBaseExp(EIterateExp newBaseExp,
         NotificationChain msgs) {
         msgs = eBasicSetContainer((InternalEObject) newBaseExp,
-            expPackage.EVARIABLE__BASE_EXP, msgs);
+            EXPPackage.EVARIABLE__BASE_EXP, msgs);
         return msgs;
     }
 
@@ -169,7 +169,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     @Override
     public void setBaseExp(EIterateExp newBaseExp) {
         if (newBaseExp != eInternalContainer()
-            || (eContainerFeatureID() != expPackage.EVARIABLE__BASE_EXP
+            || (eContainerFeatureID() != EXPPackage.EVARIABLE__BASE_EXP
                 && newBaseExp != null)) {
             if (EcoreUtil.isAncestor(this, newBaseExp))
                 throw new IllegalArgumentException(
@@ -179,13 +179,13 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
                 msgs = eBasicRemoveFromContainer(msgs);
             if (newBaseExp != null)
                 msgs = ((InternalEObject) newBaseExp).eInverseAdd(this,
-                    expPackage.EITERATE_EXP__RESULT, EIterateExp.class, msgs);
+                    EXPPackage.EITERATE_EXP__RESULT, EIterateExp.class, msgs);
             msgs = basicSetBaseExp(newBaseExp, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EVARIABLE__BASE_EXP, newBaseExp, newBaseExp));
+                EXPPackage.EVARIABLE__BASE_EXP, newBaseExp, newBaseExp));
     }
 
     /**
@@ -209,7 +209,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
         initExpression = newInitExpression;
         if (eNotificationRequired()) {
             ENotificationImpl notification = new ENotificationImpl(this,
-                Notification.SET, expPackage.EVARIABLE__INIT_EXPRESSION,
+                Notification.SET, EXPPackage.EVARIABLE__INIT_EXPRESSION,
                 oldInitExpression, newInitExpression);
             if (msgs == null)
                 msgs = notification;
@@ -230,18 +230,18 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
             NotificationChain msgs = null;
             if (initExpression != null)
                 msgs = ((InternalEObject) initExpression).eInverseRemove(this,
-                    expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT,
+                    EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT,
                     EOclExpression.class, msgs);
             if (newInitExpression != null)
                 msgs = ((InternalEObject) newInitExpression).eInverseAdd(this,
-                    expPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT,
+                    EXPPackage.EOCL_EXPRESSION__INITIALIZED_ELEMENT,
                     EOclExpression.class, msgs);
             msgs = basicSetInitExpression(newInitExpression, msgs);
             if (msgs != null)
                 msgs.dispatch();
         } else if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EVARIABLE__INIT_EXPRESSION, newInitExpression,
+                EXPPackage.EVARIABLE__INIT_EXPRESSION, newInitExpression,
                 newInitExpression));
     }
 
@@ -266,7 +266,7 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EVARIABLE__NAME, oldName, name));
+                EXPPackage.EVARIABLE__NAME, oldName, name));
     }
 
     /**
@@ -278,20 +278,20 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetLoopExp((ELoopExp) otherEnd, msgs);
-        case expPackage.EVARIABLE__BASE_EXP:
+        case EXPPackage.EVARIABLE__BASE_EXP:
             if (eInternalContainer() != null)
                 msgs = eBasicRemoveFromContainer(msgs);
             return basicSetBaseExp((EIterateExp) otherEnd, msgs);
-        case expPackage.EVARIABLE__INIT_EXPRESSION:
+        case EXPPackage.EVARIABLE__INIT_EXPRESSION:
             if (initExpression != null)
                 msgs = ((InternalEObject) initExpression)
                     .eInverseRemove(this,
                         EOPPOSITE_FEATURE_BASE
-                            - expPackage.EVARIABLE__INIT_EXPRESSION,
+                            - EXPPackage.EVARIABLE__INIT_EXPRESSION,
                         null, msgs);
             return basicSetInitExpression((EOclExpression) otherEnd, msgs);
         }
@@ -307,11 +307,11 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             return basicSetLoopExp(null, msgs);
-        case expPackage.EVARIABLE__BASE_EXP:
+        case EXPPackage.EVARIABLE__BASE_EXP:
             return basicSetBaseExp(null, msgs);
-        case expPackage.EVARIABLE__INIT_EXPRESSION:
+        case EXPPackage.EVARIABLE__INIT_EXPRESSION:
             return basicSetInitExpression(null, msgs);
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -326,12 +326,12 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     public NotificationChain eBasicRemoveFromContainerFeature(
         NotificationChain msgs) {
         switch (eContainerFeatureID()) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.ELOOP_EXP__ITERATOR, ELoopExp.class, msgs);
-        case expPackage.EVARIABLE__BASE_EXP:
+                EXPPackage.ELOOP_EXP__ITERATOR, ELoopExp.class, msgs);
+        case EXPPackage.EVARIABLE__BASE_EXP:
             return eInternalContainer().eInverseRemove(this,
-                expPackage.EITERATE_EXP__RESULT, EIterateExp.class, msgs);
+                EXPPackage.EITERATE_EXP__RESULT, EIterateExp.class, msgs);
         }
         return super.eBasicRemoveFromContainerFeature(msgs);
     }
@@ -344,13 +344,13 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             return getLoopExp();
-        case expPackage.EVARIABLE__BASE_EXP:
+        case EXPPackage.EVARIABLE__BASE_EXP:
             return getBaseExp();
-        case expPackage.EVARIABLE__INIT_EXPRESSION:
+        case EXPPackage.EVARIABLE__INIT_EXPRESSION:
             return getInitExpression();
-        case expPackage.EVARIABLE__NAME:
+        case EXPPackage.EVARIABLE__NAME:
             return getName();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -364,16 +364,16 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             setLoopExp((ELoopExp) newValue);
             return;
-        case expPackage.EVARIABLE__BASE_EXP:
+        case EXPPackage.EVARIABLE__BASE_EXP:
             setBaseExp((EIterateExp) newValue);
             return;
-        case expPackage.EVARIABLE__INIT_EXPRESSION:
+        case EXPPackage.EVARIABLE__INIT_EXPRESSION:
             setInitExpression((EOclExpression) newValue);
             return;
-        case expPackage.EVARIABLE__NAME:
+        case EXPPackage.EVARIABLE__NAME:
             setName((String) newValue);
             return;
         }
@@ -388,16 +388,16 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             setLoopExp((ELoopExp) null);
             return;
-        case expPackage.EVARIABLE__BASE_EXP:
+        case EXPPackage.EVARIABLE__BASE_EXP:
             setBaseExp((EIterateExp) null);
             return;
-        case expPackage.EVARIABLE__INIT_EXPRESSION:
+        case EXPPackage.EVARIABLE__INIT_EXPRESSION:
             setInitExpression((EOclExpression) null);
             return;
-        case expPackage.EVARIABLE__NAME:
+        case EXPPackage.EVARIABLE__NAME:
             setName(NAME_EDEFAULT);
             return;
         }
@@ -412,13 +412,13 @@ public class EVariableImpl extends MinimalEObjectImpl.Container
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EVARIABLE__LOOP_EXP:
+        case EXPPackage.EVARIABLE__LOOP_EXP:
             return getLoopExp() != null;
-        case expPackage.EVARIABLE__BASE_EXP:
+        case EXPPackage.EVARIABLE__BASE_EXP:
             return getBaseExp() != null;
-        case expPackage.EVARIABLE__INIT_EXPRESSION:
+        case EXPPackage.EVARIABLE__INIT_EXPRESSION:
             return initExpression != null;
-        case expPackage.EVARIABLE__NAME:
+        case EXPPackage.EVARIABLE__NAME:
             return NAME_EDEFAULT == null ? name != null
                 : !NAME_EDEFAULT.equals(name);
         }

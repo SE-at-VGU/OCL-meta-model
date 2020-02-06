@@ -18,24 +18,24 @@ import org.vgu.se.ocl.type.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class typeFactoryImpl extends EFactoryImpl implements typeFactory {
+public class TYPEFactoryImpl extends EFactoryImpl implements TYPEFactory {
     /**
      * Creates the default factory implementation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static typeFactory init() {
+    public static TYPEFactory init() {
         try {
-            typeFactory thetypeFactory = (typeFactory) EPackage.Registry.INSTANCE
-                .getEFactory(typePackage.eNS_URI);
-            if (thetypeFactory != null) {
-                return thetypeFactory;
+            TYPEFactory theTYPEFactory = (TYPEFactory) EPackage.Registry.INSTANCE
+                .getEFactory(TYPEPackage.eNS_URI);
+            if (theTYPEFactory != null) {
+                return theTYPEFactory;
             }
         } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
-        return new typeFactoryImpl();
+        return new TYPEFactoryImpl();
     }
 
     /**
@@ -44,7 +44,7 @@ public class typeFactoryImpl extends EFactoryImpl implements typeFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public typeFactoryImpl() {
+    public TYPEFactoryImpl() {
         super();
     }
 
@@ -56,29 +56,29 @@ public class typeFactoryImpl extends EFactoryImpl implements typeFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case typePackage.EINVALID_TYPE:
+        case TYPEPackage.EINVALID_TYPE:
             return createEInvalidType();
-        case typePackage.EVOID_TYPE:
+        case TYPEPackage.EVOID_TYPE:
             return createEVoidType();
-        case typePackage.EANY_TYPE:
+        case TYPEPackage.EANY_TYPE:
             return createEAnyType();
-        case typePackage.EMESSAGE_TYPE:
+        case TYPEPackage.EMESSAGE_TYPE:
             return createEMessageType();
-        case typePackage.ECOLLECTION_TYPE:
+        case TYPEPackage.ECOLLECTION_TYPE:
             return createECollectionType();
-        case typePackage.EPRIMITIVE_TYPE:
+        case TYPEPackage.EPRIMITIVE_TYPE:
             return createEPrimitiveType();
-        case typePackage.ETUPLE_TYPE:
+        case TYPEPackage.ETUPLE_TYPE:
             return createETupleType();
-        case typePackage.EORDERED_SET_TYPE:
+        case TYPEPackage.EORDERED_SET_TYPE:
             return createEOrderedSetType();
-        case typePackage.ESEQUENCE_TYPE:
+        case TYPEPackage.ESEQUENCE_TYPE:
             return createESequenceType();
-        case typePackage.EBAG_TYPE:
+        case TYPEPackage.EBAG_TYPE:
             return createEBagType();
-        case typePackage.ESET_TYPE:
+        case TYPEPackage.ESET_TYPE:
             return createESetType();
-        case typePackage.ESIGNAL:
+        case TYPEPackage.ESIGNAL:
             return createESignal();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
@@ -224,8 +224,8 @@ public class typeFactoryImpl extends EFactoryImpl implements typeFactory {
      * @generated
      */
     @Override
-    public typePackage gettypePackage() {
-        return (typePackage) getEPackage();
+    public TYPEPackage getTYPEPackage() {
+        return (TYPEPackage) getEPackage();
     }
 
     /**
@@ -235,8 +235,8 @@ public class typeFactoryImpl extends EFactoryImpl implements typeFactory {
      * @generated
      */
     @Deprecated
-    public static typePackage getPackage() {
-        return typePackage.eINSTANCE;
+    public static TYPEPackage getPackage() {
+        return TYPEPackage.eINSTANCE;
     }
 
-} //typeFactoryImpl
+} //TYPEFactoryImpl

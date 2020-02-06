@@ -16,7 +16,7 @@ import org.vgu.se.ocl.type.EClassifier;
  *   <li>{@link org.vgu.se.ocl.exp.ETypeExp#getReferredType <em>Referred Type</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getETypeExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getETypeExp()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface ETypeExp extends EOclExpression {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Referred Type</em>' reference.
      * @see #setReferredType(EClassifier)
-     * @see org.vgu.se.ocl.exp.expPackage#getETypeExp_ReferredType()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getETypeExp_ReferredType()
      * @model required="true"
      * @generated
      */

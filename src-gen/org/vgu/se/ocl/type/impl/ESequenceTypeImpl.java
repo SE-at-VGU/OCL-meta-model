@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.ESequenceType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class ESequenceTypeImpl extends ECollectionTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.ESEQUENCE_TYPE;
+        return TYPEPackage.Literals.ESEQUENCE_TYPE;
     }
 
 } //ESequenceTypeImpl

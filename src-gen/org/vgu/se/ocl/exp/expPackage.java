@@ -20,11 +20,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.exp.expFactory
+ * @see org.vgu.se.ocl.exp.EXPFactory
  * @model kind="package"
  * @generated
  */
-public interface expPackage extends EPackage {
+public interface EXPPackage extends EPackage {
     /**
      * The package name.
      * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public interface expPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    String eNS_PREFIX = "exp";
+    String eNS_PREFIX = "EXP";
 
     /**
      * The singleton instance of the package.
@@ -55,14 +55,14 @@ public interface expPackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    expPackage eINSTANCE = org.vgu.se.ocl.exp.impl.expPackageImpl.init();
+    EXPPackage eINSTANCE = org.vgu.se.ocl.exp.impl.EXPPackageImpl.init();
 
     /**
      * The meta object id for the '{@link org.vgu.se.ocl.exp.impl.EOclExpressionImpl <em>EOcl Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EOclExpressionImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEOclExpression()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEOclExpression()
      * @generated
      */
     int EOCL_EXPRESSION = 12;
@@ -162,7 +162,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EVariableExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEVariableExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEVariableExp()
      * @generated
      */
     int EVARIABLE_EXP = 0;
@@ -271,7 +271,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.ETypeExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getETypeExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getETypeExp()
      * @generated
      */
     int ETYPE_EXP = 1;
@@ -380,7 +380,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.ECallExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getECallExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getECallExp()
      * @generated
      */
     int ECALL_EXP = 14;
@@ -489,7 +489,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.ELoopExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getELoopExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getELoopExp()
      * @generated
      */
     int ELOOP_EXP = 2;
@@ -616,7 +616,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EStateExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEStateExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEStateExp()
      * @generated
      */
     int ESTATE_EXP = 3;
@@ -716,7 +716,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EFeatureCallExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEFeatureCallExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEFeatureCallExp()
      * @generated
      */
     int EFEATURE_CALL_EXP = 4;
@@ -825,7 +825,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.ENavigationCallExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getENavigationCallExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getENavigationCallExp()
      * @generated
      */
     int ENAVIGATION_CALL_EXP = 17;
@@ -945,7 +945,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EAssociationClassCallExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEAssociationClassCallExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEAssociationClassCallExp()
      * @generated
      */
     int EASSOCIATION_CLASS_CALL_EXP = 5;
@@ -1075,7 +1075,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.ELiteralExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getELiteralExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getELiteralExp()
      * @generated
      */
     int ELITERAL_EXP = 7;
@@ -1175,7 +1175,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EPrimitiveTypeImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEPrimitiveType()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEPrimitiveType()
      * @generated
      */
     int EPRIMITIVE_TYPE = 16;
@@ -1275,7 +1275,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.ENumericLiteralExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getENumericLiteralExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getENumericLiteralExp()
      * @generated
      */
     int ENUMERIC_LITERAL_EXP = 6;
@@ -1376,7 +1376,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EMessageExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEMessageExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEMessageExp()
      * @generated
      */
     int EMESSAGE_EXP = 8;
@@ -1476,7 +1476,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EVariableImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEVariable()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEVariable()
      * @generated
      */
     int EVARIABLE = 9;
@@ -1540,7 +1540,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EPropertyCallExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEPropertyCallExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEPropertyCallExp()
      * @generated
      */
     int EPROPERTY_CALL_EXP = 10;
@@ -1670,7 +1670,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EIteratorExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIteratorExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIteratorExp()
      * @generated
      */
     int EITERATOR_EXP = 11;
@@ -1806,7 +1806,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EIterateExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIterateExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIterateExp()
      * @generated
      */
     int EITERATE_EXP = 13;
@@ -1942,7 +1942,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EIntegerLiteralExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIntegerLiteralExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIntegerLiteralExp()
      * @generated
      */
     int EINTEGER_LITERAL_EXP = 15;
@@ -2054,7 +2054,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EOperationCallExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEOperationCallExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEOperationCallExp()
      * @generated
      */
     int EOPERATION_CALL_EXP = 18;
@@ -2183,7 +2183,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EStringLiteralExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEStringLiteralExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEStringLiteralExp()
      * @generated
      */
     int ESTRING_LITERAL_EXP = 19;
@@ -2293,7 +2293,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EIfExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIfExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIfExp()
      * @generated
      */
     int EIF_EXP = 20;
@@ -2420,7 +2420,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.impl.EBooleanLiteralExpImpl
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEBooleanLiteralExp()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEBooleanLiteralExp()
      * @generated
      */
     int EBOOLEAN_LITERAL_EXP = 21;
@@ -2530,7 +2530,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.EIteratorKind
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIteratorKind()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIteratorKind()
      * @generated
      */
     int EITERATOR_KIND = 22;
@@ -2540,7 +2540,7 @@ public interface expPackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.exp.EOperator
-     * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEOperator()
+     * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEOperator()
      * @generated
      */
     int EOPERATOR = 23;
@@ -3122,7 +3122,7 @@ public interface expPackage extends EPackage {
      * @return the factory that creates the instances of the model.
      * @generated
      */
-    expFactory getexpFactory();
+    EXPFactory getEXPFactory();
 
     /**
      * <!-- begin-user-doc -->
@@ -3143,7 +3143,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EVariableExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEVariableExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEVariableExp()
          * @generated
          */
         EClass EVARIABLE_EXP = eINSTANCE.getEVariableExp();
@@ -3162,7 +3162,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.ETypeExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getETypeExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getETypeExp()
          * @generated
          */
         EClass ETYPE_EXP = eINSTANCE.getETypeExp();
@@ -3181,7 +3181,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.ELoopExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getELoopExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getELoopExp()
          * @generated
          */
         EClass ELOOP_EXP = eINSTANCE.getELoopExp();
@@ -3207,7 +3207,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EStateExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEStateExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEStateExp()
          * @generated
          */
         EClass ESTATE_EXP = eINSTANCE.getEStateExp();
@@ -3217,7 +3217,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EFeatureCallExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEFeatureCallExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEFeatureCallExp()
          * @generated
          */
         EClass EFEATURE_CALL_EXP = eINSTANCE.getEFeatureCallExp();
@@ -3227,7 +3227,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EAssociationClassCallExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEAssociationClassCallExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEAssociationClassCallExp()
          * @generated
          */
         EClass EASSOCIATION_CLASS_CALL_EXP = eINSTANCE
@@ -3247,7 +3247,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.ENumericLiteralExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getENumericLiteralExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getENumericLiteralExp()
          * @generated
          */
         EClass ENUMERIC_LITERAL_EXP = eINSTANCE.getENumericLiteralExp();
@@ -3257,7 +3257,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.ELiteralExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getELiteralExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getELiteralExp()
          * @generated
          */
         EClass ELITERAL_EXP = eINSTANCE.getELiteralExp();
@@ -3267,7 +3267,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EMessageExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEMessageExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEMessageExp()
          * @generated
          */
         EClass EMESSAGE_EXP = eINSTANCE.getEMessageExp();
@@ -3277,7 +3277,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EVariableImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEVariable()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEVariable()
          * @generated
          */
         EClass EVARIABLE = eINSTANCE.getEVariable();
@@ -3320,7 +3320,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EPropertyCallExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEPropertyCallExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEPropertyCallExp()
          * @generated
          */
         EClass EPROPERTY_CALL_EXP = eINSTANCE.getEPropertyCallExp();
@@ -3339,7 +3339,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EIteratorExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIteratorExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIteratorExp()
          * @generated
          */
         EClass EITERATOR_EXP = eINSTANCE.getEIteratorExp();
@@ -3357,7 +3357,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EOclExpressionImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEOclExpression()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEOclExpression()
          * @generated
          */
         EClass EOCL_EXPRESSION = eINSTANCE.getEOclExpression();
@@ -3439,7 +3439,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EIterateExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIterateExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIterateExp()
          * @generated
          */
         EClass EITERATE_EXP = eINSTANCE.getEIterateExp();
@@ -3457,7 +3457,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.ECallExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getECallExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getECallExp()
          * @generated
          */
         EClass ECALL_EXP = eINSTANCE.getECallExp();
@@ -3475,7 +3475,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EIntegerLiteralExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIntegerLiteralExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIntegerLiteralExp()
          * @generated
          */
         EClass EINTEGER_LITERAL_EXP = eINSTANCE.getEIntegerLiteralExp();
@@ -3494,7 +3494,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EPrimitiveTypeImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEPrimitiveType()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEPrimitiveType()
          * @generated
          */
         EClass EPRIMITIVE_TYPE = eINSTANCE.getEPrimitiveType();
@@ -3504,7 +3504,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.ENavigationCallExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getENavigationCallExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getENavigationCallExp()
          * @generated
          */
         EClass ENAVIGATION_CALL_EXP = eINSTANCE.getENavigationCallExp();
@@ -3523,7 +3523,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EOperationCallExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEOperationCallExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEOperationCallExp()
          * @generated
          */
         EClass EOPERATION_CALL_EXP = eINSTANCE.getEOperationCallExp();
@@ -3551,7 +3551,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EStringLiteralExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEStringLiteralExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEStringLiteralExp()
          * @generated
          */
         EClass ESTRING_LITERAL_EXP = eINSTANCE.getEStringLiteralExp();
@@ -3570,7 +3570,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EIfExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIfExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIfExp()
          * @generated
          */
         EClass EIF_EXP = eINSTANCE.getEIfExp();
@@ -3606,7 +3606,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.impl.EBooleanLiteralExpImpl
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEBooleanLiteralExp()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEBooleanLiteralExp()
          * @generated
          */
         EClass EBOOLEAN_LITERAL_EXP = eINSTANCE.getEBooleanLiteralExp();
@@ -3625,7 +3625,7 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.EIteratorKind
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEIteratorKind()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEIteratorKind()
          * @generated
          */
         EEnum EITERATOR_KIND = eINSTANCE.getEIteratorKind();
@@ -3635,11 +3635,11 @@ public interface expPackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.exp.EOperator
-         * @see org.vgu.se.ocl.exp.impl.expPackageImpl#getEOperator()
+         * @see org.vgu.se.ocl.exp.impl.EXPPackageImpl#getEOperator()
          * @generated
          */
         EEnum EOPERATOR = eINSTANCE.getEOperator();
 
     }
 
-} //expPackage
+} //EXPPackage

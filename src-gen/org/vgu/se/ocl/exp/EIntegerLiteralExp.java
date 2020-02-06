@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EIntegerLiteralExp#getIntegerValue <em>Integer Value</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEIntegerLiteralExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEIntegerLiteralExp()
  * @model
  * @generated
  */
@@ -25,7 +25,7 @@ public interface EIntegerLiteralExp extends ENumericLiteralExp {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Integer Value</em>' attribute.
      * @see #setIntegerValue(Integer)
-     * @see org.vgu.se.ocl.exp.expPackage#getEIntegerLiteralExp_IntegerValue()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEIntegerLiteralExp_IntegerValue()
      * @model
      * @generated
      */

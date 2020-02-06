@@ -16,17 +16,17 @@ import org.vgu.se.ocl.type.*;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.type.typePackage
+ * @see org.vgu.se.ocl.type.TYPEPackage
  * @generated
  */
-public class typeAdapterFactory extends AdapterFactoryImpl {
+public class TYPEAdapterFactory extends AdapterFactoryImpl {
     /**
      * The cached model package.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static typePackage modelPackage;
+    protected static TYPEPackage modelPackage;
 
     /**
      * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class typeAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    public typeAdapterFactory() {
+    public TYPEAdapterFactory() {
         if (modelPackage == null) {
-            modelPackage = typePackage.eINSTANCE;
+            modelPackage = TYPEPackage.eINSTANCE;
         }
     }
 
@@ -65,7 +65,7 @@ public class typeAdapterFactory extends AdapterFactoryImpl {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected typeSwitch<Adapter> modelSwitch = new typeSwitch<Adapter>() {
+    protected TYPESwitch<Adapter> modelSwitch = new TYPESwitch<Adapter>() {
         @Override
         public Adapter caseEClassifier(EClassifier object) {
             return createEClassifierAdapter();
@@ -363,4 +363,4 @@ public class typeAdapterFactory extends AdapterFactoryImpl {
         return null;
     }
 
-} //typeAdapterFactory
+} //TYPEAdapterFactory

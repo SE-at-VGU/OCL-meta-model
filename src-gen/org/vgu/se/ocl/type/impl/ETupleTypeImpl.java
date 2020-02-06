@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.ETupleType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public class ETupleTypeImpl extends EDataTypeImpl implements ETupleType {
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.ETUPLE_TYPE;
+        return TYPEPackage.Literals.ETUPLE_TYPE;
     }
 
 } //ETupleTypeImpl

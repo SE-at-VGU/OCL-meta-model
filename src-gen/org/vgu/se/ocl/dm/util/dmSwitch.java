@@ -21,17 +21,17 @@ import org.vgu.se.ocl.type.EClassifier;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.dm.dmPackage
+ * @see org.vgu.se.ocl.dm.DMPackage
  * @generated
  */
-public class dmSwitch<T> extends Switch<T> {
+public class DMSwitch<T> extends Switch<T> {
     /**
      * The cached model package
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    protected static dmPackage modelPackage;
+    protected static DMPackage modelPackage;
 
     /**
      * Creates an instance of the switch.
@@ -39,9 +39,9 @@ public class dmSwitch<T> extends Switch<T> {
      * <!-- end-user-doc -->
      * @generated
      */
-    public dmSwitch() {
+    public DMSwitch() {
         if (modelPackage == null) {
-            modelPackage = dmPackage.eINSTANCE;
+            modelPackage = DMPackage.eINSTANCE;
         }
     }
 
@@ -68,7 +68,7 @@ public class dmSwitch<T> extends Switch<T> {
     @Override
     protected T doSwitch(int classifierID, EObject theEObject) {
         switch (classifierID) {
-        case dmPackage.EENTITY: {
+        case DMPackage.EENTITY: {
             EEntity eEntity = (EEntity) theEObject;
             T result = caseEEntity(eEntity);
             if (result == null)
@@ -77,21 +77,21 @@ public class dmSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case dmPackage.EASSOCIATION: {
+        case DMPackage.EASSOCIATION: {
             EAssociation eAssociation = (EAssociation) theEObject;
             T result = caseEAssociation(eAssociation);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case dmPackage.EDATA_MODEL: {
+        case DMPackage.EDATA_MODEL: {
             EDataModel eDataModel = (EDataModel) theEObject;
             T result = caseEDataModel(eDataModel);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
         }
-        case dmPackage.EATTRIBUTE: {
+        case DMPackage.EATTRIBUTE: {
             EAttribute eAttribute = (EAttribute) theEObject;
             T result = caseEAttribute(eAttribute);
             if (result == null)
@@ -194,4 +194,4 @@ public class dmSwitch<T> extends Switch<T> {
         return null;
     }
 
-} //dmSwitch
+} //DMSwitch

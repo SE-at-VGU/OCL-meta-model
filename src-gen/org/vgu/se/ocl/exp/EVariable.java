@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.vgu.se.ocl.exp.EVariable#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEVariable()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEVariable()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface EVariable extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Loop Exp</em>' container reference.
      * @see #setLoopExp(ELoopExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEVariable_LoopExp()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEVariable_LoopExp()
      * @see org.vgu.se.ocl.exp.ELoopExp#getIterator
      * @model opposite="iterator" transient="false"
      * @generated
@@ -55,7 +55,7 @@ public interface EVariable extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Base Exp</em>' container reference.
      * @see #setBaseExp(EIterateExp)
-     * @see org.vgu.se.ocl.exp.expPackage#getEVariable_BaseExp()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEVariable_BaseExp()
      * @see org.vgu.se.ocl.exp.EIterateExp#getResult
      * @model opposite="result" transient="false"
      * @generated
@@ -79,7 +79,7 @@ public interface EVariable extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Init Expression</em>' containment reference.
      * @see #setInitExpression(EOclExpression)
-     * @see org.vgu.se.ocl.exp.expPackage#getEVariable_InitExpression()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEVariable_InitExpression()
      * @see org.vgu.se.ocl.exp.EOclExpression#getInitializedElement
      * @model opposite="initializedElement" containment="true"
      * @generated
@@ -102,7 +102,7 @@ public interface EVariable extends EObject {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.vgu.se.ocl.exp.expPackage#getEVariable_Name()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEVariable_Name()
      * @model
      * @generated
      */

@@ -14,7 +14,7 @@ package org.vgu.se.ocl.exp;
  *   <li>{@link org.vgu.se.ocl.exp.EBooleanLiteralExp#getBooleanValue <em>Boolean Value</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEBooleanLiteralExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEBooleanLiteralExp()
  * @model
  * @generated
  */
@@ -25,7 +25,7 @@ public interface EBooleanLiteralExp extends EPrimitiveType {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Boolean Value</em>' attribute.
      * @see #setBooleanValue(Boolean)
-     * @see org.vgu.se.ocl.exp.expPackage#getEBooleanLiteralExp_BooleanValue()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEBooleanLiteralExp_BooleanValue()
      * @model
      * @generated
      */

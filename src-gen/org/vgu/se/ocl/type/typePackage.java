@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.type.typeFactory
+ * @see org.vgu.se.ocl.type.TYPEFactory
  * @model kind="package"
  * @generated
  */
-public interface typePackage extends EPackage {
+public interface TYPEPackage extends EPackage {
     /**
      * The package name.
      * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public interface typePackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    String eNS_PREFIX = "type";
+    String eNS_PREFIX = "TYPE";
 
     /**
      * The singleton instance of the package.
@@ -54,14 +54,14 @@ public interface typePackage extends EPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    typePackage eINSTANCE = org.vgu.se.ocl.type.impl.typePackageImpl.init();
+    TYPEPackage eINSTANCE = org.vgu.se.ocl.type.impl.TYPEPackageImpl.init();
 
     /**
      * The meta object id for the '{@link org.vgu.se.ocl.type.impl.EClassifierImpl <em>EClassifier</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EClassifierImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEClassifier()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEClassifier()
      * @generated
      */
     int ECLASSIFIER = 0;
@@ -89,7 +89,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EDataTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEDataType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEDataType()
      * @generated
      */
     int EDATA_TYPE = 1;
@@ -117,7 +117,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EInvalidTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEInvalidType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEInvalidType()
      * @generated
      */
     int EINVALID_TYPE = 2;
@@ -145,7 +145,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EVoidTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEVoidType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEVoidType()
      * @generated
      */
     int EVOID_TYPE = 3;
@@ -173,7 +173,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EAnyTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEAnyType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEAnyType()
      * @generated
      */
     int EANY_TYPE = 4;
@@ -201,7 +201,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EMessageTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEMessageType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEMessageType()
      * @generated
      */
     int EMESSAGE_TYPE = 5;
@@ -247,7 +247,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.ECollectionTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getECollectionType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getECollectionType()
      * @generated
      */
     int ECOLLECTION_TYPE = 6;
@@ -284,7 +284,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EPrimitiveTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEPrimitiveType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEPrimitiveType()
      * @generated
      */
     int EPRIMITIVE_TYPE = 7;
@@ -312,7 +312,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.ETupleTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getETupleType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getETupleType()
      * @generated
      */
     int ETUPLE_TYPE = 8;
@@ -340,7 +340,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EOrderedSetTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEOrderedSetType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEOrderedSetType()
      * @generated
      */
     int EORDERED_SET_TYPE = 9;
@@ -378,7 +378,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.ESequenceTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getESequenceType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getESequenceType()
      * @generated
      */
     int ESEQUENCE_TYPE = 10;
@@ -415,7 +415,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.EBagTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEBagType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEBagType()
      * @generated
      */
     int EBAG_TYPE = 11;
@@ -452,7 +452,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.ESetTypeImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getESetType()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getESetType()
      * @generated
      */
     int ESET_TYPE = 12;
@@ -489,7 +489,7 @@ public interface typePackage extends EPackage {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @see org.vgu.se.ocl.type.impl.ESignalImpl
-     * @see org.vgu.se.ocl.type.impl.typePackageImpl#getESignal()
+     * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getESignal()
      * @generated
      */
     int ESIGNAL = 13;
@@ -692,7 +692,7 @@ public interface typePackage extends EPackage {
      * @return the factory that creates the instances of the model.
      * @generated
      */
-    typeFactory gettypeFactory();
+    TYPEFactory getTYPEFactory();
 
     /**
      * <!-- begin-user-doc -->
@@ -713,7 +713,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EClassifierImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEClassifier()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEClassifier()
          * @generated
          */
         EClass ECLASSIFIER = eINSTANCE.getEClassifier();
@@ -723,7 +723,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EDataTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEDataType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEDataType()
          * @generated
          */
         EClass EDATA_TYPE = eINSTANCE.getEDataType();
@@ -733,7 +733,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EInvalidTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEInvalidType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEInvalidType()
          * @generated
          */
         EClass EINVALID_TYPE = eINSTANCE.getEInvalidType();
@@ -743,7 +743,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EVoidTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEVoidType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEVoidType()
          * @generated
          */
         EClass EVOID_TYPE = eINSTANCE.getEVoidType();
@@ -753,7 +753,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EAnyTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEAnyType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEAnyType()
          * @generated
          */
         EClass EANY_TYPE = eINSTANCE.getEAnyType();
@@ -763,7 +763,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EMessageTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEMessageType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEMessageType()
          * @generated
          */
         EClass EMESSAGE_TYPE = eINSTANCE.getEMessageType();
@@ -791,7 +791,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.ECollectionTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getECollectionType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getECollectionType()
          * @generated
          */
         EClass ECOLLECTION_TYPE = eINSTANCE.getECollectionType();
@@ -810,7 +810,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EPrimitiveTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEPrimitiveType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEPrimitiveType()
          * @generated
          */
         EClass EPRIMITIVE_TYPE = eINSTANCE.getEPrimitiveType();
@@ -820,7 +820,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.ETupleTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getETupleType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getETupleType()
          * @generated
          */
         EClass ETUPLE_TYPE = eINSTANCE.getETupleType();
@@ -830,7 +830,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EOrderedSetTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEOrderedSetType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEOrderedSetType()
          * @generated
          */
         EClass EORDERED_SET_TYPE = eINSTANCE.getEOrderedSetType();
@@ -840,7 +840,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.ESequenceTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getESequenceType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getESequenceType()
          * @generated
          */
         EClass ESEQUENCE_TYPE = eINSTANCE.getESequenceType();
@@ -850,7 +850,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.EBagTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getEBagType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getEBagType()
          * @generated
          */
         EClass EBAG_TYPE = eINSTANCE.getEBagType();
@@ -860,7 +860,7 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.ESetTypeImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getESetType()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getESetType()
          * @generated
          */
         EClass ESET_TYPE = eINSTANCE.getESetType();
@@ -870,11 +870,11 @@ public interface typePackage extends EPackage {
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
          * @see org.vgu.se.ocl.type.impl.ESignalImpl
-         * @see org.vgu.se.ocl.type.impl.typePackageImpl#getESignal()
+         * @see org.vgu.se.ocl.type.impl.TYPEPackageImpl#getESignal()
          * @generated
          */
         EClass ESIGNAL = eINSTANCE.getESignal();
 
     }
 
-} //typePackage
+} //TYPEPackage

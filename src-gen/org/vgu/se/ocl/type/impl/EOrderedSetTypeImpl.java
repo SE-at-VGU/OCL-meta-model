@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EOrderedSetType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class EOrderedSetTypeImpl extends ECollectionTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EORDERED_SET_TYPE;
+        return TYPEPackage.Literals.EORDERED_SET_TYPE;
     }
 
 } //EOrderedSetTypeImpl

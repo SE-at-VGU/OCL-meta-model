@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.vgu.se.ocl.exp.EOclExpression;
 import org.vgu.se.ocl.exp.EOperationCallExp;
 import org.vgu.se.ocl.exp.EOperator;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -84,7 +84,7 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.EOPERATION_CALL_EXP;
+        return EXPPackage.Literals.EOPERATION_CALL_EXP;
     }
 
     /**
@@ -97,8 +97,8 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
         if (argument == null) {
             argument = new EObjectContainmentWithInverseEList<EOclExpression>(
                 EOclExpression.class, this,
-                expPackage.EOPERATION_CALL_EXP__ARGUMENT,
-                expPackage.EOCL_EXPRESSION__PARENT_CALL);
+                EXPPackage.EOPERATION_CALL_EXP__ARGUMENT,
+                EXPPackage.EOCL_EXPRESSION__PARENT_CALL);
         }
         return argument;
     }
@@ -126,7 +126,7 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
             : newReferredOperation;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION,
+                EXPPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION,
                 oldReferredOperation, referredOperation));
     }
 
@@ -140,7 +140,7 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EOPERATION_CALL_EXP__ARGUMENT:
+        case EXPPackage.EOPERATION_CALL_EXP__ARGUMENT:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getArgument())
                 .basicAdd(otherEnd, msgs);
         }
@@ -156,7 +156,7 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.EOPERATION_CALL_EXP__ARGUMENT:
+        case EXPPackage.EOPERATION_CALL_EXP__ARGUMENT:
             return ((InternalEList<?>) getArgument()).basicRemove(otherEnd,
                 msgs);
         }
@@ -171,9 +171,9 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.EOPERATION_CALL_EXP__ARGUMENT:
+        case EXPPackage.EOPERATION_CALL_EXP__ARGUMENT:
             return getArgument();
-        case expPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
+        case EXPPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
             return getReferredOperation();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -188,12 +188,12 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.EOPERATION_CALL_EXP__ARGUMENT:
+        case EXPPackage.EOPERATION_CALL_EXP__ARGUMENT:
             getArgument().clear();
             getArgument()
                 .addAll((Collection<? extends EOclExpression>) newValue);
             return;
-        case expPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
+        case EXPPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
             setReferredOperation((EOperator) newValue);
             return;
         }
@@ -208,10 +208,10 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.EOPERATION_CALL_EXP__ARGUMENT:
+        case EXPPackage.EOPERATION_CALL_EXP__ARGUMENT:
             getArgument().clear();
             return;
-        case expPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
+        case EXPPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
             setReferredOperation(REFERRED_OPERATION_EDEFAULT);
             return;
         }
@@ -226,9 +226,9 @@ public class EOperationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.EOPERATION_CALL_EXP__ARGUMENT:
+        case EXPPackage.EOPERATION_CALL_EXP__ARGUMENT:
             return argument != null && !argument.isEmpty();
-        case expPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
+        case EXPPackage.EOPERATION_CALL_EXP__REFERRED_OPERATION:
             return referredOperation != REFERRED_OPERATION_EDEFAULT;
         }
         return super.eIsSet(featureID);

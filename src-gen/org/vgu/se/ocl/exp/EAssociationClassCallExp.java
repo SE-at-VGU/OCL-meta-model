@@ -16,7 +16,7 @@ import org.vgu.se.ocl.dm.EAssociation;
  *   <li>{@link org.vgu.se.ocl.exp.EAssociationClassCallExp#getReferredAssociationEnds <em>Referred Association Ends</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEAssociationClassCallExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEAssociationClassCallExp()
  * @model
  * @generated
  */
@@ -27,7 +27,7 @@ public interface EAssociationClassCallExp extends ENavigationCallExp {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Referred Association Ends</em>' reference.
      * @see #setReferredAssociationEnds(EAssociation)
-     * @see org.vgu.se.ocl.exp.expPackage#getEAssociationClassCallExp_ReferredAssociationEnds()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEAssociationClassCallExp_ReferredAssociationEnds()
      * @model required="true"
      * @generated
      */

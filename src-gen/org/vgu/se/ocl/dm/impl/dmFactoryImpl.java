@@ -19,24 +19,24 @@ import org.vgu.se.ocl.dm.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
+public class DMFactoryImpl extends EFactoryImpl implements DMFactory {
     /**
      * Creates the default factory implementation.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    public static dmFactory init() {
+    public static DMFactory init() {
         try {
-            dmFactory thedmFactory = (dmFactory) EPackage.Registry.INSTANCE
-                .getEFactory(dmPackage.eNS_URI);
-            if (thedmFactory != null) {
-                return thedmFactory;
+            DMFactory theDMFactory = (DMFactory) EPackage.Registry.INSTANCE
+                .getEFactory(DMPackage.eNS_URI);
+            if (theDMFactory != null) {
+                return theDMFactory;
             }
         } catch (Exception exception) {
             EcorePlugin.INSTANCE.log(exception);
         }
-        return new dmFactoryImpl();
+        return new DMFactoryImpl();
     }
 
     /**
@@ -45,7 +45,7 @@ public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
      * <!-- end-user-doc -->
      * @generated
      */
-    public dmFactoryImpl() {
+    public DMFactoryImpl() {
         super();
     }
 
@@ -57,13 +57,13 @@ public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
     @Override
     public EObject create(EClass eClass) {
         switch (eClass.getClassifierID()) {
-        case dmPackage.EENTITY:
+        case DMPackage.EENTITY:
             return createEEntity();
-        case dmPackage.EASSOCIATION:
+        case DMPackage.EASSOCIATION:
             return createEAssociation();
-        case dmPackage.EDATA_MODEL:
+        case DMPackage.EDATA_MODEL:
             return createEDataModel();
-        case dmPackage.EATTRIBUTE:
+        case DMPackage.EATTRIBUTE:
             return createEAttribute();
         default:
             throw new IllegalArgumentException("The class '" + eClass.getName()
@@ -79,7 +79,7 @@ public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
     @Override
     public Object createFromString(EDataType eDataType, String initialValue) {
         switch (eDataType.getClassifierID()) {
-        case dmPackage.EMULTIPLICITY:
+        case DMPackage.EMULTIPLICITY:
             return createEMultiplicityFromString(eDataType, initialValue);
         default:
             throw new IllegalArgumentException("The datatype '"
@@ -95,7 +95,7 @@ public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
     @Override
     public String convertToString(EDataType eDataType, Object instanceValue) {
         switch (eDataType.getClassifierID()) {
-        case dmPackage.EMULTIPLICITY:
+        case DMPackage.EMULTIPLICITY:
             return convertEMultiplicityToString(eDataType, instanceValue);
         default:
             throw new IllegalArgumentException("The datatype '"
@@ -178,8 +178,8 @@ public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
      * @generated
      */
     @Override
-    public dmPackage getdmPackage() {
-        return (dmPackage) getEPackage();
+    public DMPackage getDMPackage() {
+        return (DMPackage) getEPackage();
     }
 
     /**
@@ -189,8 +189,8 @@ public class dmFactoryImpl extends EFactoryImpl implements dmFactory {
      * @generated
      */
     @Deprecated
-    public static dmPackage getPackage() {
-        return dmPackage.eINSTANCE;
+    public static DMPackage getPackage() {
+        return DMPackage.eINSTANCE;
     }
 
-} //dmFactoryImpl
+} //DMFactoryImpl

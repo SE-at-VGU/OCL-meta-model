@@ -5,7 +5,7 @@ package org.vgu.se.ocl.type.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.vgu.se.ocl.type.EDataType;
-import org.vgu.se.ocl.type.typePackage;
+import org.vgu.se.ocl.type.TYPEPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public abstract class EDataTypeImpl extends EClassifierImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return typePackage.Literals.EDATA_TYPE;
+        return TYPEPackage.Literals.EDATA_TYPE;
     }
 
 } //EDataTypeImpl

@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.dm.dmPackage
+ * @see org.vgu.se.ocl.dm.DMPackage
  * @generated
  */
-public interface dmFactory extends EFactory {
+public interface DMFactory extends EFactory {
     /**
      * The singleton instance of the factory.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    dmFactory eINSTANCE = org.vgu.se.ocl.dm.impl.dmFactoryImpl.init();
+    DMFactory eINSTANCE = org.vgu.se.ocl.dm.impl.DMFactoryImpl.init();
 
     /**
      * Returns a new object of class '<em>EEntity</em>'.
@@ -64,6 +64,6 @@ public interface dmFactory extends EFactory {
      * @return the package supported by this factory.
      * @generated
      */
-    dmPackage getdmPackage();
+    DMPackage getDMPackage();
 
-} //dmFactory
+} //DMFactory

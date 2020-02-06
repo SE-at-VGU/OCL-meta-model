@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>EMultiplicity</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see org.vgu.se.ocl.dm.dmPackage#getEMultiplicity()
+ * @see org.vgu.se.ocl.dm.DMPackage#getEMultiplicity()
  * @model instanceClass="org.vgu.se.ocl.dm.EMultiplicity"
  * @generated
  */
@@ -22,43 +22,43 @@ public enum EMultiplicity implements Enumerator {
      * The '<em><b>One</b></em>' literal object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #ONE
+     * @see #ONE_VALUE
      * @generated
      * @ordered
      */
-    ONE_LITERAL(1, "one", "1"),
+    ONE(1, "one", "1"),
 
     /**
      * The '<em><b>Many</b></em>' literal object.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #MANY
+     * @see #MANY_VALUE
      * @generated
      * @ordered
      */
-    MANY_LITERAL(-1, "many", "*");
+    MANY(-1, "many", "*");
 
     /**
      * The '<em><b>One</b></em>' literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #ONE_LITERAL
+     * @see #ONE
      * @model name="one" literal="1"
      * @generated
      * @ordered
      */
-    public static final int ONE = 1;
+    public static final int ONE_VALUE = 1;
 
     /**
      * The '<em><b>Many</b></em>' literal value.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see #MANY_LITERAL
+     * @see #MANY
      * @model name="many" literal="*"
      * @generated
      * @ordered
      */
-    public static final int MANY = -1;
+    public static final int MANY_VALUE = -1;
 
     /**
      * An array of all the '<em><b>EMultiplicity</b></em>' enumerators.
@@ -67,7 +67,7 @@ public enum EMultiplicity implements Enumerator {
      * @generated
      */
     private static final EMultiplicity[] VALUES_ARRAY = new EMultiplicity[] {
-        ONE_LITERAL, MANY_LITERAL, };
+        ONE, MANY, };
 
     /**
      * A public read-only list of all the '<em><b>EMultiplicity</b></em>' enumerators.
@@ -124,10 +124,10 @@ public enum EMultiplicity implements Enumerator {
      */
     public static EMultiplicity get(int value) {
         switch (value) {
-        case ONE:
-            return ONE_LITERAL;
-        case MANY:
-            return MANY_LITERAL;
+        case ONE_VALUE:
+            return ONE;
+        case MANY_VALUE:
+            return MANY;
         }
         return null;
     }

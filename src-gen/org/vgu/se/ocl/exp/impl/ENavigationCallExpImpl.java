@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.vgu.se.ocl.exp.ENavigationCallExp;
 import org.vgu.se.ocl.exp.EOclExpression;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,7 +59,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ENAVIGATION_CALL_EXP;
+        return EXPPackage.Literals.ENAVIGATION_CALL_EXP;
     }
 
     /**
@@ -72,8 +72,8 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
         if (qualifier == null) {
             qualifier = new EObjectContainmentWithInverseEList<EOclExpression>(
                 EOclExpression.class, this,
-                expPackage.ENAVIGATION_CALL_EXP__QUALIFIER,
-                expPackage.EOCL_EXPRESSION__PARENT_NAV);
+                EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER,
+                EXPPackage.EOCL_EXPRESSION__PARENT_NAV);
         }
         return qualifier;
     }
@@ -88,7 +88,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
     public NotificationChain eInverseAdd(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
+        case EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
             return ((InternalEList<InternalEObject>) (InternalEList<?>) getQualifier())
                 .basicAdd(otherEnd, msgs);
         }
@@ -104,7 +104,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
     public NotificationChain eInverseRemove(InternalEObject otherEnd,
         int featureID, NotificationChain msgs) {
         switch (featureID) {
-        case expPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
+        case EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
             return ((InternalEList<?>) getQualifier()).basicRemove(otherEnd,
                 msgs);
         }
@@ -119,7 +119,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
+        case EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
             return getQualifier();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -134,7 +134,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
+        case EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
             getQualifier().clear();
             getQualifier()
                 .addAll((Collection<? extends EOclExpression>) newValue);
@@ -151,7 +151,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
+        case EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
             getQualifier().clear();
             return;
         }
@@ -166,7 +166,7 @@ public abstract class ENavigationCallExpImpl extends EFeatureCallExpImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
+        case EXPPackage.ENAVIGATION_CALL_EXP__QUALIFIER:
             return qualifier != null && !qualifier.isEmpty();
         }
         return super.eIsSet(featureID);

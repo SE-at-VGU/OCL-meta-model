@@ -20,7 +20,7 @@ import org.vgu.se.ocl.type.EClassifier;
  *   <li>{@link org.vgu.se.ocl.dm.EEntity#getAttributes <em>Attributes</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.dm.dmPackage#getEEntity()
+ * @see org.vgu.se.ocl.dm.DMPackage#getEEntity()
  * @model
  * @generated
  */
@@ -31,7 +31,7 @@ public interface EEntity extends EClassifier {
      * <!-- end-user-doc -->
      * @return the value of the '<em>Name</em>' attribute.
      * @see #setName(String)
-     * @see org.vgu.se.ocl.dm.dmPackage#getEEntity_Name()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEEntity_Name()
      * @model dataType="org.eclipse.emf.ecore.xml.type.String"
      * @generated
      */
@@ -53,7 +53,7 @@ public interface EEntity extends EClassifier {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Ends</em>' containment reference list.
-     * @see org.vgu.se.ocl.dm.dmPackage#getEEntity_Ends()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEEntity_Ends()
      * @model containment="true"
      * @generated
      */
@@ -65,7 +65,7 @@ public interface EEntity extends EClassifier {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Attributes</em>' containment reference list.
-     * @see org.vgu.se.ocl.dm.dmPackage#getEEntity_Attributes()
+     * @see org.vgu.se.ocl.dm.DMPackage#getEEntity_Attributes()
      * @model containment="true"
      * @generated
      */

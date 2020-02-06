@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.vgu.se.ocl.exp.EOperationCallExp#getReferredOperation <em>Referred Operation</em>}</li>
  * </ul>
  *
- * @see org.vgu.se.ocl.exp.expPackage#getEOperationCallExp()
+ * @see org.vgu.se.ocl.exp.EXPPackage#getEOperationCallExp()
  * @model
  * @generated
  */
@@ -29,7 +29,7 @@ public interface EOperationCallExp extends EFeatureCallExp {
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Argument</em>' containment reference list.
-     * @see org.vgu.se.ocl.exp.expPackage#getEOperationCallExp_Argument()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOperationCallExp_Argument()
      * @see org.vgu.se.ocl.exp.EOclExpression#getParentCall
      * @model opposite="parentCall" containment="true"
      * @generated
@@ -44,7 +44,7 @@ public interface EOperationCallExp extends EFeatureCallExp {
      * @return the value of the '<em>Referred Operation</em>' attribute.
      * @see org.vgu.se.ocl.exp.EOperator
      * @see #setReferredOperation(EOperator)
-     * @see org.vgu.se.ocl.exp.expPackage#getEOperationCallExp_ReferredOperation()
+     * @see org.vgu.se.ocl.exp.EXPPackage#getEOperationCallExp_ReferredOperation()
      * @model dataType="org.vgu.se.ocl.exp.EOperator"
      * @generated
      */

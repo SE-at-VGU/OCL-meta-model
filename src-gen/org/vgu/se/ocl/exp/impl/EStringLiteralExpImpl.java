@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.vgu.se.ocl.exp.EStringLiteralExp;
-import org.vgu.se.ocl.exp.expPackage;
+import org.vgu.se.ocl.exp.EXPPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +62,7 @@ public class EStringLiteralExpImpl extends EPrimitiveTypeImpl
      */
     @Override
     protected EClass eStaticClass() {
-        return expPackage.Literals.ESTRING_LITERAL_EXP;
+        return EXPPackage.Literals.ESTRING_LITERAL_EXP;
     }
 
     /**
@@ -86,7 +86,7 @@ public class EStringLiteralExpImpl extends EPrimitiveTypeImpl
         stringValue = newStringValue;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                expPackage.ESTRING_LITERAL_EXP__STRING_VALUE, oldStringValue,
+                EXPPackage.ESTRING_LITERAL_EXP__STRING_VALUE, oldStringValue,
                 stringValue));
     }
 
@@ -98,7 +98,7 @@ public class EStringLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case expPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
+        case EXPPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
             return getStringValue();
         }
         return super.eGet(featureID, resolve, coreType);
@@ -112,7 +112,7 @@ public class EStringLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case expPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
+        case EXPPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
             setStringValue((String) newValue);
             return;
         }
@@ -127,7 +127,7 @@ public class EStringLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case expPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
+        case EXPPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
             setStringValue(STRING_VALUE_EDEFAULT);
             return;
         }
@@ -142,7 +142,7 @@ public class EStringLiteralExpImpl extends EPrimitiveTypeImpl
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case expPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
+        case EXPPackage.ESTRING_LITERAL_EXP__STRING_VALUE:
             return STRING_VALUE_EDEFAULT == null ? stringValue != null
                 : !STRING_VALUE_EDEFAULT.equals(stringValue);
         }
