@@ -49,7 +49,7 @@ public interface EEntity extends EClassifier {
 
     /**
      * Returns the value of the '<em><b>Ends</b></em>' containment reference list.
-     * The list contents are of type {@link org.vgu.se.ocl.dm.EAssociation}.
+     * The list contents are of type {@link org.vgu.se.ocl.dm.EAssociationEnd}.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @return the value of the '<em>Ends</em>' containment reference list.
@@ -57,7 +57,7 @@ public interface EEntity extends EClassifier {
      * @model containment="true"
      * @generated
      */
-    EList<EAssociation> getEnds();
+    EList<EAssociationEnd> getEnds();
 
     /**
      * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.

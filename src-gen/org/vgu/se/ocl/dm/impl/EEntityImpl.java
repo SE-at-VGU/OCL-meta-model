@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.vgu.se.ocl.dm.DMPackage;
-import org.vgu.se.ocl.dm.EAssociation;
+import org.vgu.se.ocl.dm.EAssociationEnd;
 import org.vgu.se.ocl.dm.EAttribute;
 import org.vgu.se.ocl.dm.EEntity;
 
@@ -68,7 +68,7 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
      * @generated
      * @ordered
      */
-    protected EList<EAssociation> ends;
+    protected EList<EAssociationEnd> ends;
 
     /**
      * The cached value of the '{@link #getAttributes() <em>Attributes</em>}' containment reference list.
@@ -129,10 +129,10 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
      * @generated
      */
     @Override
-    public EList<EAssociation> getEnds() {
+    public EList<EAssociationEnd> getEnds() {
         if (ends == null) {
-            ends = new EObjectContainmentEList<EAssociation>(EAssociation.class,
-                this, DMPackage.EENTITY__ENDS);
+            ends = new EObjectContainmentEList<EAssociationEnd>(
+                EAssociationEnd.class, this, DMPackage.EENTITY__ENDS);
         }
         return ends;
     }
@@ -201,7 +201,7 @@ public class EEntityImpl extends EClassifierImpl implements EEntity {
             return;
         case DMPackage.EENTITY__ENDS:
             getEnds().clear();
-            getEnds().addAll((Collection<? extends EAssociation>) newValue);
+            getEnds().addAll((Collection<? extends EAssociationEnd>) newValue);
             return;
         case DMPackage.EENTITY__ATTRIBUTES:
             getAttributes().clear();

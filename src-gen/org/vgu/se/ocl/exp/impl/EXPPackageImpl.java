@@ -1079,7 +1079,7 @@ public class EXPPackageImpl extends EPackageImpl implements EXPPackage {
             EAssociationClassCallExp.class, "EAssociationClassCallExp",
             !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getEAssociationClassCallExp_ReferredAssociationEnds(),
-            theDMPackage.getEAssociation(), null, "referredAssociationEnds",
+            theDMPackage.getEAssociationEnd(), null, "referredAssociationEnds",
             null, 1, 1, EAssociationClassCallExp.class, !IS_TRANSIENT,
             !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
             !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

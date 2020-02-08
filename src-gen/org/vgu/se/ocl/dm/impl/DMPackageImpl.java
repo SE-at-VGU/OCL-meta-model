@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 import org.vgu.se.ocl.dm.DMFactory;
 import org.vgu.se.ocl.dm.DMPackage;
-import org.vgu.se.ocl.dm.EAssociation;
+import org.vgu.se.ocl.dm.EAssociationEnd;
 import org.vgu.se.ocl.dm.EDataModel;
 import org.vgu.se.ocl.dm.EEntity;
 import org.vgu.se.ocl.dm.EMultiplicity;
@@ -46,7 +46,7 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * <!-- end-user-doc -->
      * @generated
      */
-    private EClass eAssociationEClass = null;
+    private EClass eAssociationEndEClass = null;
 
     /**
      * <!-- begin-user-doc -->
@@ -199,8 +199,8 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EClass getEAssociation() {
-        return eAssociationEClass;
+    public EClass getEAssociationEnd() {
+        return eAssociationEndEClass;
     }
 
     /**
@@ -209,8 +209,9 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EAttribute getEAssociation_Name() {
-        return (EAttribute) eAssociationEClass.getEStructuralFeatures().get(0);
+    public EAttribute getEAssociationEnd_Name() {
+        return (EAttribute) eAssociationEndEClass.getEStructuralFeatures()
+            .get(0);
     }
 
     /**
@@ -219,8 +220,9 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EAttribute getEAssociation_Opp() {
-        return (EAttribute) eAssociationEClass.getEStructuralFeatures().get(1);
+    public EAttribute getEAssociationEnd_Opp() {
+        return (EAttribute) eAssociationEndEClass.getEStructuralFeatures()
+            .get(1);
     }
 
     /**
@@ -229,8 +231,9 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EAttribute getEAssociation_Mult() {
-        return (EAttribute) eAssociationEClass.getEStructuralFeatures().get(2);
+    public EAttribute getEAssociationEnd_Mult() {
+        return (EAttribute) eAssociationEndEClass.getEStructuralFeatures()
+            .get(2);
     }
 
     /**
@@ -239,8 +242,9 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EReference getEAssociation_Target() {
-        return (EReference) eAssociationEClass.getEStructuralFeatures().get(3);
+    public EReference getEAssociationEnd_Target() {
+        return (EReference) eAssociationEndEClass.getEStructuralFeatures()
+            .get(3);
     }
 
     /**
@@ -338,11 +342,11 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
         createEReference(eEntityEClass, EENTITY__ENDS);
         createEReference(eEntityEClass, EENTITY__ATTRIBUTES);
 
-        eAssociationEClass = createEClass(EASSOCIATION);
-        createEAttribute(eAssociationEClass, EASSOCIATION__NAME);
-        createEAttribute(eAssociationEClass, EASSOCIATION__OPP);
-        createEAttribute(eAssociationEClass, EASSOCIATION__MULT);
-        createEReference(eAssociationEClass, EASSOCIATION__TARGET);
+        eAssociationEndEClass = createEClass(EASSOCIATION_END);
+        createEAttribute(eAssociationEndEClass, EASSOCIATION_END__NAME);
+        createEAttribute(eAssociationEndEClass, EASSOCIATION_END__OPP);
+        createEAttribute(eAssociationEndEClass, EASSOCIATION_END__MULT);
+        createEReference(eAssociationEndEClass, EASSOCIATION_END__TARGET);
 
         eDataModelEClass = createEClass(EDATA_MODEL);
         createEReference(eDataModelEClass, EDATA_MODEL__CLASSES);
@@ -399,8 +403,8 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
             null, 0, 1, EEntity.class, !IS_TRANSIENT, !IS_VOLATILE,
             IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
             IS_ORDERED);
-        initEReference(getEEntity_Ends(), this.getEAssociation(), null, "ends",
-            null, 0, -1, EEntity.class, !IS_TRANSIENT, !IS_VOLATILE,
+        initEReference(getEEntity_Ends(), this.getEAssociationEnd(), null,
+            "ends", null, 0, -1, EEntity.class, !IS_TRANSIENT, !IS_VOLATILE,
             IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
             IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
         initEReference(getEEntity_Attributes(), this.getEAttribute(), null,
@@ -408,22 +412,23 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
             !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
             !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-        initEClass(eAssociationEClass, EAssociation.class, "EAssociation",
-            !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-        initEAttribute(getEAssociation_Name(), ecorePackage.getEString(),
-            "name", null, 0, 1, EAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
-            IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-            IS_ORDERED);
-        initEAttribute(getEAssociation_Opp(), ecorePackage.getEString(), "opp",
-            null, 0, 1, EAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
-            IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-            IS_ORDERED);
-        initEAttribute(getEAssociation_Mult(), this.getEMultiplicity(), "mult",
-            null, 0, 1, EAssociation.class, !IS_TRANSIENT, !IS_VOLATILE,
-            IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
-            IS_ORDERED);
-        initEReference(getEAssociation_Target(), this.getEEntity(), null,
-            "target", null, 1, 1, EAssociation.class, !IS_TRANSIENT,
+        initEClass(eAssociationEndEClass, EAssociationEnd.class,
+            "EAssociationEnd", !IS_ABSTRACT, !IS_INTERFACE,
+            IS_GENERATED_INSTANCE_CLASS);
+        initEAttribute(getEAssociationEnd_Name(), ecorePackage.getEString(),
+            "name", null, 0, 1, EAssociationEnd.class, !IS_TRANSIENT,
+            !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+            !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getEAssociationEnd_Opp(), ecorePackage.getEString(),
+            "opp", null, 0, 1, EAssociationEnd.class, !IS_TRANSIENT,
+            !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+            !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getEAssociationEnd_Mult(), this.getEMultiplicity(),
+            "mult", null, 0, 1, EAssociationEnd.class, !IS_TRANSIENT,
+            !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+            !IS_DERIVED, IS_ORDERED);
+        initEReference(getEAssociationEnd_Target(), this.getEEntity(), null,
+            "target", null, 1, 1, EAssociationEnd.class, !IS_TRANSIENT,
             !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
             !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

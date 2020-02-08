@@ -77,9 +77,9 @@ public class DMSwitch<T> extends Switch<T> {
                 result = defaultCase(theEObject);
             return result;
         }
-        case DMPackage.EASSOCIATION: {
-            EAssociation eAssociation = (EAssociation) theEObject;
-            T result = caseEAssociation(eAssociation);
+        case DMPackage.EASSOCIATION_END: {
+            EAssociationEnd eAssociationEnd = (EAssociationEnd) theEObject;
+            T result = caseEAssociationEnd(eAssociationEnd);
             if (result == null)
                 result = defaultCase(theEObject);
             return result;
@@ -119,17 +119,17 @@ public class DMSwitch<T> extends Switch<T> {
     }
 
     /**
-     * Returns the result of interpreting the object as an instance of '<em>EAssociation</em>'.
+     * Returns the result of interpreting the object as an instance of '<em>EAssociation End</em>'.
      * <!-- begin-user-doc -->
      * This implementation returns null;
      * returning a non-null result will terminate the switch.
      * <!-- end-user-doc -->
      * @param object the target of the switch.
-     * @return the result of interpreting the object as an instance of '<em>EAssociation</em>'.
+     * @return the result of interpreting the object as an instance of '<em>EAssociation End</em>'.
      * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
      * @generated
      */
-    public T caseEAssociation(EAssociation object) {
+    public T caseEAssociationEnd(EAssociationEnd object) {
         return null;
     }
 

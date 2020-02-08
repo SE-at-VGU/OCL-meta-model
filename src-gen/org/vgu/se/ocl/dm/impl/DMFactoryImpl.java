@@ -59,8 +59,8 @@ public class DMFactoryImpl extends EFactoryImpl implements DMFactory {
         switch (eClass.getClassifierID()) {
         case DMPackage.EENTITY:
             return createEEntity();
-        case DMPackage.EASSOCIATION:
-            return createEAssociation();
+        case DMPackage.EASSOCIATION_END:
+            return createEAssociationEnd();
         case DMPackage.EDATA_MODEL:
             return createEDataModel();
         case DMPackage.EATTRIBUTE:
@@ -120,9 +120,9 @@ public class DMFactoryImpl extends EFactoryImpl implements DMFactory {
      * @generated
      */
     @Override
-    public EAssociation createEAssociation() {
-        EAssociationImpl eAssociation = new EAssociationImpl();
-        return eAssociation;
+    public EAssociationEnd createEAssociationEnd() {
+        EAssociationEndImpl eAssociationEnd = new EAssociationEndImpl();
+        return eAssociationEnd;
     }
 
     /**

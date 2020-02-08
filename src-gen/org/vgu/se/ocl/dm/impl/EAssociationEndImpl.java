@@ -11,28 +11,28 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.vgu.se.ocl.dm.DMPackage;
-import org.vgu.se.ocl.dm.EAssociation;
+import org.vgu.se.ocl.dm.EAssociationEnd;
 import org.vgu.se.ocl.dm.EEntity;
 import org.vgu.se.ocl.dm.EMultiplicity;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EAssociation</b></em>'.
+ * An implementation of the model object '<em><b>EAssociation End</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationImpl#getOpp <em>Opp</em>}</li>
- *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationImpl#getMult <em>Mult</em>}</li>
- *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getOpp <em>Opp</em>}</li>
+ *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getMult <em>Mult</em>}</li>
+ *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EAssociationImpl extends MinimalEObjectImpl.Container
-    implements EAssociation {
+public class EAssociationEndImpl extends MinimalEObjectImpl.Container
+    implements EAssociationEnd {
     /**
      * The default value of the '{@link #getName() <em>Name</em>}' attribute.
      * <!-- begin-user-doc -->
@@ -108,7 +108,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
      * <!-- end-user-doc -->
      * @generated
      */
-    protected EAssociationImpl() {
+    protected EAssociationEndImpl() {
         super();
     }
 
@@ -119,7 +119,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
      */
     @Override
     protected EClass eStaticClass() {
-        return DMPackage.Literals.EASSOCIATION;
+        return DMPackage.Literals.EASSOCIATION_END;
     }
 
     /**
@@ -143,7 +143,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         name = newName;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                DMPackage.EASSOCIATION__NAME, oldName, name));
+                DMPackage.EASSOCIATION_END__NAME, oldName, name));
     }
 
     /**
@@ -167,7 +167,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         opp = newOpp;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                DMPackage.EASSOCIATION__OPP, oldOpp, opp));
+                DMPackage.EASSOCIATION_END__OPP, oldOpp, opp));
     }
 
     /**
@@ -191,7 +191,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         mult = newMult == null ? MULT_EDEFAULT : newMult;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                DMPackage.EASSOCIATION__MULT, oldMult, mult));
+                DMPackage.EASSOCIATION_END__MULT, oldMult, mult));
     }
 
     /**
@@ -207,7 +207,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
             if (target != oldTarget) {
                 if (eNotificationRequired())
                     eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-                        DMPackage.EASSOCIATION__TARGET, oldTarget, target));
+                        DMPackage.EASSOCIATION_END__TARGET, oldTarget, target));
             }
         }
         return target;
@@ -233,7 +233,7 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         target = newTarget;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
-                DMPackage.EASSOCIATION__TARGET, oldTarget, target));
+                DMPackage.EASSOCIATION_END__TARGET, oldTarget, target));
     }
 
     /**
@@ -244,13 +244,13 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
-        case DMPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION_END__NAME:
             return getName();
-        case DMPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION_END__OPP:
             return getOpp();
-        case DMPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION_END__MULT:
             return getMult();
-        case DMPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION_END__TARGET:
             if (resolve)
                 return getTarget();
             return basicGetTarget();
@@ -266,16 +266,16 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
-        case DMPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION_END__NAME:
             setName((String) newValue);
             return;
-        case DMPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION_END__OPP:
             setOpp((String) newValue);
             return;
-        case DMPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION_END__MULT:
             setMult((EMultiplicity) newValue);
             return;
-        case DMPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION_END__TARGET:
             setTarget((EEntity) newValue);
             return;
         }
@@ -290,16 +290,16 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
-        case DMPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION_END__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case DMPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION_END__OPP:
             setOpp(OPP_EDEFAULT);
             return;
-        case DMPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION_END__MULT:
             setMult(MULT_EDEFAULT);
             return;
-        case DMPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION_END__TARGET:
             setTarget((EEntity) null);
             return;
         }
@@ -314,15 +314,15 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
     @Override
     public boolean eIsSet(int featureID) {
         switch (featureID) {
-        case DMPackage.EASSOCIATION__NAME:
+        case DMPackage.EASSOCIATION_END__NAME:
             return NAME_EDEFAULT == null ? name != null
                 : !NAME_EDEFAULT.equals(name);
-        case DMPackage.EASSOCIATION__OPP:
+        case DMPackage.EASSOCIATION_END__OPP:
             return OPP_EDEFAULT == null ? opp != null
                 : !OPP_EDEFAULT.equals(opp);
-        case DMPackage.EASSOCIATION__MULT:
+        case DMPackage.EASSOCIATION_END__MULT:
             return mult != MULT_EDEFAULT;
-        case DMPackage.EASSOCIATION__TARGET:
+        case DMPackage.EASSOCIATION_END__TARGET:
             return target != null;
         }
         return super.eIsSet(featureID);
@@ -349,4 +349,4 @@ public class EAssociationImpl extends MinimalEObjectImpl.Container
         return result.toString();
     }
 
-} //EAssociationImpl
+} //EAssociationEndImpl

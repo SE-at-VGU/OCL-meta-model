@@ -74,8 +74,8 @@ public class DMAdapterFactory extends AdapterFactoryImpl {
         }
 
         @Override
-        public Adapter caseEAssociation(EAssociation object) {
-            return createEAssociationAdapter();
+        public Adapter caseEAssociationEnd(EAssociationEnd object) {
+            return createEAssociationEndAdapter();
         }
 
         @Override
@@ -127,16 +127,16 @@ public class DMAdapterFactory extends AdapterFactoryImpl {
     }
 
     /**
-     * Creates a new adapter for an object of class '{@link org.vgu.se.ocl.dm.EAssociation <em>EAssociation</em>}'.
+     * Creates a new adapter for an object of class '{@link org.vgu.se.ocl.dm.EAssociationEnd <em>EAssociation End</em>}'.
      * <!-- begin-user-doc -->
      * This default implementation returns null so that we can easily ignore cases;
      * it's useful to ignore a case when inheritance will catch all the cases anyway.
      * <!-- end-user-doc -->
      * @return the new adapter.
-     * @see org.vgu.se.ocl.dm.EAssociation
+     * @see org.vgu.se.ocl.dm.EAssociationEnd
      * @generated
      */
-    public Adapter createEAssociationAdapter() {
+    public Adapter createEAssociationEndAdapter() {
         return null;
     }
 

@@ -31,13 +31,13 @@ public interface DMFactory extends EFactory {
     EEntity createEEntity();
 
     /**
-     * Returns a new object of class '<em>EAssociation</em>'.
+     * Returns a new object of class '<em>EAssociation End</em>'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @return a new object of class '<em>EAssociation</em>'.
+     * @return a new object of class '<em>EAssociation End</em>'.
      * @generated
      */
-    EAssociation createEAssociation();
+    EAssociationEnd createEAssociationEnd();
 
     /**
      * Returns a new object of class '<em>EData Model</em>'.

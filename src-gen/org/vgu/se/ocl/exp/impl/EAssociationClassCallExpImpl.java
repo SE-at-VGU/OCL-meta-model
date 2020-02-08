@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.vgu.se.ocl.dm.EAssociation;
+import org.vgu.se.ocl.dm.EAssociationEnd;
 
 import org.vgu.se.ocl.exp.EAssociationClassCallExp;
 import org.vgu.se.ocl.exp.EXPPackage;
@@ -37,7 +37,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
      * @generated
      * @ordered
      */
-    protected EAssociation referredAssociationEnds;
+    protected EAssociationEnd referredAssociationEnds;
 
     /**
      * <!-- begin-user-doc -->
@@ -64,11 +64,11 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
      * @generated
      */
     @Override
-    public EAssociation getReferredAssociationEnds() {
+    public EAssociationEnd getReferredAssociationEnds() {
         if (referredAssociationEnds != null
             && referredAssociationEnds.eIsProxy()) {
             InternalEObject oldReferredAssociationEnds = (InternalEObject) referredAssociationEnds;
-            referredAssociationEnds = (EAssociation) eResolveProxy(
+            referredAssociationEnds = (EAssociationEnd) eResolveProxy(
                 oldReferredAssociationEnds);
             if (referredAssociationEnds != oldReferredAssociationEnds) {
                 if (eNotificationRequired())
@@ -85,7 +85,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
      * <!-- end-user-doc -->
      * @generated
      */
-    public EAssociation basicGetReferredAssociationEnds() {
+    public EAssociationEnd basicGetReferredAssociationEnds() {
         return referredAssociationEnds;
     }
 
@@ -96,8 +96,8 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
      */
     @Override
     public void setReferredAssociationEnds(
-        EAssociation newReferredAssociationEnds) {
-        EAssociation oldReferredAssociationEnds = referredAssociationEnds;
+        EAssociationEnd newReferredAssociationEnds) {
+        EAssociationEnd oldReferredAssociationEnds = referredAssociationEnds;
         referredAssociationEnds = newReferredAssociationEnds;
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
@@ -130,7 +130,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
         case EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
-            setReferredAssociationEnds((EAssociation) newValue);
+            setReferredAssociationEnds((EAssociationEnd) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -145,7 +145,7 @@ public class EAssociationClassCallExpImpl extends ENavigationCallExpImpl
     public void eUnset(int featureID) {
         switch (featureID) {
         case EXPPackage.EASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS:
-            setReferredAssociationEnds((EAssociation) null);
+            setReferredAssociationEnds((EAssociationEnd) null);
             return;
         }
         super.eUnset(featureID);
