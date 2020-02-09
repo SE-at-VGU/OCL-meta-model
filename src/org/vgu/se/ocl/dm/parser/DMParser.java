@@ -42,7 +42,7 @@ public class DMParser {
         return dataModelJSON;
     }
 
-    private static DataModel transform(EDataModel dataModelXMI) {
+    public static DataModel transform(EDataModel dataModelXMI) {
         DataModel dataModel = new DataModel();
 
         Map<String, Entity> entitiesJSON = dataModel.getEntities();

@@ -17,14 +17,24 @@ limitations under the License.
 ***************************************************************************/
 
 
-package org.vgu.se.ocl.dm.parser;
+package org.vgu.se.ocl.classifier.parser;
 
-import org.vgu.dm2schema.dm.DataModel;
+import org.vgu.se.ocl.dm.EEntity;
+import org.vgu.se.ocl.type.EClassifier;
 
-public class ApplicationTest {
-    public static void main (String[] args) {
-        DataModel dm = DMParser.convertToDataModel("C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\CarPerson.xmi");
-        System.out.println(dm);
+public class ClassifierParser {
+
+    public static String transform(EClassifier referredType) {
+        if(referredType instanceof EEntity) {
+            return transformEntity((EEntity) referredType);
+        }
+        else {
+            //TODO: Implement for other classifiers
+            return null;
+        }
     }
-    
+
+    private static String transformEntity(EEntity referredType) {
+        return referredType.getName();
+    }
 }
