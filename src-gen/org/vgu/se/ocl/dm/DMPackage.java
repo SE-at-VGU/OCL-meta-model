@@ -134,22 +134,13 @@ public interface DMPackage extends EPackage {
     int EASSOCIATION_END__NAME = 0;
 
     /**
-     * The feature id for the '<em><b>Opp</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     * @ordered
-     */
-    int EASSOCIATION_END__OPP = 1;
-
-    /**
      * The feature id for the '<em><b>Mult</b></em>' attribute.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      * @ordered
      */
-    int EASSOCIATION_END__MULT = 2;
+    int EASSOCIATION_END__MULT = 1;
 
     /**
      * The feature id for the '<em><b>Target</b></em>' reference.
@@ -158,7 +149,16 @@ public interface DMPackage extends EPackage {
      * @generated
      * @ordered
      */
-    int EASSOCIATION_END__TARGET = 3;
+    int EASSOCIATION_END__TARGET = 2;
+
+    /**
+     * The feature id for the '<em><b>Opp</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     * @ordered
+     */
+    int EASSOCIATION_END__OPP = 3;
 
     /**
      * The number of structural features of the '<em>EAssociation End</em>' class.
@@ -336,17 +336,6 @@ public interface DMPackage extends EPackage {
     EAttribute getEAssociationEnd_Name();
 
     /**
-     * Returns the meta object for the attribute '{@link org.vgu.se.ocl.dm.EAssociationEnd#getOpp <em>Opp</em>}'.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the meta object for the attribute '<em>Opp</em>'.
-     * @see org.vgu.se.ocl.dm.EAssociationEnd#getOpp()
-     * @see #getEAssociationEnd()
-     * @generated
-     */
-    EAttribute getEAssociationEnd_Opp();
-
-    /**
      * Returns the meta object for the attribute '{@link org.vgu.se.ocl.dm.EAssociationEnd#getMult <em>Mult</em>}'.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -367,6 +356,17 @@ public interface DMPackage extends EPackage {
      * @generated
      */
     EReference getEAssociationEnd_Target();
+
+    /**
+     * Returns the meta object for the reference '{@link org.vgu.se.ocl.dm.EAssociationEnd#getOpp <em>Opp</em>}'.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the meta object for the reference '<em>Opp</em>'.
+     * @see org.vgu.se.ocl.dm.EAssociationEnd#getOpp()
+     * @see #getEAssociationEnd()
+     * @generated
+     */
+    EReference getEAssociationEnd_Opp();
 
     /**
      * Returns the meta object for class '{@link org.vgu.se.ocl.dm.EDataModel <em>EData Model</em>}'.
@@ -507,14 +507,6 @@ public interface DMPackage extends EPackage {
         EAttribute EASSOCIATION_END__NAME = eINSTANCE.getEAssociationEnd_Name();
 
         /**
-         * The meta object literal for the '<em><b>Opp</b></em>' attribute feature.
-         * <!-- begin-user-doc -->
-         * <!-- end-user-doc -->
-         * @generated
-         */
-        EAttribute EASSOCIATION_END__OPP = eINSTANCE.getEAssociationEnd_Opp();
-
-        /**
          * The meta object literal for the '<em><b>Mult</b></em>' attribute feature.
          * <!-- begin-user-doc -->
          * <!-- end-user-doc -->
@@ -530,6 +522,14 @@ public interface DMPackage extends EPackage {
          */
         EReference EASSOCIATION_END__TARGET = eINSTANCE
             .getEAssociationEnd_Target();
+
+        /**
+         * The meta object literal for the '<em><b>Opp</b></em>' reference feature.
+         * <!-- begin-user-doc -->
+         * <!-- end-user-doc -->
+         * @generated
+         */
+        EReference EASSOCIATION_END__OPP = eINSTANCE.getEAssociationEnd_Opp();
 
         /**
          * The meta object literal for the '{@link org.vgu.se.ocl.dm.impl.EDataModelImpl <em>EData Model</em>}' class.

@@ -220,7 +220,7 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EAttribute getEAssociationEnd_Opp() {
+    public EAttribute getEAssociationEnd_Mult() {
         return (EAttribute) eAssociationEndEClass.getEStructuralFeatures()
             .get(1);
     }
@@ -231,8 +231,8 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EAttribute getEAssociationEnd_Mult() {
-        return (EAttribute) eAssociationEndEClass.getEStructuralFeatures()
+    public EReference getEAssociationEnd_Target() {
+        return (EReference) eAssociationEndEClass.getEStructuralFeatures()
             .get(2);
     }
 
@@ -242,7 +242,7 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
      * @generated
      */
     @Override
-    public EReference getEAssociationEnd_Target() {
+    public EReference getEAssociationEnd_Opp() {
         return (EReference) eAssociationEndEClass.getEStructuralFeatures()
             .get(3);
     }
@@ -344,9 +344,9 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
 
         eAssociationEndEClass = createEClass(EASSOCIATION_END);
         createEAttribute(eAssociationEndEClass, EASSOCIATION_END__NAME);
-        createEAttribute(eAssociationEndEClass, EASSOCIATION_END__OPP);
         createEAttribute(eAssociationEndEClass, EASSOCIATION_END__MULT);
         createEReference(eAssociationEndEClass, EASSOCIATION_END__TARGET);
+        createEReference(eAssociationEndEClass, EASSOCIATION_END__OPP);
 
         eDataModelEClass = createEClass(EDATA_MODEL);
         createEReference(eDataModelEClass, EDATA_MODEL__CLASSES);
@@ -419,16 +419,16 @@ public class DMPackageImpl extends EPackageImpl implements DMPackage {
             "name", null, 0, 1, EAssociationEnd.class, !IS_TRANSIENT,
             !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
             !IS_DERIVED, IS_ORDERED);
-        initEAttribute(getEAssociationEnd_Opp(), ecorePackage.getEString(),
-            "opp", null, 0, 1, EAssociationEnd.class, !IS_TRANSIENT,
-            !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-            !IS_DERIVED, IS_ORDERED);
         initEAttribute(getEAssociationEnd_Mult(), this.getEMultiplicity(),
             "mult", null, 0, 1, EAssociationEnd.class, !IS_TRANSIENT,
             !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
             !IS_DERIVED, IS_ORDERED);
         initEReference(getEAssociationEnd_Target(), this.getEEntity(), null,
             "target", null, 1, 1, EAssociationEnd.class, !IS_TRANSIENT,
+            !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+            !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEReference(getEAssociationEnd_Opp(), this.getEAssociationEnd(),
+            null, "opp", null, 1, 1, EAssociationEnd.class, !IS_TRANSIENT,
             !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
             !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

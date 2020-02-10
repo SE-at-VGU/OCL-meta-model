@@ -70,6 +70,7 @@ import com.vgu.se.jocl.expressions.IntegerLiteralExp;
 import com.vgu.se.jocl.expressions.IteratorExp;
 import com.vgu.se.jocl.expressions.LiteralExp;
 import com.vgu.se.jocl.expressions.LoopExp;
+import com.vgu.se.jocl.expressions.M2MAssociationClassCallExp;
 import com.vgu.se.jocl.expressions.NavigationCallExp;
 import com.vgu.se.jocl.expressions.NumericLiteralExp;
 import com.vgu.se.jocl.expressions.Operation;
@@ -80,6 +81,7 @@ import com.vgu.se.jocl.expressions.StringLiteralExp;
 import com.vgu.se.jocl.expressions.TypeExp;
 import com.vgu.se.jocl.expressions.Variable;
 import com.vgu.se.jocl.expressions.VariableExp;
+import com.vgu.se.jocl.types.Type;
 
 public class OCLParser {
     public static Expression convertToExp(String filePath) {
@@ -104,7 +106,8 @@ public class OCLParser {
 
         // This is for loading proxy resources
         EcoreUtil.resolveAll(resSet);
-        return DMParser.transform((EDataModel) resSet.getResources().get(1).getContents().get(0));
+        return DMParser.transform(
+            (EDataModel) resSet.getResources().get(1).getContents().get(0));
     }
 
     private static Expression transform(EOclExpression oclXMI) {
@@ -183,9 +186,8 @@ public class OCLParser {
     }
 
     private static Variable transformVariable(EVariable eVariable) {
-        Variable variable = new Variable(eVariable.getName(), null);
-        variable.setSource(transformIteratorSource(eVariable.eContainer()));
-        return variable;
+        return new Variable(eVariable.getName(),
+            transformIteratorSource(eVariable.eContainer()));
     }
 
     private static String transform(EIteratorKind kind) {
@@ -235,15 +237,27 @@ public class OCLParser {
 
     private static PropertyCallExp transformPropertyCallExp(
         EPropertyCallExp oclXMI) {
-        // TODO Auto-generated method stub
-        return new PropertyCallExp(transform(oclXMI.getSource()),
+        PropertyCallExp propertyCallExp = new PropertyCallExp(
+            transform(oclXMI.getSource()),
             oclXMI.getReferredProperty().getName());
+        propertyCallExp
+            .setType(new Type(oclXMI.getReferredProperty().getType()));
+        return propertyCallExp;
     }
 
     private static AssociationClassCallExp transformAssociationClassCallExp(
         EAssociationClassCallExp oclXMI) {
-        return new AssociationClassCallExp(transform(oclXMI.getSource()),
+        AssociationClassCallExp associationClassCallExp = new M2MAssociationClassCallExp(
+            transform(oclXMI.getSource()),
             oclXMI.getReferredAssociationEnds().getName());
+        associationClassCallExp.setType(new Type("Col("
+            .concat(oclXMI.getReferredAssociationEnds().getTarget().getName())
+            .concat(")")));
+        associationClassCallExp.setReferredAssociationEndType(new Type(
+            oclXMI.getReferredAssociationEnds().getTarget().getName()));
+        associationClassCallExp.setOppositeAssociationEnd(oclXMI.getReferredAssociationEnds().getOpp().getName());
+//        associationClassCallExp.setOppositeAssociationEndType(oppositeAssociationEndType);
+        return associationClassCallExp;
     }
 
     private static LiteralExp transformLiteralExp(ELiteralExp oclXMI) {

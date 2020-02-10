@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.vgu.se.ocl.dm.EAssociationEnd#getName <em>Name</em>}</li>
- *   <li>{@link org.vgu.se.ocl.dm.EAssociationEnd#getOpp <em>Opp</em>}</li>
  *   <li>{@link org.vgu.se.ocl.dm.EAssociationEnd#getMult <em>Mult</em>}</li>
  *   <li>{@link org.vgu.se.ocl.dm.EAssociationEnd#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.vgu.se.ocl.dm.EAssociationEnd#getOpp <em>Opp</em>}</li>
  * </ul>
  *
  * @see org.vgu.se.ocl.dm.DMPackage#getEAssociationEnd()
@@ -45,28 +45,6 @@ public interface EAssociationEnd extends EObject {
      * @generated
      */
     void setName(String value);
-
-    /**
-     * Returns the value of the '<em><b>Opp</b></em>' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @return the value of the '<em>Opp</em>' attribute.
-     * @see #setOpp(String)
-     * @see org.vgu.se.ocl.dm.DMPackage#getEAssociationEnd_Opp()
-     * @model
-     * @generated
-     */
-    String getOpp();
-
-    /**
-     * Sets the value of the '{@link org.vgu.se.ocl.dm.EAssociationEnd#getOpp <em>Opp</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @param value the new value of the '<em>Opp</em>' attribute.
-     * @see #getOpp()
-     * @generated
-     */
-    void setOpp(String value);
 
     /**
      * Returns the value of the '<em><b>Mult</b></em>' attribute.
@@ -114,5 +92,27 @@ public interface EAssociationEnd extends EObject {
      * @generated
      */
     void setTarget(EEntity value);
+
+    /**
+     * Returns the value of the '<em><b>Opp</b></em>' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @return the value of the '<em>Opp</em>' reference.
+     * @see #setOpp(EAssociationEnd)
+     * @see org.vgu.se.ocl.dm.DMPackage#getEAssociationEnd_Opp()
+     * @model required="true"
+     * @generated
+     */
+    EAssociationEnd getOpp();
+
+    /**
+     * Sets the value of the '{@link org.vgu.se.ocl.dm.EAssociationEnd#getOpp <em>Opp</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @param value the new value of the '<em>Opp</em>' reference.
+     * @see #getOpp()
+     * @generated
+     */
+    void setOpp(EAssociationEnd value);
 
 } // EAssociationEnd

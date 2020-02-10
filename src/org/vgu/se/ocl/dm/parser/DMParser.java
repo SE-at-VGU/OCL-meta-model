@@ -73,7 +73,7 @@ public class DMParser {
             endJSON.setName(endXMI.getName());
             endJSON.setCurrentClass(entityXMI.getName());
             endJSON.setTargetClass(endXMI.getTarget().getName());
-            endJSON.setOpp(endXMI.getOpp());
+            endJSON.setOpp(endXMI.getOpp().getName());
             endJSON.setMult(endXMI.getMult().getName().equalsIgnoreCase("ONE")
                 ? Multiplicity.ONE
                 : Multiplicity.MANY);

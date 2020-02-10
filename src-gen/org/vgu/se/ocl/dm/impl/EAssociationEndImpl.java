@@ -24,9 +24,9 @@ import org.vgu.se.ocl.dm.EMultiplicity;
  * </p>
  * <ul>
  *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getOpp <em>Opp</em>}</li>
  *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getMult <em>Mult</em>}</li>
  *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link org.vgu.se.ocl.dm.impl.EAssociationEndImpl#getOpp <em>Opp</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,26 +52,6 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
      * @ordered
      */
     protected String name = NAME_EDEFAULT;
-
-    /**
-     * The default value of the '{@link #getOpp() <em>Opp</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOpp()
-     * @generated
-     * @ordered
-     */
-    protected static final String OPP_EDEFAULT = null;
-
-    /**
-     * The cached value of the '{@link #getOpp() <em>Opp</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #getOpp()
-     * @generated
-     * @ordered
-     */
-    protected String opp = OPP_EDEFAULT;
 
     /**
      * The default value of the '{@link #getMult() <em>Mult</em>}' attribute.
@@ -102,6 +82,16 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
      * @ordered
      */
     protected EEntity target;
+
+    /**
+     * The cached value of the '{@link #getOpp() <em>Opp</em>}' reference.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see #getOpp()
+     * @generated
+     * @ordered
+     */
+    protected EAssociationEnd opp;
 
     /**
      * <!-- begin-user-doc -->
@@ -144,30 +134,6 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
         if (eNotificationRequired())
             eNotify(new ENotificationImpl(this, Notification.SET,
                 DMPackage.EASSOCIATION_END__NAME, oldName, name));
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public String getOpp() {
-        return opp;
-    }
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    @Override
-    public void setOpp(String newOpp) {
-        String oldOpp = opp;
-        opp = newOpp;
-        if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET,
-                DMPackage.EASSOCIATION_END__OPP, oldOpp, opp));
     }
 
     /**
@@ -242,18 +208,62 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
      * @generated
      */
     @Override
+    public EAssociationEnd getOpp() {
+        if (opp != null && opp.eIsProxy()) {
+            InternalEObject oldOpp = (InternalEObject) opp;
+            opp = (EAssociationEnd) eResolveProxy(oldOpp);
+            if (opp != oldOpp) {
+                if (eNotificationRequired())
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+                        DMPackage.EASSOCIATION_END__OPP, oldOpp, opp));
+            }
+        }
+        return opp;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    public EAssociationEnd basicGetOpp() {
+        return opp;
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public void setOpp(EAssociationEnd newOpp) {
+        EAssociationEnd oldOpp = opp;
+        opp = newOpp;
+        if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET,
+                DMPackage.EASSOCIATION_END__OPP, oldOpp, opp));
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
         case DMPackage.EASSOCIATION_END__NAME:
             return getName();
-        case DMPackage.EASSOCIATION_END__OPP:
-            return getOpp();
         case DMPackage.EASSOCIATION_END__MULT:
             return getMult();
         case DMPackage.EASSOCIATION_END__TARGET:
             if (resolve)
                 return getTarget();
             return basicGetTarget();
+        case DMPackage.EASSOCIATION_END__OPP:
+            if (resolve)
+                return getOpp();
+            return basicGetOpp();
         }
         return super.eGet(featureID, resolve, coreType);
     }
@@ -269,14 +279,14 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
         case DMPackage.EASSOCIATION_END__NAME:
             setName((String) newValue);
             return;
-        case DMPackage.EASSOCIATION_END__OPP:
-            setOpp((String) newValue);
-            return;
         case DMPackage.EASSOCIATION_END__MULT:
             setMult((EMultiplicity) newValue);
             return;
         case DMPackage.EASSOCIATION_END__TARGET:
             setTarget((EEntity) newValue);
+            return;
+        case DMPackage.EASSOCIATION_END__OPP:
+            setOpp((EAssociationEnd) newValue);
             return;
         }
         super.eSet(featureID, newValue);
@@ -293,14 +303,14 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
         case DMPackage.EASSOCIATION_END__NAME:
             setName(NAME_EDEFAULT);
             return;
-        case DMPackage.EASSOCIATION_END__OPP:
-            setOpp(OPP_EDEFAULT);
-            return;
         case DMPackage.EASSOCIATION_END__MULT:
             setMult(MULT_EDEFAULT);
             return;
         case DMPackage.EASSOCIATION_END__TARGET:
             setTarget((EEntity) null);
+            return;
+        case DMPackage.EASSOCIATION_END__OPP:
+            setOpp((EAssociationEnd) null);
             return;
         }
         super.eUnset(featureID);
@@ -317,13 +327,12 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
         case DMPackage.EASSOCIATION_END__NAME:
             return NAME_EDEFAULT == null ? name != null
                 : !NAME_EDEFAULT.equals(name);
-        case DMPackage.EASSOCIATION_END__OPP:
-            return OPP_EDEFAULT == null ? opp != null
-                : !OPP_EDEFAULT.equals(opp);
         case DMPackage.EASSOCIATION_END__MULT:
             return mult != MULT_EDEFAULT;
         case DMPackage.EASSOCIATION_END__TARGET:
             return target != null;
+        case DMPackage.EASSOCIATION_END__OPP:
+            return opp != null;
         }
         return super.eIsSet(featureID);
     }
@@ -341,8 +350,6 @@ public class EAssociationEndImpl extends MinimalEObjectImpl.Container
         StringBuilder result = new StringBuilder(super.toString());
         result.append(" (name: ");
         result.append(name);
-        result.append(", opp: ");
-        result.append(opp);
         result.append(", mult: ");
         result.append(mult);
         result.append(')');

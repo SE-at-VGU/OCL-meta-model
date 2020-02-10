@@ -11,10 +11,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EAssociationEnd">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="opp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="mult" eType="#//dm/EMultiplicity"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
           eType="#//dm/EEntity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="opp" lowerBound="1" eType="#//dm/EAssociationEnd"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EDataModel">
       <eStructuralFeatures xsi:type="ecore:EReference" name="classes" upperBound="-1"
