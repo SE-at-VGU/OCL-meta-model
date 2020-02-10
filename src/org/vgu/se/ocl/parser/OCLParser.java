@@ -21,6 +21,7 @@ package org.vgu.se.ocl.parser;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.eclipse.emf.common.util.EList;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.vgu.dm2schema.dm.DataModel;
 import org.vgu.se.ocl.classifier.parser.ClassifierParser;
+import org.vgu.se.ocl.dm.EAssociationEnd;
 import org.vgu.se.ocl.dm.EDataModel;
 import org.vgu.se.ocl.dm.parser.DMParser;
 import org.vgu.se.ocl.exp.EAssociationClassCallExp;
@@ -106,8 +108,14 @@ public class OCLParser {
 
         // This is for loading proxy resources
         EcoreUtil.resolveAll(resSet);
-        return DMParser.transform(
-            (EDataModel) resSet.getResources().get(1).getContents().get(0));
+        Optional<EDataModel> dataModelXMI = Optional.of(resSet)
+            .map(ResourceSet::getResources)
+            .map(resources -> resources.size() == 1 ? null : resources.get(1))
+            .map(Resource::getContents)
+            .map(contents -> (EDataModel) contents.get(0));
+
+        return dataModelXMI.isPresent() ? DMParser.transform(dataModelXMI.get())
+            : null;
     }
 
     private static Expression transform(EOclExpression oclXMI) {
@@ -247,16 +255,19 @@ public class OCLParser {
 
     private static AssociationClassCallExp transformAssociationClassCallExp(
         EAssociationClassCallExp oclXMI) {
+        EAssociationEnd referredAssociationEnd = oclXMI
+            .getReferredAssociationEnds();
         AssociationClassCallExp associationClassCallExp = new M2MAssociationClassCallExp(
-            transform(oclXMI.getSource()),
-            oclXMI.getReferredAssociationEnds().getName());
+            transform(oclXMI.getSource()), referredAssociationEnd.getName());
         associationClassCallExp.setType(new Type("Col("
-            .concat(oclXMI.getReferredAssociationEnds().getTarget().getName())
-            .concat(")")));
-        associationClassCallExp.setReferredAssociationEndType(new Type(
-            oclXMI.getReferredAssociationEnds().getTarget().getName()));
-        associationClassCallExp.setOppositeAssociationEnd(oclXMI.getReferredAssociationEnds().getOpp().getName());
-//        associationClassCallExp.setOppositeAssociationEndType(oppositeAssociationEndType);
+            .concat(referredAssociationEnd.getTarget().getName()).concat(")")));
+        associationClassCallExp.setReferredAssociationEndType(
+            new Type(referredAssociationEnd.getTarget().getName()));
+        associationClassCallExp.setOppositeAssociationEnd(
+            referredAssociationEnd.getOpp().getName());
+        associationClassCallExp.setOppositeAssociationEndType(
+            new Type(referredAssociationEnd.getOpp().getTarget().getName()));
+        associationClassCallExp.parseAssociationName();
         return associationClassCallExp;
     }
 

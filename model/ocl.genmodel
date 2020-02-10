@@ -54,7 +54,6 @@
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/lessOrEqual"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/AND"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/OR"/>
-        <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/XOR"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/IMPLIES"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/size"/>
         <genEnumLiterals ecoreEnumLiteral="ocl.ecore#//exp/EOperator/isEmpty"/>

@@ -96,7 +96,7 @@ public enum EOperator implements Enumerator {
      * @generated
      * @ordered
      */
-    AND_LITERAL(8, "AND", "AND"),
+    AND_LITERAL(8, "AND", "and"),
 
     /**
      * The '<em><b>OR</b></em>' literal object.
@@ -106,17 +106,7 @@ public enum EOperator implements Enumerator {
      * @generated
      * @ordered
      */
-    OR_LITERAL(9, "OR", "OR"),
-
-    /**
-     * The '<em><b>XOR</b></em>' literal object.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see #XOR
-     * @generated
-     * @ordered
-     */
-    XOR_LITERAL(10, "XOR", "XOR"),
+    OR_LITERAL(9, "OR", "or"),
 
     /**
      * The '<em><b>IMPLIES</b></em>' literal object.
@@ -126,7 +116,7 @@ public enum EOperator implements Enumerator {
      * @generated
      * @ordered
      */
-    IMPLIES_LITERAL(11, "IMPLIES", "IMPLIES"),
+    IMPLIES_LITERAL(11, "IMPLIES", "implies"),
 
     /**
      * The '<em><b>Size</b></em>' literal object.
@@ -384,7 +374,7 @@ public enum EOperator implements Enumerator {
     private static final EOperator[] VALUES_ARRAY = new EOperator[] {
         EQUAL_LITERAL, ALL_INSTANCES_LITERAL, GREATER_LITERAL, LESS_LITERAL,
         NOT_EQUAL_LITERAL, GREATER_OR_EQUAL_LITERAL, LESS_OR_EQUAL_LITERAL,
-        AND_LITERAL, OR_LITERAL, XOR_LITERAL, IMPLIES_LITERAL, SIZE_LITERAL,
+        AND_LITERAL, OR_LITERAL, IMPLIES_LITERAL, SIZE_LITERAL,
         IS_EMPTY_LITERAL, OCL_IS_UNDEFINED_LITERAL, FLATTEN_LITERAL,
         NOT_EMPTY_LITERAL, IS_UNIQUE_LITERAL, };
 
@@ -461,8 +451,6 @@ public enum EOperator implements Enumerator {
             return AND_LITERAL;
         case OR:
             return OR_LITERAL;
-        case XOR:
-            return XOR_LITERAL;
         case IMPLIES:
             return IMPLIES_LITERAL;
         case SIZE:

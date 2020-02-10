@@ -1279,7 +1279,6 @@ public class EXPPackageImpl extends EPackageImpl implements EXPPackage {
         addEEnumLiteral(eOperatorEEnum, EOperator.LESS_OR_EQUAL_LITERAL);
         addEEnumLiteral(eOperatorEEnum, EOperator.AND_LITERAL);
         addEEnumLiteral(eOperatorEEnum, EOperator.OR_LITERAL);
-        addEEnumLiteral(eOperatorEEnum, EOperator.XOR_LITERAL);
         addEEnumLiteral(eOperatorEEnum, EOperator.IMPLIES_LITERAL);
         addEEnumLiteral(eOperatorEEnum, EOperator.SIZE_LITERAL);
         addEEnumLiteral(eOperatorEEnum, EOperator.IS_EMPTY_LITERAL);

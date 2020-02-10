@@ -44,10 +44,9 @@
       <eLiterals name="notEqual" value="4" literal="&lt;>"/>
       <eLiterals name="greaterOrEqual" value="6" literal=">="/>
       <eLiterals name="lessOrEqual" value="7" literal="&lt;="/>
-      <eLiterals name="AND" value="8"/>
-      <eLiterals name="OR" value="9"/>
-      <eLiterals name="XOR" value="10"/>
-      <eLiterals name="IMPLIES" value="11"/>
+      <eLiterals name="AND" value="8" literal="and"/>
+      <eLiterals name="OR" value="9" literal="or"/>
+      <eLiterals name="IMPLIES" value="11" literal="implies"/>
       <eLiterals name="size" value="12"/>
       <eLiterals name="isEmpty" value="13"/>
       <eLiterals name="oclIsUndefined" value="14"/>
