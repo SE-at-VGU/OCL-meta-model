@@ -18,22 +18,15 @@ limitations under the License.
 @author: ngpbh
 ***************************************************************************/
 import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.vgu.dm2schema.dm.Attribute;
 import org.vgu.dm2schema.dm.DataModel;
-import org.vgu.dm2schema.dm.End;
-import org.vgu.dm2schema.dm.Entity;
-import org.vgu.dm2schema.dm.Multiplicity;
 import org.vgu.se.ocl.dm.DMPackage;
-import org.vgu.se.ocl.dm.EAssociationEnd;
 import org.vgu.se.ocl.dm.EDataModel;
-import org.vgu.se.ocl.dm.EEntity;
 
 public class DMParser {
     public static DataModel convertToDataModel(String filePath) {
@@ -43,54 +36,11 @@ public class DMParser {
     }
 
     public static DataModel transform(EDataModel dataModelXMI) {
-        DataModel dataModel = new DataModel();
-
-        Map<String, Entity> entitiesJSON = dataModel.getEntities();
-
-        for (EEntity entityXMI : dataModelXMI.getClasses()) {
-            Entity entityJSON = transformEntity(entityXMI);
-            entitiesJSON.put(entityXMI.getName(), entityJSON);
-        }
-
-        dataModel.formAssociations();
-        return dataModel;
-
+        return XMI2J.transform(dataModelXMI);
     }
-
-    private static Entity transformEntity(EEntity entityXMI) {
-        Entity entityJSON = new Entity();
-        entityJSON.setClazz(entityXMI.getName());
-        transformAttribute(entityXMI, entityJSON);
-        transformAssociationEnds(entityXMI, entityJSON);
-        return entityJSON;
-    }
-
-    private static void transformAssociationEnds(EEntity entityXMI,
-        Entity entityJSON) {
-        Set<End> endsJSON = entityJSON.getEnds();
-        for (EAssociationEnd endXMI : entityXMI.getEnds()) {
-            End endJSON = new End();
-            endJSON.setName(endXMI.getName());
-            endJSON.setCurrentClass(entityXMI.getName());
-            endJSON.setTargetClass(endXMI.getTarget().getName());
-            endJSON.setOpp(endXMI.getOpp().getName());
-            endJSON.setMult(endXMI.getMult().getName().equalsIgnoreCase("ONE")
-                ? Multiplicity.ONE
-                : Multiplicity.MANY);
-            endsJSON.add(endJSON);
-        }
-    }
-
-    private static void transformAttribute(EEntity entityXMI,
-        Entity entityJSON) {
-        Set<Attribute> attributesJSON = entityJSON.getAttributes();
-        for (org.vgu.se.ocl.dm.EAttribute attributeXMI : entityXMI
-            .getAttributes()) {
-            Attribute attributeJSON = new Attribute();
-            attributeJSON.setName(attributeXMI.getName());
-            attributeJSON.setType(attributeXMI.getType());
-            attributesJSON.add(attributeJSON);
-        }
+    
+    public static EDataModel transform(DataModel dataModel) {
+        return J2XMI.transform(dataModel);
     }
 
     private static EDataModel extractEDataModel(String filePath) {
