@@ -28,18 +28,14 @@ import org.vgu.dm2schema.dm.DataModel;
 import org.vgu.dm2schema.dm.End;
 import org.vgu.dm2schema.dm.Entity;
 import org.vgu.dm2schema.dm.Multiplicity;
-import org.vgu.se.ocl.dm.DMFactory;
-import org.vgu.se.ocl.dm.EAssociationEnd;
-import org.vgu.se.ocl.dm.EAttribute;
-import org.vgu.se.ocl.dm.EDataModel;
-import org.vgu.se.ocl.dm.EEntity;
-import org.vgu.se.ocl.dm.EMultiplicity;
+
+import ocl.dm.DmFactory;
 
 public class J2XMI {
-    private static DMFactory factory = DMFactory.eINSTANCE;
+    private static DmFactory factory = DmFactory.eINSTANCE;
 
-    public static EDataModel transform(DataModel dataModel) {
-        EDataModel dataModelXMI = factory.createEDataModel();
+    public static ocl.dm.DataModel transform(DataModel dataModel) {
+    	ocl.dm.DataModel dataModelXMI = factory.createDataModel();
         if (dataModel == null)
             return null;
         dataModelXMI.getClasses()
@@ -48,14 +44,14 @@ public class J2XMI {
         return dataModelXMI;
     }
 
-    private static void linkAssociationEnds(EDataModel dataModelXMI) {
-        List<EEntity> entitiesXMI = dataModelXMI.getClasses();
-        for (EEntity entityXMI : entitiesXMI) {
+    private static void linkAssociationEnds(ocl.dm.DataModel dataModelXMI) {
+        List<ocl.dm.Entity> entitiesXMI = dataModelXMI.getClasses();
+        for (ocl.dm.Entity entityXMI : entitiesXMI) {
             if (entityXMI.getEnds() == null && entityXMI.getEnds().isEmpty()) {
                 continue;
             }
-            List<EAssociationEnd> endsXMI = entityXMI.getEnds();
-            for (EAssociationEnd endXMI : endsXMI) {
+            List<ocl.dm.AssociationEnd> endsXMI = entityXMI.getEnds();
+            for (ocl.dm.AssociationEnd endXMI : endsXMI) {
                 if (endXMI.getOpp() != null && endXMI.getTarget() != null) {
                     continue;
                 } else {
@@ -66,14 +62,14 @@ public class J2XMI {
         }
     }
 
-    private static void linkAssociationEnd(EAssociationEnd endXMI,
-        EEntity entityXMI, List<EEntity> entitiesXMI) {
-        for (EEntity otherEntityXMI : entitiesXMI) {
+    private static void linkAssociationEnd(ocl.dm.AssociationEnd endXMI,
+    		ocl.dm.Entity entityXMI, List<ocl.dm.Entity> entitiesXMI) {
+        for (ocl.dm.Entity otherEntityXMI : entitiesXMI) {
             if (otherEntityXMI.getEnds() == null && otherEntityXMI.getEnds().isEmpty()) {
                 continue;
             }
-            List<EAssociationEnd> endsXMI = otherEntityXMI.getEnds();
-            for (EAssociationEnd otherEndXMI : endsXMI) {
+            List<ocl.dm.AssociationEnd> endsXMI = otherEntityXMI.getEnds();
+            for (ocl.dm.AssociationEnd otherEndXMI : endsXMI) {
                 if (otherEndXMI == endXMI) {
                     continue;
                 }
@@ -91,22 +87,22 @@ public class J2XMI {
         }
     }
 
-    private static List<EEntity> transformEntities(
+    private static List<ocl.dm.Entity> transformEntities(
         Map<String, Entity> entities) {
-        List<EEntity> entitiesXMI = new ArrayList<EEntity>();
+        List<ocl.dm.Entity> entitiesXMI = new ArrayList<ocl.dm.Entity>();
         if (entities != null) {
             for (Entity entity : entities.values()) {
-                EEntity entityXMI = transformEntity(entity);
+            	ocl.dm.Entity entityXMI = transformEntity(entity);
                 entitiesXMI.add(entityXMI);
             }
         }
         return entitiesXMI;
     }
 
-    private static EEntity transformEntity(Entity entity) {
+    private static ocl.dm.Entity transformEntity(Entity entity) {
         if (entity == null)
             return null;
-        EEntity entityXMI = factory.createEEntity();
+        ocl.dm.Entity entityXMI = factory.createEntity();
         entityXMI.setName(entity.getName());
         entityXMI.getAttributes()
             .addAll(transformAttributes(entity.getAttributes()));
@@ -114,58 +110,59 @@ public class J2XMI {
         return entityXMI;
     }
 
-    private static List<EAssociationEnd> transformEnds(Set<End> ends) {
-        List<EAssociationEnd> endsXMI = new ArrayList<EAssociationEnd>();
+    private static List<ocl.dm.AssociationEnd> transformEnds(Set<End> ends) {
+        List<ocl.dm.AssociationEnd> endsXMI = new ArrayList<ocl.dm.AssociationEnd>();
         if (ends != null) {
             for (End end : ends) {
-                EAssociationEnd endXMI = transformEnd(end);
+            	ocl.dm.AssociationEnd endXMI = transformEnd(end);
                 endsXMI.add(endXMI);
             }
         }
         return endsXMI;
     }
 
-    private static EAssociationEnd transformEnd(End end) {
+    private static ocl.dm.AssociationEnd transformEnd(End end) {
         if (end == null)
             return null;
-        EAssociationEnd endXMI = factory.createEAssociationEnd();
+        ocl.dm.AssociationEnd endXMI = factory.createAssociationEnd();
+        endXMI.setAssociation(end.getAssociation());
         endXMI.setMult(transformMultiplicity(end.getMult()));
         endXMI.setName(end.getName());
         endXMI.setOpp(createDummyAssociationEnd(end.getOpp()));
         return endXMI;
     }
 
-    private static EAssociationEnd createDummyAssociationEnd(String opp) {
-        EAssociationEnd endXMI = factory.createEAssociationEnd();
+    private static ocl.dm.AssociationEnd createDummyAssociationEnd(String opp) {
+    	ocl.dm.AssociationEnd endXMI = factory.createAssociationEnd();
         endXMI.setName(opp);
         return endXMI;
     }
 
-    private static EMultiplicity transformMultiplicity(Multiplicity mult) {
+    private static ocl.dm.Multiplicity transformMultiplicity(Multiplicity mult) {
         if (mult == null)
             return null;
         if (mult == Multiplicity.MANY)
-            return EMultiplicity.MANY;
+            return ocl.dm.Multiplicity.MANY;
         else
-            return EMultiplicity.ONE;
+            return ocl.dm.Multiplicity.ONE;
     }
 
-    private static List<EAttribute> transformAttributes(
+    private static List<ocl.dm.Attribute> transformAttributes(
         Set<Attribute> attributes) {
-        List<EAttribute> attributesXMI = new ArrayList<EAttribute>();
+        List<ocl.dm.Attribute> attributesXMI = new ArrayList<ocl.dm.Attribute>();
         if (attributes != null) {
             for (Attribute attribute : attributes) {
-                EAttribute attributeXMI = transformAttribute(attribute);
+            	ocl.dm.Attribute attributeXMI = transformAttribute(attribute);
                 attributesXMI.add(attributeXMI);
             }
         }
         return attributesXMI;
     }
 
-    private static EAttribute transformAttribute(Attribute attribute) {
+    private static ocl.dm.Attribute transformAttribute(Attribute attribute) {
         if (attribute == null)
             return null;
-        EAttribute attributeXMI = factory.createEAttribute();
+        ocl.dm.Attribute attributeXMI = factory.createAttribute();
         attributeXMI.setName(attribute.getName());
         attributeXMI.setType(attribute.getType());
         return attributeXMI;

@@ -19,14 +19,11 @@ limitations under the License.
 
 package org.vgu.se.ocl.classifier.parser;
 
-import org.vgu.se.ocl.dm.EEntity;
-import org.vgu.se.ocl.type.EClassifier;
-
 public class ClassifierParser {
 
-    public static String transform(EClassifier referredType) {
-        if(referredType instanceof EEntity) {
-            return transformEntity((EEntity) referredType);
+    public static String transform(ocl.type.Classifier referredType) {
+        if(referredType instanceof ocl.dm.Entity) {
+            return transformEntity((ocl.dm.Entity) referredType);
         }
         else {
             //TODO: Implement for other classifiers
@@ -34,7 +31,7 @@ public class ClassifierParser {
         }
     }
 
-    private static String transformEntity(EEntity referredType) {
+    private static String transformEntity(ocl.dm.Entity referredType) {
         return referredType.getName();
     }
 }

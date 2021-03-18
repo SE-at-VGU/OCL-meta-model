@@ -27,18 +27,15 @@ import org.vgu.dm2schema.dm.DataModel;
 import org.vgu.dm2schema.dm.End;
 import org.vgu.dm2schema.dm.Entity;
 import org.vgu.dm2schema.dm.Multiplicity;
-import org.vgu.se.ocl.dm.EAssociationEnd;
-import org.vgu.se.ocl.dm.EDataModel;
-import org.vgu.se.ocl.dm.EEntity;
 
 public class XMI2J {
 
-    public static DataModel transform(EDataModel dataModelXMI) {
+    public static DataModel transform(ocl.dm.DataModel dataModelXMI) {
         DataModel dataModel = new DataModel();
 
         Map<String, Entity> entitiesJSON = dataModel.getEntities();
 
-        for (EEntity entityXMI : dataModelXMI.getClasses()) {
+        for (ocl.dm.Entity entityXMI : dataModelXMI.getClasses()) {
             Entity entityJSON = transformEntity(entityXMI);
             entitiesJSON.put(entityXMI.getName(), entityJSON);
         }
@@ -48,7 +45,7 @@ public class XMI2J {
     }
     
 
-    private static Entity transformEntity(EEntity entityXMI) {
+    private static Entity transformEntity(ocl.dm.Entity entityXMI) {
         Entity entityJSON = new Entity();
         entityJSON.setClazz(entityXMI.getName());
         transformAttribute(entityXMI, entityJSON);
@@ -56,10 +53,10 @@ public class XMI2J {
         return entityJSON;
     }
 
-    private static void transformAssociationEnds(EEntity entityXMI,
+    private static void transformAssociationEnds(ocl.dm.Entity entityXMI,
         Entity entityJSON) {
         Set<End> endsJSON = entityJSON.getEnds();
-        for (EAssociationEnd endXMI : entityXMI.getEnds()) {
+        for (ocl.dm.AssociationEnd endXMI : entityXMI.getEnds()) {
             End endJSON = new End();
             endJSON.setName(endXMI.getName());
             endJSON.setCurrentClass(entityXMI.getName());
@@ -72,10 +69,10 @@ public class XMI2J {
         }
     }
 
-    private static void transformAttribute(EEntity entityXMI,
+    private static void transformAttribute(ocl.dm.Entity entityXMI,
         Entity entityJSON) {
         Set<Attribute> attributesJSON = entityJSON.getAttributes();
-        for (org.vgu.se.ocl.dm.EAttribute attributeXMI : entityXMI
+        for (ocl.dm.Attribute attributeXMI : entityXMI
             .getAttributes()) {
             Attribute attributeJSON = new Attribute();
             attributeJSON.setName(attributeXMI.getName());

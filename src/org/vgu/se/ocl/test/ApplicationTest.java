@@ -23,32 +23,31 @@ import java.util.List;
 
 import org.vgu.se.ocl.parser.OCLParser;
 
+import com.vgu.se.jocl.expressions.Expression;
+
 public class ApplicationTest {
-//    public static void main(String[] args) {
-//        DataModel dm = DMParser.convertToDataModel(
-//            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\CarPerson.xmi");
-//        System.out.println(dm);
-//    }
 
     public static void main(String[] args) {
         List<String> filePaths = Arrays.asList(
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase0Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase0Challenge2.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase0Challenge3.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase1Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase1Challenge2.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase1Challenge3.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase2Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase3Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge2.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge3.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase5Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase5Challenge2.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase6Challenge1.xmi",
-            "C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase6Challenge2.xmi");
+            "C:\\Users\\ngpbh\\eclipse-modelling-workspace\\OCLmt\\model\\Stage0Challenge0.xmi"
+//        	,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase0Challenge2.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase0Challenge3.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase1Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase1Challenge2.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase1Challenge3.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase2Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase3Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge2.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge3.xmi"
+            ,"C:\\Users\\ngpbh\\eclipse-modelling-workspace\\OCLmt\\model\\Stage5Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase5Challenge2.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase6Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase6Challenge2.xmi"
+            );
         for (String filePath : filePaths) {
-            OCLParser.convertToExp(filePath);
+            Expression exp = OCLParser.convertToExp(filePath);
+            System.out.println(exp);
         }
     }
 }

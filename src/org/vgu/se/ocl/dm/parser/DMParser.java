@@ -25,27 +25,27 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.vgu.dm2schema.dm.DataModel;
-import org.vgu.se.ocl.dm.DMPackage;
-import org.vgu.se.ocl.dm.EDataModel;
+
+import ocl.dm.DmPackage;
 
 public class DMParser {
     public static DataModel convertToDataModel(String filePath) {
-        EDataModel dataModelXMI = extractEDataModel(filePath);
+    	ocl.dm.DataModel dataModelXMI = extractEDataModel(filePath);
         DataModel dataModelJSON = transform(dataModelXMI);
         return dataModelJSON;
     }
 
-    public static DataModel transform(EDataModel dataModelXMI) {
+    public static DataModel transform(ocl.dm.DataModel dataModelXMI) {
         return XMI2J.transform(dataModelXMI);
     }
     
-    public static EDataModel transform(DataModel dataModel) {
+    public static ocl.dm.DataModel transform(DataModel dataModel) {
         return J2XMI.transform(dataModel);
     }
 
-    private static EDataModel extractEDataModel(String filePath) {
+    private static ocl.dm.DataModel extractEDataModel(String filePath) {
         // Initialize the model
-        DMPackage.eINSTANCE.eClass();
+        DmPackage.eINSTANCE.eClass();
 
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
         Map<String, Object> m = reg.getExtensionToFactoryMap();
@@ -59,7 +59,7 @@ public class DMParser {
             true);
         // Get the first model element and cast it to the right type, in my
         // example everything is hierarchical included in this first node
-        return (EDataModel) resource.getContents().get(0);
+        return (ocl.dm.DataModel) resource.getContents().get(0);
     }
 
 }
