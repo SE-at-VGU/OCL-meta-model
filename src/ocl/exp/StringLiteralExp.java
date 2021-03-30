@@ -19,7 +19,7 @@ package ocl.exp;
  * @model
  * @generated
  */
-public interface StringLiteralExp extends PrimitiveType {
+public interface StringLiteralExp extends OclExpression {
 	/**
 	 * Returns the value of the '<em><b>String Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

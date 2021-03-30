@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class BooleanLiteralExpImpl extends PrimitiveTypeImpl implements BooleanLiteralExp {
+public class BooleanLiteralExpImpl extends OclExpressionImpl implements BooleanLiteralExp {
 	/**
 	 * The default value of the '{@link #getBooleanValue() <em>Boolean Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

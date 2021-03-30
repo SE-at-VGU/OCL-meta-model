@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class IntegerLiteralExpImpl extends NumericLiteralExpImpl implements IntegerLiteralExp {
+public class IntegerLiteralExpImpl extends OclExpressionImpl implements IntegerLiteralExp {
 	/**
 	 * The default value of the '{@link #getIntegerValue() <em>Integer Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

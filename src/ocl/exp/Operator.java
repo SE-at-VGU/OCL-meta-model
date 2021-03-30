@@ -26,67 +26,7 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EQUAL(1, "equal", "="),
-
-	/**
-	 * The '<em><b>All Instances</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ALL_INSTANCES_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ALL_INSTANCES(0, "allInstances", "allInstances"),
-
-	/**
-	 * The '<em><b>Greater</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #GREATER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	GREATER(2, "greater", ">"),
-
-	/**
-	 * The '<em><b>Less</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #LESS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	LESS(3, "less", "<"),
-
-	/**
-	 * The '<em><b>Not Equal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NOT_EQUAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NOT_EQUAL(4, "notEqual", "<>"),
-
-	/**
-	 * The '<em><b>Greater Or Equal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #GREATER_OR_EQUAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	GREATER_OR_EQUAL(6, "greaterOrEqual", ">="),
-
-	/**
-	 * The '<em><b>Less Or Equal</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #LESS_OR_EQUAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	LESS_OR_EQUAL(7, "lessOrEqual", "<="),
+	EQUAL(0, "equal", "="),
 
 	/**
 	 * The '<em><b>AND</b></em>' literal object.
@@ -96,17 +36,17 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AND(8, "AND", "and"),
+	AND(1, "AND", "AND"),
 
 	/**
-	 * The '<em><b>OR</b></em>' literal object.
+	 * The '<em><b>All Instances</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OR_VALUE
+	 * @see #ALL_INSTANCES_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	OR(9, "OR", "or"),
+	ALL_INSTANCES(2, "allInstances", "allInstances"),
 
 	/**
 	 * The '<em><b>Size</b></em>' literal object.
@@ -116,7 +56,7 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SIZE(12, "size", "size");
+	SIZE(3, "size", "size");
 
 	/**
 	 * The '<em><b>Equal</b></em>' literal value.
@@ -127,7 +67,18 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EQUAL_VALUE = 1;
+	public static final int EQUAL_VALUE = 0;
+
+	/**
+	 * The '<em><b>AND</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AND
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AND_VALUE = 1;
 
 	/**
 	 * The '<em><b>All Instances</b></em>' literal value.
@@ -138,84 +89,7 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ALL_INSTANCES_VALUE = 0;
-
-	/**
-	 * The '<em><b>Greater</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #GREATER
-	 * @model name="greater" literal="&gt;"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int GREATER_VALUE = 2;
-
-	/**
-	 * The '<em><b>Less</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #LESS
-	 * @model name="less" literal="&lt;"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int LESS_VALUE = 3;
-
-	/**
-	 * The '<em><b>Not Equal</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NOT_EQUAL
-	 * @model name="notEqual" literal="&lt;&gt;"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NOT_EQUAL_VALUE = 4;
-
-	/**
-	 * The '<em><b>Greater Or Equal</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #GREATER_OR_EQUAL
-	 * @model name="greaterOrEqual" literal="&gt;="
-	 * @generated
-	 * @ordered
-	 */
-	public static final int GREATER_OR_EQUAL_VALUE = 6;
-
-	/**
-	 * The '<em><b>Less Or Equal</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #LESS_OR_EQUAL
-	 * @model name="lessOrEqual" literal="&lt;="
-	 * @generated
-	 * @ordered
-	 */
-	public static final int LESS_OR_EQUAL_VALUE = 7;
-
-	/**
-	 * The '<em><b>AND</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #AND
-	 * @model literal="and"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int AND_VALUE = 8;
-
-	/**
-	 * The '<em><b>OR</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #OR
-	 * @model literal="or"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int OR_VALUE = 9;
+	public static final int ALL_INSTANCES_VALUE = 2;
 
 	/**
 	 * The '<em><b>Size</b></em>' literal value.
@@ -226,7 +100,7 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SIZE_VALUE = 12;
+	public static final int SIZE_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Operator</b></em>' enumerators.
@@ -237,14 +111,8 @@ public enum Operator implements Enumerator {
 	private static final Operator[] VALUES_ARRAY =
 		new Operator[] {
 			EQUAL,
-			ALL_INSTANCES,
-			GREATER,
-			LESS,
-			NOT_EQUAL,
-			GREATER_OR_EQUAL,
-			LESS_OR_EQUAL,
 			AND,
-			OR,
+			ALL_INSTANCES,
 			SIZE,
 		};
 
@@ -303,14 +171,8 @@ public enum Operator implements Enumerator {
 	public static Operator get(int value) {
 		switch (value) {
 			case EQUAL_VALUE: return EQUAL;
-			case ALL_INSTANCES_VALUE: return ALL_INSTANCES;
-			case GREATER_VALUE: return GREATER;
-			case LESS_VALUE: return LESS;
-			case NOT_EQUAL_VALUE: return NOT_EQUAL;
-			case GREATER_OR_EQUAL_VALUE: return GREATER_OR_EQUAL;
-			case LESS_OR_EQUAL_VALUE: return LESS_OR_EQUAL;
 			case AND_VALUE: return AND;
-			case OR_VALUE: return OR;
+			case ALL_INSTANCES_VALUE: return ALL_INSTANCES;
 			case SIZE_VALUE: return SIZE;
 		}
 		return null;

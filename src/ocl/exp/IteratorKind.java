@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum IteratorKind implements Enumerator {
 	/**
-	 * The '<em><b>For All</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #FOR_ALL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	FOR_ALL(0, "forAll", "forAll"),
-
-	/**
 	 * The '<em><b>Exists</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,7 +26,7 @@ public enum IteratorKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EXISTS(1, "exists", "exists"),
+	EXISTS(0, "exists", "exists"),
 
 	/**
 	 * The '<em><b>Collect</b></em>' literal object.
@@ -46,18 +36,7 @@ public enum IteratorKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	COLLECT(2, "collect", "collect");
-
-	/**
-	 * The '<em><b>For All</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #FOR_ALL
-	 * @model name="forAll"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int FOR_ALL_VALUE = 0;
+	COLLECT(1, "collect", "collect");
 
 	/**
 	 * The '<em><b>Exists</b></em>' literal value.
@@ -68,7 +47,7 @@ public enum IteratorKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int EXISTS_VALUE = 1;
+	public static final int EXISTS_VALUE = 0;
 
 	/**
 	 * The '<em><b>Collect</b></em>' literal value.
@@ -79,7 +58,7 @@ public enum IteratorKind implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COLLECT_VALUE = 2;
+	public static final int COLLECT_VALUE = 1;
 
 	/**
 	 * An array of all the '<em><b>Iterator Kind</b></em>' enumerators.
@@ -89,7 +68,6 @@ public enum IteratorKind implements Enumerator {
 	 */
 	private static final IteratorKind[] VALUES_ARRAY =
 		new IteratorKind[] {
-			FOR_ALL,
 			EXISTS,
 			COLLECT,
 		};
@@ -148,7 +126,6 @@ public enum IteratorKind implements Enumerator {
 	 */
 	public static IteratorKind get(int value) {
 		switch (value) {
-			case FOR_ALL_VALUE: return FOR_ALL;
 			case EXISTS_VALUE: return EXISTS;
 			case COLLECT_VALUE: return COLLECT;
 		}

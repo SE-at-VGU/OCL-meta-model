@@ -76,24 +76,8 @@ public class ExpAdapterFactory extends AdapterFactoryImpl {
 				return createTypeExpAdapter();
 			}
 			@Override
-			public Adapter caseLoopExp(LoopExp object) {
-				return createLoopExpAdapter();
-			}
-			@Override
-			public Adapter caseFeatureCallExp(FeatureCallExp object) {
-				return createFeatureCallExpAdapter();
-			}
-			@Override
 			public Adapter caseAssociationClassCallExp(AssociationClassCallExp object) {
 				return createAssociationClassCallExpAdapter();
-			}
-			@Override
-			public Adapter caseNumericLiteralExp(NumericLiteralExp object) {
-				return createNumericLiteralExpAdapter();
-			}
-			@Override
-			public Adapter caseLiteralExp(LiteralExp object) {
-				return createLiteralExpAdapter();
 			}
 			@Override
 			public Adapter caseVariable(Variable object) {
@@ -118,14 +102,6 @@ public class ExpAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIntegerLiteralExp(IntegerLiteralExp object) {
 				return createIntegerLiteralExpAdapter();
-			}
-			@Override
-			public Adapter casePrimitiveType(PrimitiveType object) {
-				return createPrimitiveTypeAdapter();
-			}
-			@Override
-			public Adapter caseNavigationCallExp(NavigationCallExp object) {
-				return createNavigationCallExpAdapter();
 			}
 			@Override
 			public Adapter caseOperationCallExp(OperationCallExp object) {
@@ -188,34 +164,6 @@ public class ExpAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ocl.exp.LoopExp <em>Loop Exp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.exp.LoopExp
-	 * @generated
-	 */
-	public Adapter createLoopExpAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ocl.exp.FeatureCallExp <em>Feature Call Exp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.exp.FeatureCallExp
-	 * @generated
-	 */
-	public Adapter createFeatureCallExpAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ocl.exp.AssociationClassCallExp <em>Association Class Call Exp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -226,34 +174,6 @@ public class ExpAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAssociationClassCallExpAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ocl.exp.NumericLiteralExp <em>Numeric Literal Exp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.exp.NumericLiteralExp
-	 * @generated
-	 */
-	public Adapter createNumericLiteralExpAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ocl.exp.LiteralExp <em>Literal Exp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.exp.LiteralExp
-	 * @generated
-	 */
-	public Adapter createLiteralExpAdapter() {
 		return null;
 	}
 
@@ -338,34 +258,6 @@ public class ExpAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIntegerLiteralExpAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ocl.exp.PrimitiveType <em>Primitive Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.exp.PrimitiveType
-	 * @generated
-	 */
-	public Adapter createPrimitiveTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ocl.exp.NavigationCallExp <em>Navigation Call Exp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.exp.NavigationCallExp
-	 * @generated
-	 */
-	public Adapter createNavigationCallExpAdapter() {
 		return null;
 	}
 

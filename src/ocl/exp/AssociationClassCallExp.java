@@ -20,7 +20,7 @@ import ocl.dm.AssociationEnd;
  * @model
  * @generated
  */
-public interface AssociationClassCallExp extends NavigationCallExp {
+public interface AssociationClassCallExp extends CallExp {
 	/**
 	 * Returns the value of the '<em><b>Referred Association Ends</b></em>' reference.
 	 * <!-- begin-user-doc -->

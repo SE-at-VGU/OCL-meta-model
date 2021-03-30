@@ -2,7 +2,7 @@
  */
 package ocl.exp;
 
-import ocl.type.Classifier;
+import ocl.dm.Entity;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,12 +26,12 @@ public interface TypeExp extends OclExpression {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Referred Type</em>' reference.
-	 * @see #setReferredType(Classifier)
+	 * @see #setReferredType(Entity)
 	 * @see ocl.exp.ExpPackage#getTypeExp_ReferredType()
 	 * @model required="true"
 	 * @generated
 	 */
-	Classifier getReferredType();
+	Entity getReferredType();
 
 	/**
 	 * Sets the value of the '{@link ocl.exp.TypeExp#getReferredType <em>Referred Type</em>}' reference.
@@ -41,6 +41,6 @@ public interface TypeExp extends OclExpression {
 	 * @see #getReferredType()
 	 * @generated
 	 */
-	void setReferredType(Classifier value);
+	void setReferredType(Entity value);
 
 } // TypeExp

@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ocl.exp.Variable#getLoopExp <em>Loop Exp</em>}</li>
  *   <li>{@link ocl.exp.Variable#getInitExpression <em>Init Expression</em>}</li>
+ *   <li>{@link ocl.exp.Variable#getLoopExp <em>Loop Exp</em>}</li>
  *   <li>{@link ocl.exp.Variable#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -23,30 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Variable extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Loop Exp</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link ocl.exp.LoopExp#getIterator <em>Iterator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Loop Exp</em>' container reference.
-	 * @see #setLoopExp(LoopExp)
-	 * @see ocl.exp.ExpPackage#getVariable_LoopExp()
-	 * @see ocl.exp.LoopExp#getIterator
-	 * @model opposite="iterator" transient="false"
-	 * @generated
-	 */
-	LoopExp getLoopExp();
-
-	/**
-	 * Sets the value of the '{@link ocl.exp.Variable#getLoopExp <em>Loop Exp</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Loop Exp</em>' container reference.
-	 * @see #getLoopExp()
-	 * @generated
-	 */
-	void setLoopExp(LoopExp value);
-
 	/**
 	 * Returns the value of the '<em><b>Init Expression</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link ocl.exp.OclExpression#getInitializedElement <em>Initialized Element</em>}'.
@@ -70,6 +46,30 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setInitExpression(OclExpression value);
+
+	/**
+	 * Returns the value of the '<em><b>Loop Exp</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link ocl.exp.IteratorExp#getIterator <em>Iterator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Loop Exp</em>' container reference.
+	 * @see #setLoopExp(IteratorExp)
+	 * @see ocl.exp.ExpPackage#getVariable_LoopExp()
+	 * @see ocl.exp.IteratorExp#getIterator
+	 * @model opposite="iterator" transient="false"
+	 * @generated
+	 */
+	IteratorExp getLoopExp();
+
+	/**
+	 * Sets the value of the '{@link ocl.exp.Variable#getLoopExp <em>Loop Exp</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Loop Exp</em>' container reference.
+	 * @see #getLoopExp()
+	 * @generated
+	 */
+	void setLoopExp(IteratorExp value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

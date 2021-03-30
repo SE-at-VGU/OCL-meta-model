@@ -8,16 +8,12 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: 
- ocl.dm,
+Export-Package: ocl.dm,
  ocl.dm.impl,
  ocl.dm.util,
  ocl.exp,
  ocl.exp.impl,
- ocl.exp.util,
- ocl.type,
- ocl.type.impl,
- ocl.type.util
+ ocl.exp.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

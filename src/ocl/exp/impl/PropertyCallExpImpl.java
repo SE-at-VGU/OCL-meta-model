@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class PropertyCallExpImpl extends NavigationCallExpImpl implements PropertyCallExp {
+public class PropertyCallExpImpl extends CallExpImpl implements PropertyCallExp {
 	/**
 	 * The cached value of the '{@link #getReferredProperty() <em>Referred Property</em>}' reference.
 	 * <!-- begin-user-doc -->

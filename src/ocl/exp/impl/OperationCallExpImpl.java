@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class OperationCallExpImpl extends FeatureCallExpImpl implements OperationCallExp {
+public class OperationCallExpImpl extends CallExpImpl implements OperationCallExp {
 	/**
 	 * The cached value of the '{@link #getArgument() <em>Argument</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -181,7 +181,7 @@ public class OperationCallExpImpl extends FeatureCallExpImpl implements Operatio
 				getArgument().addAll((Collection<? extends OclExpression>)newValue);
 				return;
 			case ExpPackage.OPERATION_CALL_EXP__REFERRED_OPERATION:
-				setReferredOperation((Operator) newValue);
+				setReferredOperation((Operator)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

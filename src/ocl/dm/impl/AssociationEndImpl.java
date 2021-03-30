@@ -317,7 +317,7 @@ public class AssociationEndImpl extends MinimalEObjectImpl.Container implements 
 				setName((String)newValue);
 				return;
 			case DmPackage.ASSOCIATION_END__MULT:
-				setMult((Multiplicity) newValue);
+				setMult((Multiplicity)newValue);
 				return;
 			case DmPackage.ASSOCIATION_END__TARGET:
 				setTarget((Entity)newValue);

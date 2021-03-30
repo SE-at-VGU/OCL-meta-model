@@ -22,12 +22,4 @@
             genModel="metamodels/ocl.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated ocl -->
-      <package
-            uri="http://www.example.org/ocl/type"
-            class="ocl.type.TypePackage"
-            genModel="metamodels/ocl.genmodel"/>
-   </extension>
-
 </plugin>

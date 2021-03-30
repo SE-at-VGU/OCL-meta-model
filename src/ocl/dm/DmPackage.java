@@ -2,8 +2,6 @@
  */
 package ocl.dm;
 
-import ocl.type.TypePackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -76,7 +74,7 @@ public interface DmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = TypePackage.CLASSIFIER_FEATURE_COUNT + 0;
+	int ENTITY__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Ends</b></em>' containment reference list.
@@ -85,7 +83,7 @@ public interface DmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ENDS = TypePackage.CLASSIFIER_FEATURE_COUNT + 1;
+	int ENTITY__ENDS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
@@ -94,7 +92,7 @@ public interface DmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__ATTRIBUTES = TypePackage.CLASSIFIER_FEATURE_COUNT + 2;
+	int ENTITY__ATTRIBUTES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -103,7 +101,7 @@ public interface DmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = TypePackage.CLASSIFIER_FEATURE_COUNT + 3;
+	int ENTITY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Entity</em>' class.
@@ -112,7 +110,7 @@ public interface DmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_OPERATION_COUNT = TypePackage.CLASSIFIER_OPERATION_COUNT + 0;
+	int ENTITY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link ocl.dm.impl.AssociationEndImpl <em>Association End</em>}' class.

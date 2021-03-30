@@ -33,24 +33,18 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.vgu.dm2schema.dm.DataModel;
-import org.vgu.se.ocl.classifier.parser.ClassifierParser;
 import org.vgu.se.ocl.dm.parser.DMParser;
 
 import com.vgu.se.jocl.expressions.AssociationClassCallExp;
 import com.vgu.se.jocl.expressions.BooleanLiteralExp;
 import com.vgu.se.jocl.expressions.CallExp;
 import com.vgu.se.jocl.expressions.Expression;
-import com.vgu.se.jocl.expressions.FeatureCallExp;
 import com.vgu.se.jocl.expressions.IntegerLiteralExp;
 import com.vgu.se.jocl.expressions.IteratorExp;
-import com.vgu.se.jocl.expressions.LiteralExp;
 import com.vgu.se.jocl.expressions.LoopExp;
 import com.vgu.se.jocl.expressions.M2MAssociationClassCallExp;
-import com.vgu.se.jocl.expressions.NavigationCallExp;
-import com.vgu.se.jocl.expressions.NumericLiteralExp;
 import com.vgu.se.jocl.expressions.Operation;
 import com.vgu.se.jocl.expressions.OperationCallExp;
-import com.vgu.se.jocl.expressions.PrimitiveLiteralExp;
 import com.vgu.se.jocl.expressions.PropertyCallExp;
 import com.vgu.se.jocl.expressions.StringLiteralExp;
 import com.vgu.se.jocl.expressions.TypeExp;
@@ -97,8 +91,12 @@ public class OCLParser {
     private static Expression transform(ocl.exp.OclExpression oclXMI) {
         if (oclXMI instanceof ocl.exp.CallExp) {
             return transformCallExp((ocl.exp.CallExp) oclXMI);
-        } else if (oclXMI instanceof ocl.exp.LiteralExp) {
-            return transformLiteralExp((ocl.exp.LiteralExp) oclXMI);
+        } else if (oclXMI instanceof ocl.exp.BooleanLiteralExp) {
+            return transformBooleanLiteralExp((ocl.exp.BooleanLiteralExp) oclXMI);
+        } else  if (oclXMI instanceof ocl.exp.IntegerLiteralExp) {
+            return transformIntegerLiteralExp((ocl.exp.IntegerLiteralExp) oclXMI);
+        } else if (oclXMI instanceof ocl.exp.StringLiteralExp) {
+            return transformStringLiteralExp((ocl.exp.StringLiteralExp) oclXMI);
         } else if (oclXMI instanceof ocl.exp.TypeExp) {
             return transformTypeExp((ocl.exp.TypeExp) oclXMI);
         } else {
@@ -111,24 +109,20 @@ public class OCLParser {
     }
 
     private static TypeExp transformTypeExp(ocl.exp.TypeExp oclXMI) {
-        String referredType = ClassifierParser
-            .transform(oclXMI.getReferredType());
+        String referredType = oclXMI.getReferredType().getName();
         return new TypeExp(referredType);
     }
 
     private static CallExp transformCallExp(ocl.exp.CallExp oclXMI) {
-        if (oclXMI instanceof ocl.exp.FeatureCallExp) {
-            return transformFeatureCallExp((ocl.exp.FeatureCallExp) oclXMI);
-        } else {
-            return transformLoopExp((ocl.exp.LoopExp) oclXMI);
-        }
-    }
-
-    private static LoopExp transformLoopExp(ocl.exp.LoopExp oclXMI) {
-        if (oclXMI instanceof ocl.exp.IteratorExp) {
+        if (oclXMI instanceof ocl.exp.AssociationClassCallExp) {
+            return transformAssociationClassCallExp(
+                (ocl.exp.AssociationClassCallExp) oclXMI);
+        } else if (oclXMI instanceof ocl.exp.PropertyCallExp) {
+            return transformPropertyCallExp((ocl.exp.PropertyCallExp) oclXMI);
+        } else  if (oclXMI instanceof ocl.exp.IteratorExp) {
             return transformIteratorExp((ocl.exp.IteratorExp) oclXMI);
         } else {
-            return null;
+            return transformOperationCallExp((ocl.exp.OperationCallExp) oclXMI);
         }
     }
 
@@ -168,15 +162,6 @@ public class OCLParser {
     private static String transform(ocl.exp.IteratorKind kind) {
         return kind.getLiteral();
     }
-    
-    private static FeatureCallExp transformFeatureCallExp(
-    		ocl.exp.FeatureCallExp oclXMI) {
-        if (oclXMI instanceof ocl.exp.NavigationCallExp) {
-            return transformNavigationCallExp((ocl.exp.NavigationCallExp) oclXMI);
-        } else {
-            return transformOperationCallExp((ocl.exp.OperationCallExp) oclXMI);
-        }
-    }
 
     private static OperationCallExp transformOperationCallExp(
     		ocl.exp.OperationCallExp oclXMI) {
@@ -193,16 +178,6 @@ public class OCLParser {
         EList<ocl.exp.OclExpression> argumentsXMI) {
         return argumentsXMI.stream().map(OCLParser::transform)
             .collect(Collectors.toList());
-    }
-
-    private static NavigationCallExp transformNavigationCallExp(
-    		ocl.exp.NavigationCallExp oclXMI) {
-        if (oclXMI instanceof ocl.exp.AssociationClassCallExp) {
-            return transformAssociationClassCallExp(
-                (ocl.exp.AssociationClassCallExp) oclXMI);
-        } else {
-            return transformPropertyCallExp((ocl.exp.PropertyCallExp) oclXMI);
-        }
     }
 
     private static PropertyCallExp transformPropertyCallExp(
@@ -232,36 +207,6 @@ public class OCLParser {
 //        associationClassCallExp.parseAssociationName();
         associationClassCallExp.setAssociation(oclXMI.getReferredAssociationEnds().getAssociation());
         return associationClassCallExp;
-    }
-
-    private static LiteralExp transformLiteralExp(ocl.exp.LiteralExp oclXMI) {
-        if (oclXMI instanceof ocl.exp.PrimitiveType) {
-            return transformPrimitiveTypeExp((ocl.exp.PrimitiveType) oclXMI);
-        } else {
-            // TODO: Implement other types later...
-            return null;
-        }
-    }
-
-    private static PrimitiveLiteralExp<?> transformPrimitiveTypeExp(
-    		ocl.exp.PrimitiveType oclXMI) {
-        if (oclXMI instanceof ocl.exp.BooleanLiteralExp) {
-            return transformBooleanLiteralExp((ocl.exp.BooleanLiteralExp) oclXMI);
-        } else if (oclXMI instanceof ocl.exp.NumericLiteralExp) {
-            return transformNumericLiteralExp((ocl.exp.NumericLiteralExp) oclXMI);
-        } else {
-            return transformStringLiteralExp((ocl.exp.StringLiteralExp) oclXMI);
-        }
-    }
-
-    private static NumericLiteralExp<?> transformNumericLiteralExp(
-    		ocl.exp.NumericLiteralExp oclXMI) {
-        if (oclXMI instanceof ocl.exp.IntegerLiteralExp) {
-            return transformIntegerLiteralExp((ocl.exp.IntegerLiteralExp) oclXMI);
-        } else {
-            // TODO: Implement other types later...
-            return null;
-        }
     }
 
     private static IntegerLiteralExp transformIntegerLiteralExp(

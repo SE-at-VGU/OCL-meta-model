@@ -80,45 +80,11 @@ public class ExpSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ExpPackage.LOOP_EXP: {
-				LoopExp loopExp = (LoopExp)theEObject;
-				T result = caseLoopExp(loopExp);
-				if (result == null) result = caseCallExp(loopExp);
-				if (result == null) result = caseOclExpression(loopExp);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpPackage.FEATURE_CALL_EXP: {
-				FeatureCallExp featureCallExp = (FeatureCallExp)theEObject;
-				T result = caseFeatureCallExp(featureCallExp);
-				if (result == null) result = caseCallExp(featureCallExp);
-				if (result == null) result = caseOclExpression(featureCallExp);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ExpPackage.ASSOCIATION_CLASS_CALL_EXP: {
 				AssociationClassCallExp associationClassCallExp = (AssociationClassCallExp)theEObject;
 				T result = caseAssociationClassCallExp(associationClassCallExp);
-				if (result == null) result = caseNavigationCallExp(associationClassCallExp);
-				if (result == null) result = caseFeatureCallExp(associationClassCallExp);
 				if (result == null) result = caseCallExp(associationClassCallExp);
 				if (result == null) result = caseOclExpression(associationClassCallExp);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpPackage.NUMERIC_LITERAL_EXP: {
-				NumericLiteralExp numericLiteralExp = (NumericLiteralExp)theEObject;
-				T result = caseNumericLiteralExp(numericLiteralExp);
-				if (result == null) result = casePrimitiveType(numericLiteralExp);
-				if (result == null) result = caseLiteralExp(numericLiteralExp);
-				if (result == null) result = caseOclExpression(numericLiteralExp);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpPackage.LITERAL_EXP: {
-				LiteralExp literalExp = (LiteralExp)theEObject;
-				T result = caseLiteralExp(literalExp);
-				if (result == null) result = caseOclExpression(literalExp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -131,8 +97,6 @@ public class ExpSwitch<T> extends Switch<T> {
 			case ExpPackage.PROPERTY_CALL_EXP: {
 				PropertyCallExp propertyCallExp = (PropertyCallExp)theEObject;
 				T result = casePropertyCallExp(propertyCallExp);
-				if (result == null) result = caseNavigationCallExp(propertyCallExp);
-				if (result == null) result = caseFeatureCallExp(propertyCallExp);
 				if (result == null) result = caseCallExp(propertyCallExp);
 				if (result == null) result = caseOclExpression(propertyCallExp);
 				if (result == null) result = defaultCase(theEObject);
@@ -141,7 +105,6 @@ public class ExpSwitch<T> extends Switch<T> {
 			case ExpPackage.ITERATOR_EXP: {
 				IteratorExp iteratorExp = (IteratorExp)theEObject;
 				T result = caseIteratorExp(iteratorExp);
-				if (result == null) result = caseLoopExp(iteratorExp);
 				if (result == null) result = caseCallExp(iteratorExp);
 				if (result == null) result = caseOclExpression(iteratorExp);
 				if (result == null) result = defaultCase(theEObject);
@@ -163,34 +126,13 @@ public class ExpSwitch<T> extends Switch<T> {
 			case ExpPackage.INTEGER_LITERAL_EXP: {
 				IntegerLiteralExp integerLiteralExp = (IntegerLiteralExp)theEObject;
 				T result = caseIntegerLiteralExp(integerLiteralExp);
-				if (result == null) result = caseNumericLiteralExp(integerLiteralExp);
-				if (result == null) result = casePrimitiveType(integerLiteralExp);
-				if (result == null) result = caseLiteralExp(integerLiteralExp);
 				if (result == null) result = caseOclExpression(integerLiteralExp);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpPackage.PRIMITIVE_TYPE: {
-				PrimitiveType primitiveType = (PrimitiveType)theEObject;
-				T result = casePrimitiveType(primitiveType);
-				if (result == null) result = caseLiteralExp(primitiveType);
-				if (result == null) result = caseOclExpression(primitiveType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ExpPackage.NAVIGATION_CALL_EXP: {
-				NavigationCallExp navigationCallExp = (NavigationCallExp)theEObject;
-				T result = caseNavigationCallExp(navigationCallExp);
-				if (result == null) result = caseFeatureCallExp(navigationCallExp);
-				if (result == null) result = caseCallExp(navigationCallExp);
-				if (result == null) result = caseOclExpression(navigationCallExp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ExpPackage.OPERATION_CALL_EXP: {
 				OperationCallExp operationCallExp = (OperationCallExp)theEObject;
 				T result = caseOperationCallExp(operationCallExp);
-				if (result == null) result = caseFeatureCallExp(operationCallExp);
 				if (result == null) result = caseCallExp(operationCallExp);
 				if (result == null) result = caseOclExpression(operationCallExp);
 				if (result == null) result = defaultCase(theEObject);
@@ -199,8 +141,6 @@ public class ExpSwitch<T> extends Switch<T> {
 			case ExpPackage.STRING_LITERAL_EXP: {
 				StringLiteralExp stringLiteralExp = (StringLiteralExp)theEObject;
 				T result = caseStringLiteralExp(stringLiteralExp);
-				if (result == null) result = casePrimitiveType(stringLiteralExp);
-				if (result == null) result = caseLiteralExp(stringLiteralExp);
 				if (result == null) result = caseOclExpression(stringLiteralExp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -208,8 +148,6 @@ public class ExpSwitch<T> extends Switch<T> {
 			case ExpPackage.BOOLEAN_LITERAL_EXP: {
 				BooleanLiteralExp booleanLiteralExp = (BooleanLiteralExp)theEObject;
 				T result = caseBooleanLiteralExp(booleanLiteralExp);
-				if (result == null) result = casePrimitiveType(booleanLiteralExp);
-				if (result == null) result = caseLiteralExp(booleanLiteralExp);
 				if (result == null) result = caseOclExpression(booleanLiteralExp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -249,36 +187,6 @@ public class ExpSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Loop Exp</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Loop Exp</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLoopExp(LoopExp object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Feature Call Exp</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Feature Call Exp</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFeatureCallExp(FeatureCallExp object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Association Class Call Exp</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -290,36 +198,6 @@ public class ExpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAssociationClassCallExp(AssociationClassCallExp object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Numeric Literal Exp</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Numeric Literal Exp</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNumericLiteralExp(NumericLiteralExp object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Literal Exp</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Literal Exp</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLiteralExp(LiteralExp object) {
 		return null;
 	}
 
@@ -410,36 +288,6 @@ public class ExpSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIntegerLiteralExp(IntegerLiteralExp object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrimitiveType(PrimitiveType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Navigation Call Exp</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Navigation Call Exp</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNavigationCallExp(NavigationCallExp object) {
 		return null;
 	}
 

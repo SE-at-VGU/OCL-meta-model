@@ -20,7 +20,7 @@ import ocl.dm.Attribute;
  * @model
  * @generated
  */
-public interface PropertyCallExp extends NavigationCallExp {
+public interface PropertyCallExp extends CallExp {
 	/**
 	 * Returns the value of the '<em><b>Referred Property</b></em>' reference.
 	 * <!-- begin-user-doc -->

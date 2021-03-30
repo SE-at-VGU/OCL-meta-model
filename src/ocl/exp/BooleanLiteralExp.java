@@ -19,7 +19,7 @@ package ocl.exp;
  * @model
  * @generated
  */
-public interface BooleanLiteralExp extends PrimitiveType {
+public interface BooleanLiteralExp extends OclExpression {
 	/**
 	 * Returns the value of the '<em><b>Boolean Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

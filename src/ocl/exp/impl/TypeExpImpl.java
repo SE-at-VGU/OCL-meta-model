@@ -2,10 +2,10 @@
  */
 package ocl.exp.impl;
 
+import ocl.dm.Entity;
+
 import ocl.exp.ExpPackage;
 import ocl.exp.TypeExp;
-
-import ocl.type.Classifier;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -36,7 +36,7 @@ public class TypeExpImpl extends OclExpressionImpl implements TypeExp {
 	 * @generated
 	 * @ordered
 	 */
-	protected Classifier referredType;
+	protected Entity referredType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,10 +63,10 @@ public class TypeExpImpl extends OclExpressionImpl implements TypeExp {
 	 * @generated
 	 */
 	@Override
-	public Classifier getReferredType() {
+	public Entity getReferredType() {
 		if (referredType != null && referredType.eIsProxy()) {
 			InternalEObject oldReferredType = (InternalEObject)referredType;
-			referredType = (Classifier)eResolveProxy(oldReferredType);
+			referredType = (Entity)eResolveProxy(oldReferredType);
 			if (referredType != oldReferredType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ExpPackage.TYPE_EXP__REFERRED_TYPE, oldReferredType, referredType));
@@ -80,7 +80,7 @@ public class TypeExpImpl extends OclExpressionImpl implements TypeExp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Classifier basicGetReferredType() {
+	public Entity basicGetReferredType() {
 		return referredType;
 	}
 
@@ -90,8 +90,8 @@ public class TypeExpImpl extends OclExpressionImpl implements TypeExp {
 	 * @generated
 	 */
 	@Override
-	public void setReferredType(Classifier newReferredType) {
-		Classifier oldReferredType = referredType;
+	public void setReferredType(Entity newReferredType) {
+		Entity oldReferredType = referredType;
 		referredType = newReferredType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ExpPackage.TYPE_EXP__REFERRED_TYPE, oldReferredType, referredType));
@@ -121,7 +121,7 @@ public class TypeExpImpl extends OclExpressionImpl implements TypeExp {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ExpPackage.TYPE_EXP__REFERRED_TYPE:
-				setReferredType((Classifier)newValue);
+				setReferredType((Entity)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,7 +136,7 @@ public class TypeExpImpl extends OclExpressionImpl implements TypeExp {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ExpPackage.TYPE_EXP__REFERRED_TYPE:
-				setReferredType((Classifier)null);
+				setReferredType((Entity)null);
 				return;
 		}
 		super.eUnset(featureID);

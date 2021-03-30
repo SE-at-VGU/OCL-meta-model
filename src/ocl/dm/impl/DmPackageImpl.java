@@ -14,10 +14,6 @@ import ocl.exp.ExpPackage;
 
 import ocl.exp.impl.ExpPackageImpl;
 
-import ocl.type.TypePackage;
-
-import ocl.type.impl.TypePackageImpl;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -123,18 +119,14 @@ public class DmPackageImpl extends EPackageImpl implements DmPackage {
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ExpPackage.eNS_URI);
 		ExpPackageImpl theExpPackage = (ExpPackageImpl)(registeredPackage instanceof ExpPackageImpl ? registeredPackage : ExpPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(TypePackage.eNS_URI);
-		TypePackageImpl theTypePackage = (TypePackageImpl)(registeredPackage instanceof TypePackageImpl ? registeredPackage : TypePackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theDmPackage.createPackageContents();
 		theExpPackage.createPackageContents();
-		theTypePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theDmPackage.initializePackageContents();
 		theExpPackage.initializePackageContents();
-		theTypePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theDmPackage.freeze();
@@ -380,7 +372,6 @@ public class DmPackageImpl extends EPackageImpl implements DmPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypePackage theTypePackage = (TypePackage)EPackage.Registry.INSTANCE.getEPackage(TypePackage.eNS_URI);
 		XMLTypePackage theXMLTypePackage = (XMLTypePackage)EPackage.Registry.INSTANCE.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
@@ -388,7 +379,6 @@ public class DmPackageImpl extends EPackageImpl implements DmPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		entityEClass.getESuperTypes().add(theTypePackage.getClassifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

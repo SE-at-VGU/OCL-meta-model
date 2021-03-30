@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AssociationClassCallExpImpl extends NavigationCallExpImpl implements AssociationClassCallExp {
+public class AssociationClassCallExpImpl extends CallExpImpl implements AssociationClassCallExp {
 	/**
 	 * The cached value of the '{@link #getReferredAssociationEnds() <em>Referred Association Ends</em>}' reference.
 	 * <!-- begin-user-doc -->

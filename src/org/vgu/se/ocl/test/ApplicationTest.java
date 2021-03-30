@@ -40,7 +40,7 @@ public class ApplicationTest {
 //            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge1.xmi"
 //            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge2.xmi"
 //            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase4Challenge3.xmi"
-            ,"C:\\Users\\ngpbh\\eclipse-modelling-workspace\\OCLmt\\model\\Stage5Challenge1.xmi"
+//            ,"C:\\Users\\ngpbh\\eclipse-modelling-workspace\\OCLmt\\model\\Stage5Challenge1.xmi"
 //            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase5Challenge2.xmi"
 //            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase6Challenge1.xmi"
 //            ,"C:\\Users\\ngpbh\\eclipse-workspace\\org.vgu.se.ocl\\model\\Phase6Challenge2.xmi"

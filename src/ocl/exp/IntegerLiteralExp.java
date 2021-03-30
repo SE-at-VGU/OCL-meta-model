@@ -19,7 +19,7 @@ package ocl.exp;
  * @model
  * @generated
  */
-public interface IntegerLiteralExp extends NumericLiteralExp {
+public interface IntegerLiteralExp extends OclExpression {
 	/**
 	 * Returns the value of the '<em><b>Integer Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

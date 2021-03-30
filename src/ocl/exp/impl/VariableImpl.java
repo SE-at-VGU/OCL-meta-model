@@ -3,7 +3,7 @@
 package ocl.exp.impl;
 
 import ocl.exp.ExpPackage;
-import ocl.exp.LoopExp;
+import ocl.exp.IteratorExp;
 import ocl.exp.OclExpression;
 import ocl.exp.Variable;
 
@@ -26,8 +26,8 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ocl.exp.impl.VariableImpl#getLoopExp <em>Loop Exp</em>}</li>
  *   <li>{@link ocl.exp.impl.VariableImpl#getInitExpression <em>Init Expression</em>}</li>
+ *   <li>{@link ocl.exp.impl.VariableImpl#getLoopExp <em>Loop Exp</em>}</li>
  *   <li>{@link ocl.exp.impl.VariableImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -89,49 +89,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @generated
 	 */
 	@Override
-	public LoopExp getLoopExp() {
-		if (eContainerFeatureID() != ExpPackage.VARIABLE__LOOP_EXP) return null;
-		return (LoopExp)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetLoopExp(LoopExp newLoopExp, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newLoopExp, ExpPackage.VARIABLE__LOOP_EXP, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setLoopExp(LoopExp newLoopExp) {
-		if (newLoopExp != eInternalContainer() || (eContainerFeatureID() != ExpPackage.VARIABLE__LOOP_EXP && newLoopExp != null)) {
-			if (EcoreUtil.isAncestor(this, newLoopExp))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newLoopExp != null)
-				msgs = ((InternalEObject)newLoopExp).eInverseAdd(this, ExpPackage.LOOP_EXP__ITERATOR, LoopExp.class, msgs);
-			msgs = basicSetLoopExp(newLoopExp, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExpPackage.VARIABLE__LOOP_EXP, newLoopExp, newLoopExp));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public OclExpression getInitExpression() {
 		return initExpression;
 	}
@@ -177,6 +134,49 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @generated
 	 */
 	@Override
+	public IteratorExp getLoopExp() {
+		if (eContainerFeatureID() != ExpPackage.VARIABLE__LOOP_EXP) return null;
+		return (IteratorExp)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetLoopExp(IteratorExp newLoopExp, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newLoopExp, ExpPackage.VARIABLE__LOOP_EXP, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setLoopExp(IteratorExp newLoopExp) {
+		if (newLoopExp != eInternalContainer() || (eContainerFeatureID() != ExpPackage.VARIABLE__LOOP_EXP && newLoopExp != null)) {
+			if (EcoreUtil.isAncestor(this, newLoopExp))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newLoopExp != null)
+				msgs = ((InternalEObject)newLoopExp).eInverseAdd(this, ExpPackage.ITERATOR_EXP__ITERATOR, IteratorExp.class, msgs);
+			msgs = basicSetLoopExp(newLoopExp, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ExpPackage.VARIABLE__LOOP_EXP, newLoopExp, newLoopExp));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -202,14 +202,14 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__LOOP_EXP:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetLoopExp((LoopExp)otherEnd, msgs);
 			case ExpPackage.VARIABLE__INIT_EXPRESSION:
 				if (initExpression != null)
 					msgs = ((InternalEObject)initExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ExpPackage.VARIABLE__INIT_EXPRESSION, null, msgs);
 				return basicSetInitExpression((OclExpression)otherEnd, msgs);
+			case ExpPackage.VARIABLE__LOOP_EXP:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetLoopExp((IteratorExp)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -222,10 +222,10 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__LOOP_EXP:
-				return basicSetLoopExp(null, msgs);
 			case ExpPackage.VARIABLE__INIT_EXPRESSION:
 				return basicSetInitExpression(null, msgs);
+			case ExpPackage.VARIABLE__LOOP_EXP:
+				return basicSetLoopExp(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -239,7 +239,7 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case ExpPackage.VARIABLE__LOOP_EXP:
-				return eInternalContainer().eInverseRemove(this, ExpPackage.LOOP_EXP__ITERATOR, LoopExp.class, msgs);
+				return eInternalContainer().eInverseRemove(this, ExpPackage.ITERATOR_EXP__ITERATOR, IteratorExp.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -252,10 +252,10 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__LOOP_EXP:
-				return getLoopExp();
 			case ExpPackage.VARIABLE__INIT_EXPRESSION:
 				return getInitExpression();
+			case ExpPackage.VARIABLE__LOOP_EXP:
+				return getLoopExp();
 			case ExpPackage.VARIABLE__NAME:
 				return getName();
 		}
@@ -270,11 +270,11 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__LOOP_EXP:
-				setLoopExp((LoopExp)newValue);
-				return;
 			case ExpPackage.VARIABLE__INIT_EXPRESSION:
 				setInitExpression((OclExpression)newValue);
+				return;
+			case ExpPackage.VARIABLE__LOOP_EXP:
+				setLoopExp((IteratorExp)newValue);
 				return;
 			case ExpPackage.VARIABLE__NAME:
 				setName((String)newValue);
@@ -291,11 +291,11 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__LOOP_EXP:
-				setLoopExp((LoopExp)null);
-				return;
 			case ExpPackage.VARIABLE__INIT_EXPRESSION:
 				setInitExpression((OclExpression)null);
+				return;
+			case ExpPackage.VARIABLE__LOOP_EXP:
+				setLoopExp((IteratorExp)null);
 				return;
 			case ExpPackage.VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
@@ -312,10 +312,10 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__LOOP_EXP:
-				return getLoopExp() != null;
 			case ExpPackage.VARIABLE__INIT_EXPRESSION:
 				return initExpression != null;
+			case ExpPackage.VARIABLE__LOOP_EXP:
+				return getLoopExp() != null;
 			case ExpPackage.VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

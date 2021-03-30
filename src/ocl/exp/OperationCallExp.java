@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface OperationCallExp extends FeatureCallExp {
+public interface OperationCallExp extends CallExp {
 	/**
 	 * Returns the value of the '<em><b>Argument</b></em>' containment reference list.
 	 * The list contents are of type {@link ocl.exp.OclExpression}.

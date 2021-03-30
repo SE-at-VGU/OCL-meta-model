@@ -4,8 +4,6 @@ package ocl.dm.util;
 
 import ocl.dm.*;
 
-import ocl.type.Classifier;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -86,10 +84,6 @@ public class DmAdapterFactory extends AdapterFactoryImpl {
 				return createAttributeAdapter();
 			}
 			@Override
-			public Adapter caseClassifier(Classifier object) {
-				return createClassifierAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -162,20 +156,6 @@ public class DmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAttributeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link ocl.type.Classifier <em>Classifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ocl.type.Classifier
-	 * @generated
-	 */
-	public Adapter createClassifierAdapter() {
 		return null;
 	}
 
