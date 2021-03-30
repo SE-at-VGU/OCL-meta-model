@@ -58,6 +58,7 @@ public class XMI2J {
         Set<End> endsJSON = entityJSON.getEnds();
         for (ocl.dm.AssociationEnd endXMI : entityXMI.getEnds()) {
             End endJSON = new End();
+            endJSON.setAssociation(endXMI.getAssociation());
             endJSON.setName(endXMI.getName());
             endJSON.setCurrentClass(entityXMI.getName());
             endJSON.setTargetClass(endXMI.getTarget().getName());

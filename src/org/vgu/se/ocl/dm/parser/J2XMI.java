@@ -77,6 +77,7 @@ public class J2XMI {
                     continue;
                 }
                 else if (otherEndXMI.getOpp().getName().equals(endXMI.getName())){
+                	endXMI.setAssociation(otherEndXMI.getAssociation());
                     endXMI.setOpp(otherEndXMI);
                     endXMI.setTarget(otherEntityXMI);
                     otherEndXMI.setOpp(endXMI);

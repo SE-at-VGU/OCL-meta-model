@@ -229,7 +229,8 @@ public class OCLParser {
             referredAssociationEnd.getOpp().getName());
         associationClassCallExp.setOppositeAssociationEndType(
             new Type(referredAssociationEnd.getOpp().getTarget().getName()));
-        associationClassCallExp.parseAssociationName();
+//        associationClassCallExp.parseAssociationName();
+        associationClassCallExp.setAssociation(oclXMI.getReferredAssociationEnds().getAssociation());
         return associationClassCallExp;
     }
 
