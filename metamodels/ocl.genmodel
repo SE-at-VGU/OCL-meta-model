@@ -56,7 +56,6 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EReference ocl.ecore#//exp/AssociationClassCallExp/referredAssociationEnds"/>
       </genClasses>
       <genClasses ecoreClass="ocl.ecore#//exp/Variable">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ocl.ecore#//exp/Variable/initExpression"/>
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ocl.ecore#//exp/Variable/loopExp"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ocl.ecore#//exp/Variable/name"/>
       </genClasses>
@@ -69,8 +68,6 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ocl.ecore#//exp/IteratorExp/iterator"/>
       </genClasses>
       <genClasses image="false" ecoreClass="ocl.ecore#//exp/OclExpression">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference ocl.ecore#//exp/OclExpression/initializedElement"/>
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ocl.ecore#//exp/OclExpression/loopBodyOwner"/>
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ocl.ecore#//exp/OclExpression/appliedElement"/>
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference ocl.ecore#//exp/OclExpression/parentCall"/>

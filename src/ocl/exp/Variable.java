@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ocl.exp.Variable#getInitExpression <em>Init Expression</em>}</li>
  *   <li>{@link ocl.exp.Variable#getLoopExp <em>Loop Exp</em>}</li>
  *   <li>{@link ocl.exp.Variable#getName <em>Name</em>}</li>
  * </ul>
@@ -23,30 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Variable extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Init Expression</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link ocl.exp.OclExpression#getInitializedElement <em>Initialized Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Init Expression</em>' containment reference.
-	 * @see #setInitExpression(OclExpression)
-	 * @see ocl.exp.ExpPackage#getVariable_InitExpression()
-	 * @see ocl.exp.OclExpression#getInitializedElement
-	 * @model opposite="initializedElement" containment="true"
-	 * @generated
-	 */
-	OclExpression getInitExpression();
-
-	/**
-	 * Sets the value of the '{@link ocl.exp.Variable#getInitExpression <em>Init Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Init Expression</em>' containment reference.
-	 * @see #getInitExpression()
-	 * @generated
-	 */
-	void setInitExpression(OclExpression value);
-
 	/**
 	 * Returns the value of the '<em><b>Loop Exp</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link ocl.exp.IteratorExp#getIterator <em>Iterator</em>}'.

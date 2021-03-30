@@ -68,22 +68,13 @@ public interface ExpPackage extends EPackage {
 	int OCL_EXPRESSION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OCL_EXPRESSION__INITIALIZED_ELEMENT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OCL_EXPRESSION__LOOP_BODY_OWNER = 1;
+	int OCL_EXPRESSION__LOOP_BODY_OWNER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Applied Element</b></em>' container reference.
@@ -92,7 +83,7 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCL_EXPRESSION__APPLIED_ELEMENT = 2;
+	int OCL_EXPRESSION__APPLIED_ELEMENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Parent Call</b></em>' container reference.
@@ -101,7 +92,7 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCL_EXPRESSION__PARENT_CALL = 3;
+	int OCL_EXPRESSION__PARENT_CALL = 2;
 
 	/**
 	 * The number of structural features of the '<em>Ocl Expression</em>' class.
@@ -110,7 +101,7 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OCL_EXPRESSION_FEATURE_COUNT = 4;
+	int OCL_EXPRESSION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Ocl Expression</em>' class.
@@ -130,15 +121,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	int VARIABLE_EXP = 0;
-
-	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE_EXP__INITIALIZED_ELEMENT = OCL_EXPRESSION__INITIALIZED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
@@ -205,15 +187,6 @@ public interface ExpPackage extends EPackage {
 	int TYPE_EXP = 1;
 
 	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_EXP__INITIALIZED_ELEMENT = OCL_EXPRESSION__INITIALIZED_ELEMENT;
-
-	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -278,15 +251,6 @@ public interface ExpPackage extends EPackage {
 	int CALL_EXP = 7;
 
 	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_EXP__INITIALIZED_ELEMENT = OCL_EXPRESSION__INITIALIZED_ELEMENT;
-
-	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,15 +313,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	int ASSOCIATION_CLASS_CALL_EXP = 2;
-
-	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSOCIATION_CLASS_CALL_EXP__INITIALIZED_ELEMENT = CALL_EXP__INITIALIZED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
@@ -433,22 +388,13 @@ public interface ExpPackage extends EPackage {
 	int VARIABLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Init Expression</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__INIT_EXPRESSION = 0;
-
-	/**
 	 * The feature id for the '<em><b>Loop Exp</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__LOOP_EXP = 1;
+	int VARIABLE__LOOP_EXP = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -457,7 +403,7 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__NAME = 2;
+	int VARIABLE__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -466,7 +412,7 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 3;
+	int VARIABLE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -486,15 +432,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	int PROPERTY_CALL_EXP = 4;
-
-	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_CALL_EXP__INITIALIZED_ELEMENT = CALL_EXP__INITIALIZED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
@@ -568,15 +505,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	int ITERATOR_EXP = 5;
-
-	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ITERATOR_EXP__INITIALIZED_ELEMENT = CALL_EXP__INITIALIZED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
@@ -670,15 +598,6 @@ public interface ExpPackage extends EPackage {
 	int INTEGER_LITERAL_EXP = 8;
 
 	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_LITERAL_EXP__INITIALIZED_ELEMENT = OCL_EXPRESSION__INITIALIZED_ELEMENT;
-
-	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -741,15 +660,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	int OPERATION_CALL_EXP = 9;
-
-	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OPERATION_CALL_EXP__INITIALIZED_ELEMENT = CALL_EXP__INITIALIZED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
@@ -834,15 +744,6 @@ public interface ExpPackage extends EPackage {
 	int STRING_LITERAL_EXP = 10;
 
 	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_LITERAL_EXP__INITIALIZED_ELEMENT = OCL_EXPRESSION__INITIALIZED_ELEMENT;
-
-	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -905,15 +806,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	int BOOLEAN_LITERAL_EXP = 11;
-
-	/**
-	 * The feature id for the '<em><b>Initialized Element</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_LITERAL_EXP__INITIALIZED_ELEMENT = OCL_EXPRESSION__INITIALIZED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Loop Body Owner</b></em>' container reference.
@@ -1064,17 +956,6 @@ public interface ExpPackage extends EPackage {
 	EClass getVariable();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link ocl.exp.Variable#getInitExpression <em>Init Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Init Expression</em>'.
-	 * @see ocl.exp.Variable#getInitExpression()
-	 * @see #getVariable()
-	 * @generated
-	 */
-	EReference getVariable_InitExpression();
-
-	/**
 	 * Returns the meta object for the container reference '{@link ocl.exp.Variable#getLoopExp <em>Loop Exp</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1169,17 +1050,6 @@ public interface ExpPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getOclExpression();
-
-	/**
-	 * Returns the meta object for the container reference '{@link ocl.exp.OclExpression#getInitializedElement <em>Initialized Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Initialized Element</em>'.
-	 * @see ocl.exp.OclExpression#getInitializedElement()
-	 * @see #getOclExpression()
-	 * @generated
-	 */
-	EReference getOclExpression_InitializedElement();
 
 	/**
 	 * Returns the meta object for the container reference '{@link ocl.exp.OclExpression#getLoopBodyOwner <em>Loop Body Owner</em>}'.
@@ -1438,14 +1308,6 @@ public interface ExpPackage extends EPackage {
 		EClass VARIABLE = eINSTANCE.getVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Init Expression</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VARIABLE__INIT_EXPRESSION = eINSTANCE.getVariable_InitExpression();
-
-		/**
 		 * The meta object literal for the '<em><b>Loop Exp</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1522,14 +1384,6 @@ public interface ExpPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OCL_EXPRESSION = eINSTANCE.getOclExpression();
-
-		/**
-		 * The meta object literal for the '<em><b>Initialized Element</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference OCL_EXPRESSION__INITIALIZED_ELEMENT = eINSTANCE.getOclExpression_InitializedElement();
 
 		/**
 		 * The meta object literal for the '<em><b>Loop Body Owner</b></em>' container reference feature.

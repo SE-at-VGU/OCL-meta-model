@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link ocl.exp.OclExpression#getInitializedElement <em>Initialized Element</em>}</li>
  *   <li>{@link ocl.exp.OclExpression#getLoopBodyOwner <em>Loop Body Owner</em>}</li>
  *   <li>{@link ocl.exp.OclExpression#getAppliedElement <em>Applied Element</em>}</li>
  *   <li>{@link ocl.exp.OclExpression#getParentCall <em>Parent Call</em>}</li>
@@ -24,30 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface OclExpression extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Initialized Element</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link ocl.exp.Variable#getInitExpression <em>Init Expression</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Initialized Element</em>' container reference.
-	 * @see #setInitializedElement(Variable)
-	 * @see ocl.exp.ExpPackage#getOclExpression_InitializedElement()
-	 * @see ocl.exp.Variable#getInitExpression
-	 * @model opposite="initExpression" transient="false"
-	 * @generated
-	 */
-	Variable getInitializedElement();
-
-	/**
-	 * Sets the value of the '{@link ocl.exp.OclExpression#getInitializedElement <em>Initialized Element</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Initialized Element</em>' container reference.
-	 * @see #getInitializedElement()
-	 * @generated
-	 */
-	void setInitializedElement(Variable value);
-
 	/**
 	 * Returns the value of the '<em><b>Loop Body Owner</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link ocl.exp.IteratorExp#getBody <em>Body</em>}'.

@@ -7,8 +7,6 @@ import ocl.exp.ExpPackage;
 import ocl.exp.IteratorExp;
 import ocl.exp.OclExpression;
 import ocl.exp.OperationCallExp;
-
-import ocl.exp.Variable;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -28,7 +26,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ocl.exp.impl.OclExpressionImpl#getInitializedElement <em>Initialized Element</em>}</li>
  *   <li>{@link ocl.exp.impl.OclExpressionImpl#getLoopBodyOwner <em>Loop Body Owner</em>}</li>
  *   <li>{@link ocl.exp.impl.OclExpressionImpl#getAppliedElement <em>Applied Element</em>}</li>
  *   <li>{@link ocl.exp.impl.OclExpressionImpl#getParentCall <em>Parent Call</em>}</li>
@@ -54,49 +51,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	protected EClass eStaticClass() {
 		return ExpPackage.Literals.OCL_EXPRESSION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Variable getInitializedElement() {
-		if (eContainerFeatureID() != ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT) return null;
-		return (Variable)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInitializedElement(Variable newInitializedElement, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newInitializedElement, ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInitializedElement(Variable newInitializedElement) {
-		if (newInitializedElement != eInternalContainer() || (eContainerFeatureID() != ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT && newInitializedElement != null)) {
-			if (EcoreUtil.isAncestor(this, newInitializedElement))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newInitializedElement != null)
-				msgs = ((InternalEObject)newInitializedElement).eInverseAdd(this, ExpPackage.VARIABLE__INIT_EXPRESSION, Variable.class, msgs);
-			msgs = basicSetInitializedElement(newInitializedElement, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT, newInitializedElement, newInitializedElement));
 	}
 
 	/**
@@ -236,10 +190,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetInitializedElement((Variable)otherEnd, msgs);
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -264,8 +214,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				return basicSetInitializedElement(null, msgs);
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				return basicSetLoopBodyOwner(null, msgs);
 			case ExpPackage.OCL_EXPRESSION__APPLIED_ELEMENT:
@@ -284,8 +232,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				return eInternalContainer().eInverseRemove(this, ExpPackage.VARIABLE__INIT_EXPRESSION, Variable.class, msgs);
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				return eInternalContainer().eInverseRemove(this, ExpPackage.ITERATOR_EXP__BODY, IteratorExp.class, msgs);
 			case ExpPackage.OCL_EXPRESSION__APPLIED_ELEMENT:
@@ -304,8 +250,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				return getInitializedElement();
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				return getLoopBodyOwner();
 			case ExpPackage.OCL_EXPRESSION__APPLIED_ELEMENT:
@@ -324,9 +268,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				setInitializedElement((Variable)newValue);
-				return;
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				setLoopBodyOwner((IteratorExp)newValue);
 				return;
@@ -348,9 +289,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				setInitializedElement((Variable)null);
-				return;
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				setLoopBodyOwner((IteratorExp)null);
 				return;
@@ -372,8 +310,6 @@ public abstract class OclExpressionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT:
-				return getInitializedElement() != null;
 			case ExpPackage.OCL_EXPRESSION__LOOP_BODY_OWNER:
 				return getLoopBodyOwner() != null;
 			case ExpPackage.OCL_EXPRESSION__APPLIED_ELEMENT:

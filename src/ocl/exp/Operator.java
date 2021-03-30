@@ -36,7 +36,7 @@ public enum Operator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AND(1, "AND", "AND"),
+	AND(1, "AND", "and"),
 
 	/**
 	 * The '<em><b>All Instances</b></em>' literal object.
@@ -74,7 +74,7 @@ public enum Operator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #AND
-	 * @model
+	 * @model literal="and"
 	 * @generated
 	 * @ordered
 	 */

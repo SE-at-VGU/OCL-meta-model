@@ -279,7 +279,7 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getVariable_InitExpression() {
+	public EReference getVariable_LoopExp() {
 		return (EReference)variableEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -289,18 +289,8 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getVariable_LoopExp() {
-		return (EReference)variableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getVariable_Name() {
-		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -379,7 +369,7 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getOclExpression_InitializedElement() {
+	public EReference getOclExpression_LoopBodyOwner() {
 		return (EReference)oclExpressionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -389,7 +379,7 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getOclExpression_LoopBodyOwner() {
+	public EReference getOclExpression_AppliedElement() {
 		return (EReference)oclExpressionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -399,18 +389,8 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getOclExpression_AppliedElement() {
-		return (EReference)oclExpressionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getOclExpression_ParentCall() {
-		return (EReference)oclExpressionEClass.getEStructuralFeatures().get(3);
+		return (EReference)oclExpressionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -582,7 +562,6 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 		createEReference(associationClassCallExpEClass, ASSOCIATION_CLASS_CALL_EXP__REFERRED_ASSOCIATION_ENDS);
 
 		variableEClass = createEClass(VARIABLE);
-		createEReference(variableEClass, VARIABLE__INIT_EXPRESSION);
 		createEReference(variableEClass, VARIABLE__LOOP_EXP);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 
@@ -595,7 +574,6 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 		createEReference(iteratorExpEClass, ITERATOR_EXP__ITERATOR);
 
 		oclExpressionEClass = createEClass(OCL_EXPRESSION);
-		createEReference(oclExpressionEClass, OCL_EXPRESSION__INITIALIZED_ELEMENT);
 		createEReference(oclExpressionEClass, OCL_EXPRESSION__LOOP_BODY_OWNER);
 		createEReference(oclExpressionEClass, OCL_EXPRESSION__APPLIED_ELEMENT);
 		createEReference(oclExpressionEClass, OCL_EXPRESSION__PARENT_CALL);
@@ -674,7 +652,6 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 		initEReference(getAssociationClassCallExp_ReferredAssociationEnds(), theDmPackage.getAssociationEnd(), null, "referredAssociationEnds", null, 1, 1, AssociationClassCallExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVariable_InitExpression(), this.getOclExpression(), this.getOclExpression_InitializedElement(), "initExpression", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariable_LoopExp(), this.getIteratorExp(), this.getIteratorExp_Iterator(), "loopExp", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -687,7 +664,6 @@ public class ExpPackageImpl extends EPackageImpl implements ExpPackage {
 		initEReference(getIteratorExp_Iterator(), this.getVariable(), this.getVariable_LoopExp(), "iterator", null, 0, -1, IteratorExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(oclExpressionEClass, OclExpression.class, "OclExpression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOclExpression_InitializedElement(), this.getVariable(), this.getVariable_InitExpression(), "initializedElement", null, 0, 1, OclExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOclExpression_LoopBodyOwner(), this.getIteratorExp(), this.getIteratorExp_Body(), "loopBodyOwner", null, 0, 1, OclExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOclExpression_AppliedElement(), this.getCallExp(), this.getCallExp_Source(), "appliedElement", null, 0, 1, OclExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getOclExpression_ParentCall(), this.getOperationCallExp(), this.getOperationCallExp_Argument(), "parentCall", null, 0, 1, OclExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

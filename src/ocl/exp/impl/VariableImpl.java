@@ -4,7 +4,6 @@ package ocl.exp.impl;
 
 import ocl.exp.ExpPackage;
 import ocl.exp.IteratorExp;
-import ocl.exp.OclExpression;
 import ocl.exp.Variable;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,7 +25,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link ocl.exp.impl.VariableImpl#getInitExpression <em>Init Expression</em>}</li>
  *   <li>{@link ocl.exp.impl.VariableImpl#getLoopExp <em>Loop Exp</em>}</li>
  *   <li>{@link ocl.exp.impl.VariableImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -34,16 +32,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * @generated
  */
 public class VariableImpl extends MinimalEObjectImpl.Container implements Variable {
-	/**
-	 * The cached value of the '{@link #getInitExpression() <em>Init Expression</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInitExpression()
-	 * @generated
-	 * @ordered
-	 */
-	protected OclExpression initExpression;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,51 +69,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	protected EClass eStaticClass() {
 		return ExpPackage.Literals.VARIABLE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public OclExpression getInitExpression() {
-		return initExpression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInitExpression(OclExpression newInitExpression, NotificationChain msgs) {
-		OclExpression oldInitExpression = initExpression;
-		initExpression = newInitExpression;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ExpPackage.VARIABLE__INIT_EXPRESSION, oldInitExpression, newInitExpression);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setInitExpression(OclExpression newInitExpression) {
-		if (newInitExpression != initExpression) {
-			NotificationChain msgs = null;
-			if (initExpression != null)
-				msgs = ((InternalEObject)initExpression).eInverseRemove(this, ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT, OclExpression.class, msgs);
-			if (newInitExpression != null)
-				msgs = ((InternalEObject)newInitExpression).eInverseAdd(this, ExpPackage.OCL_EXPRESSION__INITIALIZED_ELEMENT, OclExpression.class, msgs);
-			msgs = basicSetInitExpression(newInitExpression, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ExpPackage.VARIABLE__INIT_EXPRESSION, newInitExpression, newInitExpression));
 	}
 
 	/**
@@ -202,10 +145,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__INIT_EXPRESSION:
-				if (initExpression != null)
-					msgs = ((InternalEObject)initExpression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ExpPackage.VARIABLE__INIT_EXPRESSION, null, msgs);
-				return basicSetInitExpression((OclExpression)otherEnd, msgs);
 			case ExpPackage.VARIABLE__LOOP_EXP:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -222,8 +161,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__INIT_EXPRESSION:
-				return basicSetInitExpression(null, msgs);
 			case ExpPackage.VARIABLE__LOOP_EXP:
 				return basicSetLoopExp(null, msgs);
 		}
@@ -252,8 +189,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__INIT_EXPRESSION:
-				return getInitExpression();
 			case ExpPackage.VARIABLE__LOOP_EXP:
 				return getLoopExp();
 			case ExpPackage.VARIABLE__NAME:
@@ -270,9 +205,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__INIT_EXPRESSION:
-				setInitExpression((OclExpression)newValue);
-				return;
 			case ExpPackage.VARIABLE__LOOP_EXP:
 				setLoopExp((IteratorExp)newValue);
 				return;
@@ -291,9 +223,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__INIT_EXPRESSION:
-				setInitExpression((OclExpression)null);
-				return;
 			case ExpPackage.VARIABLE__LOOP_EXP:
 				setLoopExp((IteratorExp)null);
 				return;
@@ -312,8 +241,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ExpPackage.VARIABLE__INIT_EXPRESSION:
-				return initExpression != null;
 			case ExpPackage.VARIABLE__LOOP_EXP:
 				return getLoopExp() != null;
 			case ExpPackage.VARIABLE__NAME:
